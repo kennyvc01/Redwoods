@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C021C73F71900B936BF /* AppDelegate.swift */; };
+		D80C0C051C73F71900B936BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C041C73F71900B936BF /* ViewController.swift */; };
+		D80C0C081C73F71900B936BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C061C73F71900B936BF /* Main.storyboard */; };
+		D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C091C73F71900B936BF /* Assets.xcassets */; };
+		D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */; };
+		D80C0C181C73F71900B936BF /* RedwoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C171C73F71900B936BF /* RedwoodsTests.swift */; };
+		D80C0C231C73F71900B936BF /* RedwoodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C221C73F71900B936BF /* RedwoodsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D80C0C141C73F71900B936BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D80C0BF71C73F71900B936BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D80C0BFE1C73F71900B936BF;
+			remoteInfo = Redwoods;
+		};
+		D80C0C1F1C73F71900B936BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D80C0BF71C73F71900B936BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D80C0BFE1C73F71900B936BF;
+			remoteInfo = Redwoods;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D80C0BFF1C73F71900B936BF /* Redwoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redwoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80C0C021C73F71900B936BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D80C0C041C73F71900B936BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D80C0C071C73F71900B936BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D80C0C091C73F71900B936BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D80C0C0C1C73F71900B936BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D80C0C0E1C73F71900B936BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D80C0C131C73F71900B936BF /* RedwoodsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedwoodsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80C0C171C73F71900B936BF /* RedwoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedwoodsTests.swift; sourceTree = "<group>"; };
+		D80C0C191C73F71900B936BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D80C0C1E1C73F71900B936BF /* RedwoodsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedwoodsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80C0C221C73F71900B936BF /* RedwoodsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedwoodsUITests.swift; sourceTree = "<group>"; };
+		D80C0C241C73F71900B936BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D80C0BFC1C73F71900B936BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80C0C101C73F71900B936BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80C0C1B1C73F71900B936BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D80C0BF61C73F71900B936BF = {
+			isa = PBXGroup;
+			children = (
+				D80C0C011C73F71900B936BF /* Redwoods */,
+				D80C0C161C73F71900B936BF /* RedwoodsTests */,
+				D80C0C211C73F71900B936BF /* RedwoodsUITests */,
+				D80C0C001C73F71900B936BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D80C0C001C73F71900B936BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D80C0BFF1C73F71900B936BF /* Redwoods.app */,
+				D80C0C131C73F71900B936BF /* RedwoodsTests.xctest */,
+				D80C0C1E1C73F71900B936BF /* RedwoodsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D80C0C011C73F71900B936BF /* Redwoods */ = {
+			isa = PBXGroup;
+			children = (
+				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
+				D80C0C041C73F71900B936BF /* ViewController.swift */,
+				D80C0C061C73F71900B936BF /* Main.storyboard */,
+				D80C0C091C73F71900B936BF /* Assets.xcassets */,
+				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
+				D80C0C0E1C73F71900B936BF /* Info.plist */,
+			);
+			path = Redwoods;
+			sourceTree = "<group>";
+		};
+		D80C0C161C73F71900B936BF /* RedwoodsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D80C0C171C73F71900B936BF /* RedwoodsTests.swift */,
+				D80C0C191C73F71900B936BF /* Info.plist */,
+			);
+			path = RedwoodsTests;
+			sourceTree = "<group>";
+		};
+		D80C0C211C73F71900B936BF /* RedwoodsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D80C0C221C73F71900B936BF /* RedwoodsUITests.swift */,
+				D80C0C241C73F71900B936BF /* Info.plist */,
+			);
+			path = RedwoodsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D80C0BFE1C73F71900B936BF /* Redwoods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D80C0C271C73F71900B936BF /* Build configuration list for PBXNativeTarget "Redwoods" */;
+			buildPhases = (
+				D80C0BFB1C73F71900B936BF /* Sources */,
+				D80C0BFC1C73F71900B936BF /* Frameworks */,
+				D80C0BFD1C73F71900B936BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Redwoods;
+			productName = Redwoods;
+			productReference = D80C0BFF1C73F71900B936BF /* Redwoods.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D80C0C121C73F71900B936BF /* RedwoodsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D80C0C2A1C73F71900B936BF /* Build configuration list for PBXNativeTarget "RedwoodsTests" */;
+			buildPhases = (
+				D80C0C0F1C73F71900B936BF /* Sources */,
+				D80C0C101C73F71900B936BF /* Frameworks */,
+				D80C0C111C73F71900B936BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D80C0C151C73F71900B936BF /* PBXTargetDependency */,
+			);
+			name = RedwoodsTests;
+			productName = RedwoodsTests;
+			productReference = D80C0C131C73F71900B936BF /* RedwoodsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D80C0C1D1C73F71900B936BF /* RedwoodsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D80C0C2D1C73F71900B936BF /* Build configuration list for PBXNativeTarget "RedwoodsUITests" */;
+			buildPhases = (
+				D80C0C1A1C73F71900B936BF /* Sources */,
+				D80C0C1B1C73F71900B936BF /* Frameworks */,
+				D80C0C1C1C73F71900B936BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D80C0C201C73F71900B936BF /* PBXTargetDependency */,
+			);
+			name = RedwoodsUITests;
+			productName = RedwoodsUITests;
+			productReference = D80C0C1E1C73F71900B936BF /* RedwoodsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D80C0BF71C73F71900B936BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Ken Churchill";
+				TargetAttributes = {
+					D80C0BFE1C73F71900B936BF = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D80C0C121C73F71900B936BF = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D80C0BFE1C73F71900B936BF;
+					};
+					D80C0C1D1C73F71900B936BF = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D80C0BFE1C73F71900B936BF;
+					};
+				};
+			};
+			buildConfigurationList = D80C0BFA1C73F71900B936BF /* Build configuration list for PBXProject "Redwoods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D80C0BF61C73F71900B936BF;
+			productRefGroup = D80C0C001C73F71900B936BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D80C0BFE1C73F71900B936BF /* Redwoods */,
+				D80C0C121C73F71900B936BF /* RedwoodsTests */,
+				D80C0C1D1C73F71900B936BF /* RedwoodsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D80C0BFD1C73F71900B936BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
+				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
+				D80C0C081C73F71900B936BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80C0C111C73F71900B936BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80C0C1C1C73F71900B936BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D80C0BFB1C73F71900B936BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D80C0C051C73F71900B936BF /* ViewController.swift in Sources */,
+				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80C0C0F1C73F71900B936BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D80C0C181C73F71900B936BF /* RedwoodsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80C0C1A1C73F71900B936BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D80C0C231C73F71900B936BF /* RedwoodsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D80C0C151C73F71900B936BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D80C0BFE1C73F71900B936BF /* Redwoods */;
+			targetProxy = D80C0C141C73F71900B936BF /* PBXContainerItemProxy */;
+		};
+		D80C0C201C73F71900B936BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D80C0BFE1C73F71900B936BF /* Redwoods */;
+			targetProxy = D80C0C1F1C73F71900B936BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D80C0C061C73F71900B936BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D80C0C071C73F71900B936BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D80C0C0C1C73F71900B936BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D80C0C251C73F71900B936BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D80C0C261C73F71900B936BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D80C0C281C73F71900B936BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Redwoods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D80C0C291C73F71900B936BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Redwoods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D80C0C2B1C73F71900B936BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RedwoodsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = s.RedwoodsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Redwoods.app/Redwoods";
+			};
+			name = Debug;
+		};
+		D80C0C2C1C73F71900B936BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RedwoodsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = s.RedwoodsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Redwoods.app/Redwoods";
+			};
+			name = Release;
+		};
+		D80C0C2E1C73F71900B936BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RedwoodsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = s.RedwoodsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Redwoods;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D80C0C2F1C73F71900B936BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RedwoodsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = s.RedwoodsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Redwoods;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D80C0BFA1C73F71900B936BF /* Build configuration list for PBXProject "Redwoods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D80C0C251C73F71900B936BF /* Debug */,
+				D80C0C261C73F71900B936BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D80C0C271C73F71900B936BF /* Build configuration list for PBXNativeTarget "Redwoods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D80C0C281C73F71900B936BF /* Debug */,
+				D80C0C291C73F71900B936BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D80C0C2A1C73F71900B936BF /* Build configuration list for PBXNativeTarget "RedwoodsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D80C0C2B1C73F71900B936BF /* Debug */,
+				D80C0C2C1C73F71900B936BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D80C0C2D1C73F71900B936BF /* Build configuration list for PBXNativeTarget "RedwoodsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D80C0C2E1C73F71900B936BF /* Debug */,
+				D80C0C2F1C73F71900B936BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D80C0BF71C73F71900B936BF /* Project object */;
+}
