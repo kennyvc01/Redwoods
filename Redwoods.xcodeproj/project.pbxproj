@@ -19,6 +19,7 @@
 		D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */; };
 		D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */; };
 		D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */; };
+		D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
+				D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */,
 				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
 				D80C0C321C74002800B936BF /* TableViewCell.swift */,
 				D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */,
@@ -278,6 +281,7 @@
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
+				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
 				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +507,7 @@
 				D80C0C291C73F71900B936BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D80C0C2A1C73F71900B936BF /* Build configuration list for PBXNativeTarget "RedwoodsTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				D80C0C2C1C73F71900B936BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D80C0C2D1C73F71900B936BF /* Build configuration list for PBXNativeTarget "RedwoodsUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				D80C0C2F1C73F71900B936BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
