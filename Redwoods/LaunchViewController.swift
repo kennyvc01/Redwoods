@@ -18,14 +18,20 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Add child view controller to parent page view controller
+        
         if let vc = storyboard?.instantiateViewControllerWithIdentifier("LaunchPageViewController"){
             self.addChildViewController(vc)
             self.view.addSubview(vc.view)
             
             pageViewController = vc as! UIPageViewController
+            
+            //configure data source and delegate
+            
             pageViewController.dataSource = self
             pageViewController.delegate = self
             
+            //set at index 0 of pages array - uses viewcontrollerAtIndex method below
             pageViewController.setViewControllers([viewcontrollerAtIndex(0)!], direction: .Forward, animated: true, completion: nil)
             pageViewController.didMoveToParentViewController(self)
             
@@ -34,7 +40,7 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
     }
     
     
-    
+    //Method for swiping left
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         if let index = pages.indexOf(viewController.restorationIdentifier!) {
             if index > 0 {
@@ -44,6 +50,8 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
         return nil
     }
     
+    
+    //method for swiping right
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         if let index = pages.indexOf(viewController.restorationIdentifier!) {
             if index < pages.count - 1 {
@@ -53,12 +61,16 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
         return nil
     }
     
+    
+    //gets the pages array index of the current view controller
     func viewcontrollerAtIndex(index: Int) -> UIViewController?{
         let vc = storyboard?.instantiateViewControllerWithIdentifier(pages[index])
         return vc
     }
     
     
+    
+    //total count of view controllers - used for scroll dots at the bottom of the screen
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
         
     {
@@ -69,6 +81,7 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
     }
     
     
+    //index of current view controllers - used for scroll dots at the bottom of the screen
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int
         
     {
