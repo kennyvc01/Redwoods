@@ -20,6 +20,7 @@
 		D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */; };
 		D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */; };
 		D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */; };
+		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaurasHome.mp4; sourceTree = "<group>"; };
+		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,7 @@
 		D80C0BF61C73F71900B936BF = {
 			isa = PBXGroup;
 			children = (
+				D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */,
 				D80C0C011C73F71900B936BF /* Redwoods */,
 				D80C0C161C73F71900B936BF /* RedwoodsTests */,
 				D80C0C211C73F71900B936BF /* RedwoodsUITests */,
@@ -119,6 +124,7 @@
 				D80C0C061C73F71900B936BF /* Main.storyboard */,
 				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
 				D80C0C0E1C73F71900B936BF /* Info.plist */,
+				D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
 				D80C0C341C74107C00B936BF /* Images.xcassets */,
 			);
@@ -212,6 +218,7 @@
 				TargetAttributes = {
 					D80C0BFE1C73F71900B936BF = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 2AL3467K7B;
 					};
 					D80C0C121C73F71900B936BF = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -422,10 +429,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Redwoods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -433,10 +443,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Redwoods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
