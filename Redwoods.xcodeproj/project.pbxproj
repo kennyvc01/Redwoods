@@ -20,6 +20,7 @@
 		D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */; };
 		D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */; };
 		D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */; };
+		D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */; };
 		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaurasHome.mp4; sourceTree = "<group>"; };
 		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			children = (
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
 				D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */,
+				D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */,
 				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
 				D80C0C321C74002800B936BF /* TableViewCell.swift */,
 				D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */,
@@ -287,6 +290,7 @@
 				D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
+				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
 				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,
