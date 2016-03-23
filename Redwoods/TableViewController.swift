@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import AVKit
+import AVFoundation
 
 
 class TableViewController: UITableViewController {
     
     var objects: NSMutableArray! = NSMutableArray()
-    var image: NSMutableArray! = NSMutableArray()
+    //var image: NSMutableArray! = NSMutableArray()
+    var videoArray: NSMutableArray! = NSMutableArray()
+
+
 
 
     override func viewDidLoad() {
@@ -24,10 +28,15 @@ class TableViewController: UITableViewController {
         self.objects.addObject("Laura's Home")
         self.objects.addObject("Berea Children's Home")
         self.objects.addObject("Preston's H.O.P.E.")
-            
-        self.image.addObject(UIImage(named: "Image1.png")!)
-        self.image.addObject(UIImage(named: "Image2.png")!)
-        self.image.addObject(UIImage(named: "Image3.png")!)
+        
+        self.videoArray.addObject("LaurasHome")
+        self.videoArray.addObject("Berea")
+        self.videoArray.addObject("LaurasHome")
+        
+      
+//        self.image.addObject(UIImage(named: "Image1.png")!)
+//        self.image.addObject(UIImage(named: "Image2.png")!)
+//        self.image.addObject(UIImage(named: "Image3.png")!)
         
 
         
@@ -72,9 +81,36 @@ class TableViewController: UITableViewController {
         
         cell.LblBranch.text = self.objects.objectAtIndex(indexPath.row) as? String
         
-        cell.ImgBranch.image = self.image.objectAtIndex(indexPath.row) as? UIImage
+             
         
-      
+        
+        
+               let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(self.videoArray.objectAtIndex(indexPath.row) as? String, ofType:"mp4")!)
+                let player = AVPlayer(URL: url)
+                let playerViewController = AVPlayerViewController()
+                playerViewController.player = player
+        
+        
+                playerViewController.view.frame = CGRectMake(1, 1, 395, 500)
+                cell.addSubview(playerViewController.view)
+
+        
+//        
+//        let url = NSURL(fileURLWithPath: self.videoArray.objectAtIndex(indexPath.row) as! String)
+//        let player = AVPlayer(URL: url)
+//        let playerViewController = AVPlayerViewController()
+//        playerViewController.player = player
+//        
+//        
+//        playerViewController.view.frame = CGRectMake(1, 1, 395, 500)
+//        cell.addSubview(playerViewController.view)
+        
+       
+        //player.play()
+
+        
+//        cell.ImgBranch.image = self.image.objectAtIndex(indexPath.row) as? UIImage
+        
 
         return cell
     }
