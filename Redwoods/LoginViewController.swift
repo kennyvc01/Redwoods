@@ -33,11 +33,12 @@ class LoginViewController: UIViewController {
         
         let user = txtEmail.text as String!
         let password = txtPassword.text as String!
+        //Credentials for basic authentication using text fields for username and password
         let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
-        
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         
+        //GET Method for api/profile.  If successful, open FeedViewController.  If unsuccessful, alert to reset password.
         Alamofire.request(.GET, "https://redwoods-engine-test.herokuapp.com/api/profile", headers: headers)
             .responseJSON { response in
                 
@@ -74,7 +75,7 @@ class LoginViewController: UIViewController {
                     self.presentViewController(alertController, animated: true) {
                     }
 
-                } else { //no errors
+                } else { //user is authenticated
                     let statusCode = (response.response?.statusCode)!
                     print(statusCode)
                     
@@ -87,20 +88,11 @@ class LoginViewController: UIViewController {
     }
 
         
-
-
+    //Exit button
     @IBAction func btnExit(sender: AnyObject) {
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController
         self.presentViewController(viewController, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
