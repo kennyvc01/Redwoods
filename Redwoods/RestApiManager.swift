@@ -20,42 +20,63 @@ class RestApiManager: UIViewController {
         super.viewDidLoad()
         
         
-        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+//        
+//        let parameters = [
+//            "username": self.user,
+//            "password": self.password
+//        ]
+//        
+//        Alamofire.request(.POST, "https://redwoods-engine-test.herokuapp.com/api/user/register", parameters: parameters, encoding: .JSON)
+//            .responseJSON { response in
+//                
+//                                if let _ = response.result.error {
+//                                    print("incorrect credentials")
+//                                } else { //no errors
+//                                    let statusCode = (response.response?.statusCode)!
+//                                    print(statusCode)
+//                                }
+//                                         }
+
         
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
-        
-        Alamofire.request(.GET, "https://redwoods-engine-test.herokuapp.com/api/profile", headers: headers)
-            .responseJSON { response in
-                
-                if let _ = response.result.error {
-                    print("incorrect credentials")
-                } else { //no errors
-                    let statusCode = (response.response?.statusCode)!
-                    print(statusCode)
-                }
-               // debugPrint(response)
-               // print(response.request)  // original URL request
-                //print(response.response) // URL response
-               // print(response.data)     // server data
-               // print(response.result)   // result of response serialization
-                
-//                if let  JSON = response.result.value {
-//                    self.jsonArray = JSON as? NSMutableArray
-//                    for item in self.jsonArray! {
+//        
+//        
+//        
+//        
+//        
+//        
+//        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
+//        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+//        
+//        
+//        let headers = ["Authorization": "Basic \(base64Credentials)"
+//                        ,"Content-Type": "application/x-www-form-urlencoded"]
+//        
+//        Alamofire.request(.GET, "https://redwoods-engine-test.herokuapp.com/api/users", headers: headers)
+//            .responseJSON { response in
+//                
+//                if let _ = response.result.error {
+//                    print("incorrect credentials")
+//                } else { //no errors
+//                    print(response.result.value)
+//                    
+//                    
+//                    if let JSON = response.result.value {
+//                        self.jsonArray = JSON as? NSMutableArray
+//                        for item in self.jsonArray! {
+//                            print(item)
+//                            let string = item
+//                            print("String is \(string)")
+//                            
+//                            self.newArray.append(string as! String)
+//                        }
 //                        
-//                        print(item)
-//                        let string = item
-//                        print("String is \(string)")
-//                        self.newArray.append(string as! String)
-                   // }
-                    
-                  //  print("New array is \(self.newArray)")
-                    
-                    
-              //  }
-            }
-        
+//                        print("New array is \(self.newArray)")
+//                        
+//                      
+//                    }
+//                }
+//                         }
+
         }
 
     override func didReceiveMemoryWarning() {
