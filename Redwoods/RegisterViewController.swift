@@ -10,11 +10,12 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
 
+    
+    //Outlet variables
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-//    var jsonArray:NSMutableArray?
-//    var newArray: Array<String> = []
-    
+
+    //submit button.  on submit, performs POST to api/user/register using username and password parameters.  If result returns "username already exists", a series of alert controllers are used to have them register or re-enter their credentials.  Else, open FeedViewController.
     @IBAction func btnSubmit(sender: AnyObject) {
         
         let user = txtEmail.text as String!
@@ -23,15 +24,11 @@ class RegisterViewController: UIViewController {
             "username": user,
             "password": password
         ]
-        
+        //POST to api/user/register
         Alamofire.request(.POST, "https://redwoods-engine-test.herokuapp.com/api/user/register", parameters: parameters, encoding: .JSON)
-            
-                
                 .responseJSON { response in
-                    
-                    if let _ = response.result.error {
+                    if let _ = response.result.error {//error in response
                         print("Connection error")
-                        
                     } else { //No connection error
                        
                        //get JSON result
@@ -73,9 +70,9 @@ class RegisterViewController: UIViewController {
                                     self.presentViewController(alertController, animated: true) {
                                     }
 
-                                }//if msg as! String == "username already exists"
+                                }//if msg as! String == "username already exists" closing brace
                                 
-                                }//if let msg = response.objectForKey("msg")
+                                }//if let msg = response.objectForKey("msg") closing brace
                                 else {
                                     print("successfully registered")
                                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
