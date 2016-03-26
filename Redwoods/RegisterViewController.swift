@@ -14,6 +14,13 @@ class RegisterViewController: UIViewController {
     //Outlet variables
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        txtEmail.becomeFirstResponder()
+        
+    }
 
     //submit button.  on submit, performs POST to api/user/register using username and password parameters.  If result returns "username already exists", a series of alert controllers are used to have them register or re-enter their credentials.  Else, open FeedViewController.
     @IBAction func btnSubmit(sender: AnyObject) {
@@ -75,24 +82,17 @@ class RegisterViewController: UIViewController {
                                 }//if let msg = response.objectForKey("msg") closing brace
                                 else {
                                     print("successfully registered")
-                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
+                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Register2") as UIViewController
                                     self.presentViewController(viewController, animated: false, completion: nil)
                                 }
-                        
+                            }
                         }
-                    }
                     
+                    }
                 }
         
-        
-        
-
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

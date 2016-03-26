@@ -50,14 +50,6 @@ class TableViewController: UITableViewController {
      
     }
 
-    
-    
-    
-    
-    
-    
-
-    // MARK: - Table view data source
 
     //Number of table view sections
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -81,9 +73,6 @@ class TableViewController: UITableViewController {
         
         cell.LblBranch.text = self.objects.objectAtIndex(indexPath.row) as? String
         
-             
-        
-        
         
                let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(self.videoArray.objectAtIndex(indexPath.row) as? String, ofType:"mp4")!)
                 let player = AVPlayer(URL: url)
@@ -93,23 +82,6 @@ class TableViewController: UITableViewController {
         
                 playerViewController.view.frame = CGRectMake(1, 1, 395, 500)
                 cell.addSubview(playerViewController.view)
-
-        
-//        
-//        let url = NSURL(fileURLWithPath: self.videoArray.objectAtIndex(indexPath.row) as! String)
-//        let player = AVPlayer(URL: url)
-//        let playerViewController = AVPlayerViewController()
-//        playerViewController.player = player
-//        
-//        
-//        playerViewController.view.frame = CGRectMake(1, 1, 395, 500)
-//        cell.addSubview(playerViewController.view)
-        
-       
-        //player.play()
-
-        
-//        cell.ImgBranch.image = self.image.objectAtIndex(indexPath.row) as? UIImage
         
 
         return cell

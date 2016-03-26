@@ -17,16 +17,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtEmail.becomeFirstResponder()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
- 
     
     //Submit button
     @IBAction func btnSubmit(sender: AnyObject) {
@@ -59,7 +54,6 @@ class LoginViewController: UIViewController {
                         resetController.addTextFieldWithConfigurationHandler { (textField) in
                             textField.placeholder = "Email"
                             textField.keyboardType = .EmailAddress
-                            
                         }
                         //reset action
                         let resetAction = UIAlertAction(title: "Reset", style: .Default) { (_) in }
