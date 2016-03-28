@@ -11,7 +11,9 @@ import UIKit
 class CharitySearchTableViewCell: UITableViewCell {
     @IBOutlet weak var lblCharity: UILabel!
     @IBOutlet weak var lblCharityDescription: UILabel!
+    @IBOutlet weak var lblWebsite: UILabel!
 
+    @IBOutlet weak var txtWebsite: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

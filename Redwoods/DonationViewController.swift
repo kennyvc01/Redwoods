@@ -10,11 +10,9 @@ import UIKit
 
 class DonationViewController: UIViewController {
 
-    @IBOutlet weak var lblDonation: UILabel!
-    @IBOutlet weak var txtDonation: UITextField!
-    @IBOutlet weak var lblMaxDonation: UILabel!
-    @IBOutlet weak var txtMaxDonation: UITextField!
+   
     @IBOutlet weak var lblCharity: UILabel!
+    @IBOutlet weak var txtDonation: UITextField!
     
     var CharityLabel = ""
     
@@ -23,46 +21,17 @@ class DonationViewController: UIViewController {
         super.viewDidLoad()
         
         self.lblCharity.text = self.CharityLabel + " is an amazing organization!"
-
+        self.txtDonation.becomeFirstResponder()
         
-        
-        self.lblDonation.hidden = true
-        self.txtDonation.hidden = true
-        self.lblMaxDonation.hidden = true
-        self.txtMaxDonation.hidden = true
-    }
+          }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnMonthly(sender: AnyObject) {
-        if self.lblMaxDonation.hidden == false{
-            self.lblMaxDonation.hidden = true
-            self.txtMaxDonation.hidden = true
-        }
         
-        self.lblDonation.hidden = false
-        self.txtDonation.hidden = false
-        self.lblDonation.text = "how much would you like to donate?"
-        
-        self.txtDonation.becomeFirstResponder()
-        
-        
-    }
 
-    @IBAction func btnPercent(sender: AnyObject) {
-        self.lblDonation.hidden = false
-        self.txtDonation.hidden = false
-        self.lblMaxDonation.hidden = false
-        self.txtMaxDonation.hidden = false
-        self.lblDonation.text = "what percent do you want to donate?"
-        self.lblMaxDonation.text = "what's the maximum you want to donate per month?"
-        
-        self.txtDonation.becomeFirstResponder()
-        
-    }
     /*
     // MARK: - Navigation
 

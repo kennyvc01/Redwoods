@@ -27,10 +27,12 @@
 		D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8686C851CA369F600216488 /* RegisterViewController.swift */; };
 		D87D4DAD1CA41AD900B08AF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */; };
 		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
+		D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */; };
 		D8CD8FDB1CA63CCF00D10F14 /* Register3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDA1CA63CCF00D10F14 /* Register3ViewController.swift */; };
 		D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */; };
 		D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */; };
 		D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */; };
+		D8CD8FE71CA8A58100D10F14 /* CharityProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE61CA8A58100D10F14 /* CharityProfileViewController.swift */; };
 		D8DE60691CA2206100ECAF76 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE60681CA2206100ECAF76 /* RestApiManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,10 +82,12 @@
 		D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaurasHome.mp4; sourceTree = "<group>"; };
 		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainWrapper.swift; sourceTree = "<group>"; };
 		D8CD8FDA1CA63CCF00D10F14 /* Register3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register3ViewController.swift; sourceTree = "<group>"; };
 		D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewController.swift; sourceTree = "<group>"; };
 		D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		D8CD8FE61CA8A58100D10F14 /* CharityProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharityProfileViewController.swift; sourceTree = "<group>"; };
 		D8DE60681CA2206100ECAF76 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,7 @@
 		D80C0C011C73F71900B936BF /* Redwoods */ = {
 			isa = PBXGroup;
 			children = (
+				D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */,
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
 				D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */,
 				D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */,
@@ -179,6 +184,7 @@
 				D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */,
 				D80373641C928BAE00885C4C /* Berea.mp4 */,
 				D8DE60681CA2206100ECAF76 /* RestApiManager.swift */,
+				D8CD8FE61CA8A58100D10F14 /* CharityProfileViewController.swift */,
 			);
 			path = Redwoods;
 			sourceTree = "<group>";
@@ -390,9 +396,11 @@
 			files = (
 				D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */,
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
+				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */,
+				D8CD8FE71CA8A58100D10F14 /* CharityProfileViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,

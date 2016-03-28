@@ -32,7 +32,7 @@ class RegisterViewController: UIViewController {
             "password": password
         ]
         //POST to api/user/register
-        Alamofire.request(.POST, "https://redwoods-engine-test.herokuapp.com/api/user/register", parameters: parameters, encoding: .JSON)
+        Alamofire.request(.POST, "https://redwoods-engine-test.herokuapp.com/api/users/register", parameters: parameters, encoding: .JSON)
                 .responseJSON { response in
                     if let _ = response.result.error {//error in response
                         print("Connection error")
@@ -82,8 +82,12 @@ class RegisterViewController: UIViewController {
                                 }//if let msg = response.objectForKey("msg") closing brace
                                 else {
                                     print("successfully registered")
-                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Register2") as UIViewController
+                                    KeychainWrapper.setString(self.txtEmail.text!, forKey: "username")
+                                    KeychainWrapper.setString(self.txtPassword.text!, forKey: "password")
+                                
+                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Register3") as UIViewController
                                     self.presentViewController(viewController, animated: false, completion: nil)
+                                
                                 }
                             }
                         }

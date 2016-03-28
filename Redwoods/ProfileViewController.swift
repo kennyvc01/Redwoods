@@ -11,6 +11,8 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBAction func btnLogout(sender: AnyObject) {
+        KeychainWrapper.removeObjectForKey("username")
+        KeychainWrapper.removeObjectForKey("password")
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController
         self.presentViewController(viewController, animated: true, completion: nil)
     }

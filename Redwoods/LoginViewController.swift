@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         txtEmail.becomeFirstResponder()
     }
@@ -75,6 +77,10 @@ class LoginViewController: UIViewController {
                     
                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
                     self.presentViewController(viewController, animated: false, completion: nil)
+                    
+                    KeychainWrapper.setString(self.txtEmail.text!, forKey: "username")
+                    KeychainWrapper.setString(self.txtPassword.text!, forKey: "password")
+                    
                 }
                
         }
