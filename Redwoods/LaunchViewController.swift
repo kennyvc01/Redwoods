@@ -14,17 +14,11 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
     var pageViewController:  UIPageViewController!
     let pages = ["LaunchViewControllerOne","LaunchViewControllerTwo","LaunchViewControllerThree"]
     
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
 
-        
         if (KeychainWrapper.stringForKey("username") != nil){
             let user: String = KeychainWrapper.stringForKey("username")!
             let password: String = KeychainWrapper.stringForKey("password")!

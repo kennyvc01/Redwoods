@@ -36,6 +36,7 @@ class RegisterViewController: UIViewController {
                 .responseJSON { response in
                     if let _ = response.result.error {//error in response
                         print("Connection error")
+                        print(response)
                     } else { //No connection error
                        
                        //get JSON result

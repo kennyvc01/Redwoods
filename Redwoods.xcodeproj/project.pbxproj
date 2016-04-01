@@ -23,8 +23,13 @@
 		D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */; };
 		D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */; };
 		D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */; };
+		D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */; };
+		D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */; };
 		D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */; };
 		D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8686C851CA369F600216488 /* RegisterViewController.swift */; };
+		D87B6C1E1CAB41DC00CB2A3C /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B6C1D1CAB41DC00CB2A3C /* Test2.swift */; };
+		D87B6C201CAB5D5700CB2A3C /* TestTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */; };
+		D87B6C221CAB5D6C00CB2A3C /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */; };
 		D87D4DAD1CA41AD900B08AF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */; };
 		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
 		D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */; };
@@ -32,8 +37,6 @@
 		D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */; };
 		D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */; };
 		D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */; };
-		D8CD8FE71CA8A58100D10F14 /* CharityProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE61CA8A58100D10F14 /* CharityProfileViewController.swift */; };
-		D8DE60691CA2206100ECAF76 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE60681CA2206100ECAF76 /* RestApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +80,13 @@
 		D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewController.swift; sourceTree = "<group>"; };
+		D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8686C851CA369F600216488 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D87B6C1D1CAB41DC00CB2A3C /* Test2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2.swift; sourceTree = "<group>"; };
+		D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableView.swift; sourceTree = "<group>"; };
+		D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaurasHome.mp4; sourceTree = "<group>"; };
 		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -87,8 +95,6 @@
 		D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewController.swift; sourceTree = "<group>"; };
 		D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
-		D8CD8FE61CA8A58100D10F14 /* CharityProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharityProfileViewController.swift; sourceTree = "<group>"; };
-		D8DE60681CA2206100ECAF76 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,30 +167,17 @@
 		D80C0C011C73F71900B936BF /* Redwoods */ = {
 			isa = PBXGroup;
 			children = (
-				D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */,
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
-				D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */,
-				D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */,
-				D8686C851CA369F600216488 /* RegisterViewController.swift */,
-				D8CD8FDA1CA63CCF00D10F14 /* Register3ViewController.swift */,
-				D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */,
-				D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */,
-				D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */,
-				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
-				D80C0C321C74002800B936BF /* TableViewCell.swift */,
-				D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */,
-				D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */,
-				D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */,
-				D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */,
+				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
+				D831E93E1CAE140700669CC5 /* VideoFeed */,
+				D831E93F1CAE143700669CC5 /* CharitySearch */,
+				D831E9401CAE147600669CC5 /* Profile */,
 				D80C0C061C73F71900B936BF /* Main.storyboard */,
 				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
 				D80C0C0E1C73F71900B936BF /* Info.plist */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
 				D80C0C341C74107C00B936BF /* Images.xcassets */,
-				D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */,
-				D80373641C928BAE00885C4C /* Berea.mp4 */,
-				D8DE60681CA2206100ECAF76 /* RestApiManager.swift */,
-				D8CD8FE61CA8A58100D10F14 /* CharityProfileViewController.swift */,
+				D87B6C1D1CAB41DC00CB2A3C /* Test2.swift */,
 			);
 			path = Redwoods;
 			sourceTree = "<group>";
@@ -206,6 +199,54 @@
 				D80C0C241C73F71900B936BF /* Info.plist */,
 			);
 			path = RedwoodsUITests;
+			sourceTree = "<group>";
+		};
+		D831E93D1CAE13D600669CC5 /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */,
+				D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */,
+				D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */,
+				D8686C851CA369F600216488 /* RegisterViewController.swift */,
+				D8CD8FDA1CA63CCF00D10F14 /* Register3ViewController.swift */,
+			);
+			name = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		D831E93E1CAE140700669CC5 /* VideoFeed */ = {
+			isa = PBXGroup;
+			children = (
+				D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */,
+				D80373641C928BAE00885C4C /* Berea.mp4 */,
+				D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */,
+				D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */,
+				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
+				D80C0C321C74002800B936BF /* TableViewCell.swift */,
+			);
+			name = VideoFeed;
+			sourceTree = "<group>";
+		};
+		D831E93F1CAE143700669CC5 /* CharitySearch */ = {
+			isa = PBXGroup;
+			children = (
+				D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */,
+				D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */,
+				D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */,
+			);
+			name = CharitySearch;
+			sourceTree = "<group>";
+		};
+		D831E9401CAE147600669CC5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */,
+				D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */,
+				D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */,
+				D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */,
+				D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */,
+				D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,23 +435,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */,
 				D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */,
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */,
-				D8CD8FE71CA8A58100D10F14 /* CharityProfileViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
 				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
 				D87D4DAD1CA41AD900B08AF9 /* ProfileViewController.swift in Sources */,
+				D87B6C221CAB5D6C00CB2A3C /* TestTableViewCell.swift in Sources */,
+				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
+				D87B6C1E1CAB41DC00CB2A3C /* Test2.swift in Sources */,
+				D87B6C201CAB5D5700CB2A3C /* TestTableView.swift in Sources */,
 				D8CD8FDB1CA63CCF00D10F14 /* Register3ViewController.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
 				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,
-				D8DE60691CA2206100ECAF76 /* RestApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-//import Haneke
 
 class CharitySearchTableViewController: UITableViewController {
 
@@ -39,7 +38,7 @@ class CharitySearchTableViewController: UITableViewController {
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         
-        //GET Method for api/profile.  If successful, open FeedViewController.  If unsuccessful, alert to reset password.
+        //GET Method for api/orgs
         Alamofire.request(.GET, "https://redwoods-engine-test.herokuapp.com/api/orgs", headers: headers)
             .response { (request, response, json, error) in
                 
@@ -108,6 +107,7 @@ class CharitySearchTableViewController: UITableViewController {
             let data = objects[indexPath.row]
             
             dvc.CharityLabel = data["name"].string!
+            dvc.orgId = data["_id"].string!
 
         }
     }

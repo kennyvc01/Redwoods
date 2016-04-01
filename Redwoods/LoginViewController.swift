@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
                 
                 if let _ = response.result.error {
                     print("incorrect credentials")
+                    print(response.result.error)
                     
                     //Alert if user enters invalid username or password.  Two buttons on the alert:  Ok and Reset Account
                     let alertController = UIAlertController(title: "Invalid Credentials", message: "You've entered an invalid username/password combination.", preferredStyle: .Alert)
