@@ -442,7 +442,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="770"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Mu-uZ-EO8" id="t8m-BX-0f3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="769.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNI-Lo-jxt">

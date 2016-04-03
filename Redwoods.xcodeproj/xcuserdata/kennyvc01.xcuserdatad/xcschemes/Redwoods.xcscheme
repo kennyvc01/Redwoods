@@ -20,6 +20,34 @@
                ReferencedContainer = "container:Redwoods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D80C0C121C73F71900B936BF"
+               BuildableName = "RedwoodsTests.xctest"
+               BlueprintName = "RedwoodsTests"
+               ReferencedContainer = "container:Redwoods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D80C0C1D1C73F71900B936BF"
+               BuildableName = "RedwoodsUITests.xctest"
+               BlueprintName = "RedwoodsUITests"
+               ReferencedContainer = "container:Redwoods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,26 +56,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D80C0C121C73F71900B936BF"
-               BuildableName = "RedwoodsTests.xctest"
-               BlueprintName = "RedwoodsTests"
-               ReferencedContainer = "container:Redwoods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D80C0C1D1C73F71900B936BF"
-               BuildableName = "RedwoodsUITests.xctest"
-               BlueprintName = "RedwoodsUITests"
-               ReferencedContainer = "container:Redwoods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
