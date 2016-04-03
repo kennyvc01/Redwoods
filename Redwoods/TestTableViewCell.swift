@@ -19,10 +19,14 @@ class TestTableViewCell: UITableViewCell {
     
     @IBOutlet weak var movieView:UIView!
     
+    @IBOutlet weak var lblCharity: UILabel!
+    @IBOutlet weak var lblAmount: UILabel!
     
     
     var moviePlayer:MPMoviePlayerController!
     var videoURL:NSURL!
+    
+    var completelyVisible: Bool = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +46,8 @@ class TestTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    
     
     
     

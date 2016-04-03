@@ -18,8 +18,8 @@ class PortfolioTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //Navbar Format
-//        UINavigationBar.appearance().barTintColor = UIColor(red: 55.0/255.0, green: 55.0/255.0, blue: 55.0/255.0, alpha: 1.0);
-//        self.navigationController!.navigationBar.tintColor = UIColor(red: 76.0/255.0, green: 288.0/255.0, blue: 144.0/255.0, alpha: 1.0);
+        //UINavigationBar.appearance().barTintColor = UIColor(red: 55.0/255.0, green: 55.0/255.0, blue: 55.0/255.0, alpha: 1.0);
+        //self.navigationController!.navigationBar.tintColor = UIColor(red: 76.0/255.0, green: 288.0/255.0, blue: 144.0/255.0, alpha: 1.0);
         
     }
     
@@ -51,16 +51,19 @@ class PortfolioTableViewController: UITableViewController {
     func parseJSON(json: JSON) {
         //loop through json results
         for result in json["portfolio"].arrayValue {
-            let org = result["org"].stringValue
+            let org = result["org"]["name"].stringValue
+            let orgId = result["org"]["_id"].stringValue
             let amount  = result["amount"].stringValue
             let paymentDate = result["payment_date"].stringValue
-            //print(storyLink)
-            let obj = ["org": org, "amount": amount, "paymentDate": paymentDate]
+            print(json["portfolio"])
+            let obj = ["org": org, "orgId": orgId,"amount": amount, "paymentDate": paymentDate]
             objects.append(obj)
 
         }
         tableView.reloadData()
     }
+    
+
     
     
     override func didReceiveMemoryWarning() {
@@ -90,10 +93,28 @@ class PortfolioTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PortfolioTableViewCell
         
         cell.lblCharityName.text = self.objects[indexPath.row]["org"]! as String
-        cell .lblDonationAmount.text = self.objects[indexPath.row]["amount"]! as String
-        cell .lblDonationDay.text = self.objects[indexPath.row]["paymentDate"]! as String
+        cell .lblDonationAmount.text = "Monthly Donation Amount: $" + self.objects[indexPath.row]["amount"]! as String
+        cell .lblDonationDay.text = "Collection Day: " + self.objects[indexPath.row]["paymentDate"]! as String
         
+        
+
         return cell
+    }
+    
+    //Prepare for segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Segue" {
+            
+            let evc = segue.destinationViewController as! EditDonationViewController
+            
+            let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
+            let data = objects[indexPath.row]
+            
+            evc.CharityLabel = data["org"]!
+            evc.orgId = data["orgId"]!
+            evc.amount = data["amount"]!
+            evc.paymentDate = data["paymentDate"]!
+        }
     }
 
     

@@ -1,29 +1,27 @@
 //
-//  PortfolioTableViewCell.swift
+//  Test2TableViewCell.swift
 //  Redwoods
 //
-//  Created by Ken Churchill on 3/31/16.
+//  Created by Ken Churchill on 4/1/16.
 //  Copyright © 2016 Ken Churchill. All rights reserved.
 //
 
 import UIKit
 
-class PortfolioTableViewCell: UITableViewCell {
+class Test2TableViewCell: UITableViewCell {
     @IBOutlet weak var lblCharityName: UILabel!
-    @IBOutlet weak var lblDonationAmount: UILabel!
-    @IBOutlet weak var lblDonationDay: UILabel!
-    @IBOutlet weak var btnDelete: UIButton!
-    
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblDonor: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
-
 
 }
