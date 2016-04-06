@@ -19,22 +19,19 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var lblAmount: UILabel!
 
     
-    var moviePlayer:MPMoviePlayerController!
-    var videoURL:NSURL!
     
-    var completelyVisible: Bool = true
+    
+    var completelyVisible: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
+        
     }
     
     override func layoutSubviews() {
         //layout movieplayer
-        moviePlayer.view.frame = movieView.bounds
-        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
-        movieView.addSubview(moviePlayer.view)
+        
     }
 
 

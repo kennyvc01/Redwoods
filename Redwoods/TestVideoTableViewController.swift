@@ -1,8 +1,8 @@
 //
-//  TableViewController.swift
+//  TestVideoTableViewController.swift
 //  Redwoods
 //
-//  Created by Ken Churchill on 2/16/16.
+//  Created by Ken Churchill on 4/4/16.
 //  Copyright © 2016 Ken Churchill. All rights reserved.
 //
 
@@ -14,27 +14,17 @@ import AVFoundation
 import MediaPlayer
 
 
-class TableViewController: UITableViewController {
+
+class TestVideoTableViewController: UITableViewController {
     
     var objects = [[String: String]]()
- 
-    var moviePlayer:MPMoviePlayerController!
-    var videoURL:NSURL!
-
-
-
+    var moviePlayer = MPMoviePlayerController()
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Navbar Format
-        
-        UINavigationBar.appearance().barTintColor = UIColor(red: 55.0/255.0, green: 55.0/255.0, blue: 55.0/255.0, alpha: 1.0);
-        self.navigationController!.navigationBar.tintColor = UIColor(red: 76.0/255.0, green: 288.0/255.0, blue: 144.0/255.0, alpha: 1.0);
-        
-    }
-    
-    
-    override func viewDidAppear(animated: Bool) {
         self.objects.removeAll()
         //set username and password = key chain
         let user: String = KeychainWrapper.stringForKey("username")!
@@ -54,7 +44,15 @@ class TableViewController: UITableViewController {
                     self.parseJSON(json)
                 }
         }
+
+
         
+        
+        
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
         
     }
     
@@ -83,100 +81,48 @@ class TableViewController: UITableViewController {
         
     }
     
-    
-    //Number of table view sections
+
+    // MARK: - Table view data source
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
-    
-    //Number of table view rows
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.objects.count
     }
-    
-    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 
-
-                moviePlayer.stop()
-                self.tableView.reloadData()
-
-        
-    }
-    
-   override func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-    
-    }
-    
     
     //populate each cell based on index path of array
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TestVideoTableViewCell
         
-        cell.lblCharity.text = self.objects[indexPath.row]["org"]! as String
-        cell .lblAmount.text = "Your " + self.objects[indexPath.row]["amount"]! as String + " dollars a month is doing this!"
+        
+       
         
         
         let url:NSURL = NSURL(string: self.objects[indexPath.row]["storyLink"]!)!
         
-        
-        
-        
-        var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
-        cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
+        moviePlayer.stop()
+        moviePlayer = MPMoviePlayerController(contentURL: url)
+        moviePlayer.controlStyle = MPMovieControlStyle.None
+        moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
+        moviePlayer.movieSourceType = MPMovieSourceType.File
+        moviePlayer.repeatMode = MPMovieRepeatMode.One
+        moviePlayer.initialPlaybackTime = -1.0
+        moviePlayer.view.frame = cell.vwVideo.bounds
 
+        //moviePlayer.view.center = CGPointMake(CGRectGetMidX(cell.vwVideo.bounds), CGRectGetMidY(cell.vwVideo.bounds))
+        cell.vwVideo.addSubview(moviePlayer.view)
+       // moviePlayer.prepareToPlay()
+        moviePlayer.play()
         
-        if self.tableView.frame.contains(cellRect) {
-            
-                moviePlayer = MPMoviePlayerController(contentURL: url)
-                moviePlayer.controlStyle = MPMovieControlStyle.None
-                moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
-                moviePlayer.movieSourceType = MPMovieSourceType.File
-                moviePlayer.repeatMode = MPMovieRepeatMode.One
-                moviePlayer.initialPlaybackTime = -1.0
-                moviePlayer.view.frame = cell.movieView.bounds
-                moviePlayer.view.center = CGPointMake(CGRectGetMidX(cell.movieView.bounds), CGRectGetMidY(cell.movieView.bounds))
-                cell.movieView.addSubview(moviePlayer.view)
-                //moviePlayer.prepareToPlay()
-                moviePlayer.play()
-            
-         //   cell.movieView.backgroundColor = UIColor.redColor()
-            
-        }else{
 
-
-            
-           // cell.movieView.backgroundColor = UIColor.whiteColor()
-        }
-        
-        
         
         
         return cell
     }
-
-
     
-    //Prepare for segue
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! TableViewCell
-        
-
-        moviePlayer.stop()
-    }
-    
-
-    
-    
- 
-    
-    
-
-
-
-
 }

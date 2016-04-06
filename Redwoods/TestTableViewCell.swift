@@ -26,7 +26,7 @@ class TestTableViewCell: UITableViewCell {
     var moviePlayer:MPMoviePlayerController!
     var videoURL:NSURL!
     
-    var completelyVisible: Bool = true
+    var completelyVisible: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
