@@ -29,16 +29,17 @@
 		D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8686C851CA369F600216488 /* RegisterViewController.swift */; };
 		D87B6C201CAB5D5700CB2A3C /* TestTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */; };
 		D87B6C221CAB5D6C00CB2A3C /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */; };
-		D87D4DAD1CA41AD900B08AF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */; };
 		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
 		D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */; };
 		D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */; };
 		D8A778581CB316ED0039C41E /* TestVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A778571CB316ED0039C41E /* TestVideoTableViewController.swift */; };
 		D8A7785A1CB317050039C41E /* TestVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A778591CB317050039C41E /* TestVideoTableViewCell.swift */; };
-		D8CD8FDB1CA63CCF00D10F14 /* Register3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDA1CA63CCF00D10F14 /* Register3ViewController.swift */; };
+		D8ACFD071CBAD21900774766 /* OldStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ACFD061CBAD21900774766 /* OldStoryboard.storyboard */; };
 		D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */; };
 		D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */; };
 		D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */; };
+		D8CF34051CB886F400250633 /* redwoodslogovariationsimple7.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CF34041CB886F400250633 /* redwoodslogovariationsimple7.png */; };
+		D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8A3101CBB2A8A00CA9443 /* ProfileTableViewController.swift */; };
 		D8DE63351CB484B80033E4AB /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE63341CB484B80033E4AB /* NewTableViewController.swift */; };
 		D8DE63371CB485310033E4AB /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE63361CB485310033E4AB /* NewTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -90,17 +91,36 @@
 		D8686C851CA369F600216488 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableView.swift; sourceTree = "<group>"; };
 		D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
-		D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaurasHome.mp4; sourceTree = "<group>"; };
 		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainWrapper.swift; sourceTree = "<group>"; };
 		D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDonationViewController.swift; sourceTree = "<group>"; };
 		D8A778571CB316ED0039C41E /* TestVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVideoTableViewController.swift; sourceTree = "<group>"; };
 		D8A778591CB317050039C41E /* TestVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVideoTableViewCell.swift; sourceTree = "<group>"; };
-		D8CD8FDA1CA63CCF00D10F14 /* Register3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register3ViewController.swift; sourceTree = "<group>"; };
+		D8ACFD061CBAD21900774766 /* OldStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OldStoryboard.storyboard; sourceTree = "<group>"; };
 		D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewController.swift; sourceTree = "<group>"; };
 		D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		D8CF33F21CB8853B00250633 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Black.ttf"; sourceTree = "<group>"; };
+		D8CF33F31CB8853B00250633 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlackItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		D8CF33F41CB8853B00250633 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		D8CF33F51CB8853B00250633 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BoldItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D8CF33F61CB8853B00250633 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hairline.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		D8CF33F71CB8853B00250633 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HairlineItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		D8CF33F81CB8853B00250633 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Heavy.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		D8CF33F91CB8853B00250633 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HeavyItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		D8CF33FA1CB8853B00250633 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		D8CF33FB1CB8853B00250633 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Light.ttf"; sourceTree = "<group>"; };
+		D8CF33FC1CB8853B00250633 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		D8CF33FD1CB8853B00250633 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Medium.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		D8CF33FE1CB8853B00250633 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-MediumItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		D8CF33FF1CB8853B00250633 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		D8CF34001CB8853B00250633 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Semibold.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		D8CF34011CB8853B00250633 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-SemiboldItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		D8CF34021CB8853B00250633 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		D8CF34031CB8853B00250633 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		D8CF34041CB886F400250633 /* redwoodslogovariationsimple7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redwoodslogovariationsimple7.png; path = ../../../Downloads/redwoodslogovariationsimple7.png; sourceTree = "<group>"; };
+		D8D8A3101CBB2A8A00CA9443 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		D8DE63341CB484B80033E4AB /* NewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTableViewController.swift; sourceTree = "<group>"; };
 		D8DE63361CB485310033E4AB /* NewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,15 +195,18 @@
 		D80C0C011C73F71900B936BF /* Redwoods */ = {
 			isa = PBXGroup;
 			children = (
+				D8CF33F11CB884C300250633 /* Resources */,
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
 				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
 				D831E93E1CAE140700669CC5 /* VideoFeed */,
 				D831E93F1CAE143700669CC5 /* CharitySearch */,
 				D831E9401CAE147600669CC5 /* Profile */,
 				D80C0C061C73F71900B936BF /* Main.storyboard */,
+				D8ACFD061CBAD21900774766 /* OldStoryboard.storyboard */,
 				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
 				D80C0C0E1C73F71900B936BF /* Info.plist */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
+				D8CF34041CB886F400250633 /* redwoodslogovariationsimple7.png */,
 				D80C0C341C74107C00B936BF /* Images.xcassets */,
 				D8A778571CB316ED0039C41E /* TestVideoTableViewController.swift */,
 				D8A778591CB317050039C41E /* TestVideoTableViewCell.swift */,
@@ -219,7 +242,6 @@
 				D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */,
 				D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */,
 				D8686C851CA369F600216488 /* RegisterViewController.swift */,
-				D8CD8FDA1CA63CCF00D10F14 /* Register3ViewController.swift */,
 			);
 			name = LoginAndRegister;
 			sourceTree = "<group>";
@@ -252,13 +274,38 @@
 			children = (
 				D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */,
 				D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */,
-				D87D4DAC1CA41AD900B08AF9 /* ProfileViewController.swift */,
+				D8D8A3101CBB2A8A00CA9443 /* ProfileTableViewController.swift */,
 				D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */,
 				D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */,
 				D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */,
 				D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		D8CF33F11CB884C300250633 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8CF33F21CB8853B00250633 /* Lato-Black.ttf */,
+				D8CF33F31CB8853B00250633 /* Lato-BlackItalic.ttf */,
+				D8CF33F41CB8853B00250633 /* Lato-Bold.ttf */,
+				D8CF33F51CB8853B00250633 /* Lato-BoldItalic.ttf */,
+				D8CF33F61CB8853B00250633 /* Lato-Hairline.ttf */,
+				D8CF33F71CB8853B00250633 /* Lato-HairlineItalic.ttf */,
+				D8CF33F81CB8853B00250633 /* Lato-Heavy.ttf */,
+				D8CF33F91CB8853B00250633 /* Lato-HeavyItalic.ttf */,
+				D8CF33FA1CB8853B00250633 /* Lato-Italic.ttf */,
+				D8CF33FB1CB8853B00250633 /* Lato-Light.ttf */,
+				D8CF33FC1CB8853B00250633 /* Lato-LightItalic.ttf */,
+				D8CF33FD1CB8853B00250633 /* Lato-Medium.ttf */,
+				D8CF33FE1CB8853B00250633 /* Lato-MediumItalic.ttf */,
+				D8CF33FF1CB8853B00250633 /* Lato-Regular.ttf */,
+				D8CF34001CB8853B00250633 /* Lato-Semibold.ttf */,
+				D8CF34011CB8853B00250633 /* Lato-SemiboldItalic.ttf */,
+				D8CF34021CB8853B00250633 /* Lato-Thin.ttf */,
+				D8CF34031CB8853B00250633 /* Lato-ThinItalic.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,12 +416,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CF34051CB886F400250633 /* redwoodslogovariationsimple7.png in Resources */,
 				D80373651C93B61F00885C4C /* LaurasHome.mp4 in Resources */,
 				D80373661C93B61F00885C4C /* Berea.mp4 in Resources */,
 				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
 				D80C0C351C74107C00B936BF /* Images.xcassets in Resources */,
 				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
 				D80C0C081C73F71900B936BF /* Main.storyboard in Resources */,
+				D8ACFD071CBAD21900774766 /* OldStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +502,7 @@
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
 				D8A778581CB316ED0039C41E /* TestVideoTableViewController.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
+				D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */,
 				D8DE63371CB485310033E4AB /* NewTableViewCell.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D8DE63351CB484B80033E4AB /* NewTableViewController.swift in Sources */,
@@ -462,11 +512,9 @@
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
 				D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */,
 				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
-				D87D4DAD1CA41AD900B08AF9 /* ProfileViewController.swift in Sources */,
 				D87B6C221CAB5D6C00CB2A3C /* TestTableViewCell.swift in Sources */,
 				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
 				D87B6C201CAB5D5700CB2A3C /* TestTableView.swift in Sources */,
-				D8CD8FDB1CA63CCF00D10F14 /* Register3ViewController.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8A7785A1CB317050039C41E /* TestVideoTableViewCell.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,

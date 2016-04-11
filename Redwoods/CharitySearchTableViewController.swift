@@ -18,14 +18,12 @@ class CharitySearchTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 55.0/255.0, green: 55.0/255.0, blue: 55.0/255.0, alpha: 1.0);
-        self.navigationController!.navigationBar.tintColor = UIColor(red: 76.0/255.0, green: 288.0/255.0, blue: 144.0/255.0, alpha: 1.0);
-        
+                
     }
     
     
     override func viewDidAppear(animated: Bool) {
-        
+
         
         self.feedObjects.removeAll()
         self.browseOrgobjects.removeAll()
@@ -124,7 +122,7 @@ class CharitySearchTableViewController: UITableViewController {
         if self.feedObjects.contains(dataOrgId!){
             cell.lblDonor.text = "I'm donating"
         }else{
-            cell.lblDonor.hidden = true
+            cell.lblDonor.text = ""
         }
         
         cell.lblCharity.text = data["name"]
@@ -138,13 +136,18 @@ class CharitySearchTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Segue" {
             
+            
+            
             let dvc = segue.destinationViewController as! DonationViewController
             
             let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
             let data = browseOrgobjects[indexPath.row]
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! CharitySearchTableViewCell!;
             
             dvc.CharityLabel = data["name"]!
             dvc.orgId = data["orgId"]!
+            dvc.donation = cell.lblDonor.text!
+            
 
         }
     }

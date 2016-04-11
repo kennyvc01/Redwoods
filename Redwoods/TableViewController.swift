@@ -25,11 +25,15 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        //Navbar Format
+        // Do any additional setup after loading the view.
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 138, height: 138))
+        imageView.contentMode = .ScaleAspectFit
+        let image = UIImage(named: "RedwoodsMasterLogoWhite")
+        imageView.image = image
+        navigationItem.titleView = imageView
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 55.0/255.0, green: 55.0/255.0, blue: 55.0/255.0, alpha: 1.0);
-        self.navigationController!.navigationBar.tintColor = UIColor(red: 76.0/255.0, green: 288.0/255.0, blue: 144.0/255.0, alpha: 1.0);
         
     }
     
@@ -98,17 +102,14 @@ class TableViewController: UITableViewController {
     }
     
     override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-
-
-                moviePlayer.stop()
-                self.tableView.reloadData()
-
-        
+        moviePlayer.stop()
+        self.tableView.reloadData()
     }
     
    override func scrollViewDidScroll(scrollView: UIScrollView) {
         
     
+
     }
     
     
@@ -131,7 +132,7 @@ class TableViewController: UITableViewController {
 
         
         if self.tableView.frame.contains(cellRect) {
-            
+        
                 moviePlayer = MPMoviePlayerController(contentURL: url)
                 moviePlayer.controlStyle = MPMovieControlStyle.None
                 moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
@@ -141,18 +142,15 @@ class TableViewController: UITableViewController {
                 moviePlayer.view.frame = cell.movieView.bounds
                 moviePlayer.view.center = CGPointMake(CGRectGetMidX(cell.movieView.bounds), CGRectGetMidY(cell.movieView.bounds))
                 cell.movieView.addSubview(moviePlayer.view)
-                //moviePlayer.prepareToPlay()
+                moviePlayer.prepareToPlay()
                 moviePlayer.play()
             
-         //   cell.movieView.backgroundColor = UIColor.redColor()
+            
             
         }else{
 
-
-            
-           // cell.movieView.backgroundColor = UIColor.whiteColor()
         }
-        
+    
         
         
         
@@ -166,17 +164,12 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! TableViewCell
         
 
-        moviePlayer.stop()
+        
+        if self.objects.count > 1{
+            moviePlayer.stop()
+        }
+        
     }
-    
-
-    
-    
- 
-    
-    
-
-
 
 
 }

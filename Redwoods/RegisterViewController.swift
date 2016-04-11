@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
     //Outlet variables
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtZipCode: UITextField!
     
     
     override func viewDidLoad() {
@@ -86,8 +87,14 @@ class RegisterViewController: UIViewController {
                                     KeychainWrapper.setString(self.txtEmail.text!, forKey: "username")
                                     KeychainWrapper.setString(self.txtPassword.text!, forKey: "password")
                                 
-                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Register3") as UIViewController
-                                    self.presentViewController(viewController, animated: false, completion: nil)
+//                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CharitySearch") as UIViewController
+//                                    self.presentViewController(viewController, animated: false, completion: nil)
+                                
+                                self.performSegueWithIdentifier("Segue", sender: sender)
+                                
+                                
+                                
+                                
                                 
                                 }
                             }
@@ -105,10 +112,13 @@ class RegisterViewController: UIViewController {
     }
     
     //Exit button
-    @IBAction func btnExit(sender: AnyObject) {
-        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController
-        self.presentViewController(viewController, animated: true, completion: nil)
-    }
+    
+    
+    //Can be deleted...old format
+//    @IBAction func btnExit(sender: AnyObject) {
+//        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController
+//        self.presentViewController(viewController, animated: true, completion: nil)
+//    }
     
 
 }

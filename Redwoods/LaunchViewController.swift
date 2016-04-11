@@ -56,9 +56,9 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
                         let statusCode = (response.response?.statusCode)!
                         print(statusCode)
                         
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
-                        self.presentViewController(viewController, animated: false, completion: nil)
-                        
+//                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
+//                        self.presentViewController(viewController, animated: false, completion: nil)
+                        self.performSegueWithIdentifier("Segue", sender: self)
                         
                         
                     }

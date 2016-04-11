@@ -76,8 +76,10 @@ class LoginViewController: UIViewController {
                     let statusCode = (response.response?.statusCode)!
                     print(statusCode)
                     
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
-                    self.presentViewController(viewController, animated: false, completion: nil)
+//                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
+//                    self.presentViewController(viewController, animated: false, completion: nil)
+                    
+                    self.performSegueWithIdentifier("Segue", sender: sender)
                     
                     KeychainWrapper.setString(self.txtEmail.text!, forKey: "username")
                     KeychainWrapper.setString(self.txtPassword.text!, forKey: "password")
@@ -88,7 +90,26 @@ class LoginViewController: UIViewController {
         
     }
 
+    @IBAction func btnReset(sender: AnyObject) {
         
+        
+            let resetController = UIAlertController(title: "Account Reset", message: "Enter your Email to reset your account.", preferredStyle: .Alert)
+            //reset text field for email address
+            resetController.addTextFieldWithConfigurationHandler { (textField) in
+                textField.placeholder = "Email"
+                textField.keyboardType = .EmailAddress
+            }
+            //reset action
+            let resetAction = UIAlertAction(title: "Reset", style: .Default) { (_) in }
+            resetController.addAction(resetAction)
+            //cancel action
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+            resetController.addAction(cancelAction)
+            //preset reset view controller
+            self.presentViewController(resetController, animated: true, completion: nil)
+       
+    }
+    
     //Exit button
     @IBAction func btnExit(sender: AnyObject) {
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController

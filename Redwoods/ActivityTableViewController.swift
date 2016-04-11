@@ -75,19 +75,9 @@ class ActivityTableViewController: UITableViewController {
                 let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
                 
                 svc.TransactionLabel1 = self.ActivityObjects1[indexPath.row] as! String
-                svc.TransactionLabel2 = self.ActivityObjects2[indexPath.row] as! String
+                svc.TransactionLabel2 = "Donated $" + (self.ActivityObjects2[indexPath.row] as! String) 
                 svc.TransactionLabel3 = self.ActivityObjects3[indexPath.row] as! String
             }
-        }
-    
-    
-    //Execute segue
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        _ = tableView.indexPathForSelectedRow!
-        if let _ = tableView.cellForRowAtIndexPath(indexPath) {
-            self.performSegueWithIdentifier("TransactionSegue", sender: self)
-        }
-        
     }
     
 
