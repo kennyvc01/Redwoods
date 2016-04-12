@@ -17,9 +17,6 @@ class PortfolioTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Navbar Format
-        //UINavigationBar.appearance().barTintColor = UIColor(red: 55.0/255.0, green: 55.0/255.0, blue: 55.0/255.0, alpha: 1.0);
-        //self.navigationController!.navigationBar.tintColor = UIColor(red: 76.0/255.0, green: 288.0/255.0, blue: 144.0/255.0, alpha: 1.0);
         
     }
     

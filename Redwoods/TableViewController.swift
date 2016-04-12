@@ -21,8 +21,7 @@ class TableViewController: UITableViewController {
     var moviePlayer:MPMoviePlayerController!
     var videoURL:NSURL!
 
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +38,7 @@ class TableViewController: UITableViewController {
     
     
     override func viewDidAppear(animated: Bool) {
+        
         self.objects.removeAll()
         //set username and password = key chain
         let user: String = KeychainWrapper.stringForKey("username")!
@@ -80,6 +80,7 @@ class TableViewController: UITableViewController {
         }
         tableView.reloadData()
     }
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -162,8 +163,6 @@ class TableViewController: UITableViewController {
     //Prepare for segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! TableViewCell
-        
-
         
         if self.objects.count > 1{
             moviePlayer.stop()

@@ -10,10 +10,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class EditDonationViewController: UIViewController {
+class EditDonationViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var lblCharity: UILabel!
-    @IBOutlet weak var txtAmount: UITextField!
+    @IBOutlet weak var pkPicker: UIPickerView!
     
     var CharityLabel = ""
     var orgId = ""
@@ -21,11 +21,17 @@ class EditDonationViewController: UIViewController {
     var paymentDate = ""
     
     
+    var PickerAmount = ["5","10","15","20","25","30","35","40","45","50","75","100","150","200","250","300","350","400","500","750","1000"]
+    var selectedAmount = "25"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.lblCharity.text = self.CharityLabel + " is an amazing organization!"
-        self.txtAmount.becomeFirstResponder()
+        pkPicker.selectRow(4, inComponent: 0, animated: true)
+        
+        self.lblCharity.text = self.CharityLabel
+        
         
     }
     
@@ -36,10 +42,10 @@ class EditDonationViewController: UIViewController {
         dateFormatter.dateFormat = "dd"
         let todayString:String = dateFormatter.stringFromDate(todaysDate)
         
-        if Int(self.txtAmount.text!) != nil {
+       
             //Added [ String : AnyObject] to handle int type
             let parameters : [ String : AnyObject] =  [
-                "amount": Int(self.txtAmount.text!)!,
+                "amount": Int(self.selectedAmount)!,
                 "payment_date": Int(todayString)!
             ]
             let user: String = KeychainWrapper.stringForKey("username")!
@@ -55,29 +61,17 @@ class EditDonationViewController: UIViewController {
             Alamofire.request(.PUT, "https://redwoods-engine-test.herokuapp.com/api/profiles/portfolio/" + orgId, headers: headers, parameters: parameters)
                 .response { (request, response, json, error) in
                     
+                    if error != nil {
+                        self.performSegueWithIdentifier("UpdateSegue", sender: sender)
+                    }
                     
                     //store json result in objects array
                     if json != nil {
                         let jsonObj = JSON(data: json!)
                         print(jsonObj)
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
-                        self.presentViewController(viewController, animated: false, completion: nil)
                     }
             }
-            
-
-        }
-        else {
-            //Alert if amount is nil
-            let alertController = UIAlertController(title: "Invalid Amount", message: "Please enter an amount to continue.", preferredStyle: .Alert)
-            //Ok button on alert
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            }
-            alertController.addAction(OKAction)
-            self.presentViewController(alertController, animated: true) {
-            }
-
-        }
+       
         
         
         
@@ -99,14 +93,15 @@ class EditDonationViewController: UIViewController {
         
         Alamofire.request(.DELETE, "https://redwoods-engine-test.herokuapp.com/api/profiles/portfolio/" + orgId, headers: headers)
             .response { (request, response, json, error) in
-                
+                if error != nil {
+                    self.performSegueWithIdentifier("CancelSegue", sender: sender)
+                }
                 
                 //store json result in objects array
                 if json != nil {
                     let jsonObj = JSON(data: json!)
                     print(jsonObj)
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
-                    self.presentViewController(viewController, animated: false, completion: nil)
+                    
                 }
         }
     }
@@ -116,6 +111,27 @@ class EditDonationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - Picker View Data Source
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
+        return 1
+    }
+    
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        return self.PickerAmount.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return PickerAmount[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        self.selectedAmount = PickerAmount[row]
+        print(self.selectedAmount)
+    }
+
     
     
     /*

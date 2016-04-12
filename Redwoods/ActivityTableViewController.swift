@@ -66,19 +66,7 @@ class ActivityTableViewController: UITableViewController {
         
     }
     
-    //Prepare for segue
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "TransactionSegue" {
-                
-                let svc = segue.destinationViewController as! TransactionViewController
-                
-                let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-                
-                svc.TransactionLabel1 = self.ActivityObjects1[indexPath.row] as! String
-                svc.TransactionLabel2 = "Donated $" + (self.ActivityObjects2[indexPath.row] as! String) 
-                svc.TransactionLabel3 = self.ActivityObjects3[indexPath.row] as! String
-            }
-    }
+
     
 
 

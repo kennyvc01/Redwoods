@@ -21,7 +21,6 @@
 		D80C0C351C74107C00B936BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C341C74107C00B936BF /* Images.xcassets */; };
 		D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */; };
 		D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */; };
-		D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */; };
 		D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */; };
 		D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */; };
 		D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */; };
@@ -32,16 +31,10 @@
 		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
 		D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */; };
 		D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */; };
-		D8A778581CB316ED0039C41E /* TestVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A778571CB316ED0039C41E /* TestVideoTableViewController.swift */; };
-		D8A7785A1CB317050039C41E /* TestVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A778591CB317050039C41E /* TestVideoTableViewCell.swift */; };
-		D8ACFD071CBAD21900774766 /* OldStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ACFD061CBAD21900774766 /* OldStoryboard.storyboard */; };
 		D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */; };
 		D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */; };
 		D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */; };
-		D8CF34051CB886F400250633 /* redwoodslogovariationsimple7.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CF34041CB886F400250633 /* redwoodslogovariationsimple7.png */; };
 		D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8A3101CBB2A8A00CA9443 /* ProfileTableViewController.swift */; };
-		D8DE63351CB484B80033E4AB /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE63341CB484B80033E4AB /* NewTableViewController.swift */; };
-		D8DE63371CB485310033E4AB /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE63361CB485310033E4AB /* NewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +76,6 @@
 		D80C0C341C74107C00B936BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
-		D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		D8186B8D1C7696E300D1F7BF /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewController.swift; sourceTree = "<group>"; };
 		D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,9 +87,6 @@
 		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainWrapper.swift; sourceTree = "<group>"; };
 		D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDonationViewController.swift; sourceTree = "<group>"; };
-		D8A778571CB316ED0039C41E /* TestVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVideoTableViewController.swift; sourceTree = "<group>"; };
-		D8A778591CB317050039C41E /* TestVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVideoTableViewCell.swift; sourceTree = "<group>"; };
-		D8ACFD061CBAD21900774766 /* OldStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OldStoryboard.storyboard; sourceTree = "<group>"; };
 		D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewController.swift; sourceTree = "<group>"; };
 		D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
@@ -119,10 +108,7 @@
 		D8CF34011CB8853B00250633 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-SemiboldItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		D8CF34021CB8853B00250633 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../../../Downloads/Lato2OFL/Lato-Thin.ttf"; sourceTree = "<group>"; };
 		D8CF34031CB8853B00250633 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../../../Downloads/Lato2OFL/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
-		D8CF34041CB886F400250633 /* redwoodslogovariationsimple7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redwoodslogovariationsimple7.png; path = ../../../Downloads/redwoodslogovariationsimple7.png; sourceTree = "<group>"; };
 		D8D8A3101CBB2A8A00CA9443 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		D8DE63341CB484B80033E4AB /* NewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTableViewController.swift; sourceTree = "<group>"; };
-		D8DE63361CB485310033E4AB /* NewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,16 +188,10 @@
 				D831E93F1CAE143700669CC5 /* CharitySearch */,
 				D831E9401CAE147600669CC5 /* Profile */,
 				D80C0C061C73F71900B936BF /* Main.storyboard */,
-				D8ACFD061CBAD21900774766 /* OldStoryboard.storyboard */,
 				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
 				D80C0C0E1C73F71900B936BF /* Info.plist */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
-				D8CF34041CB886F400250633 /* redwoodslogovariationsimple7.png */,
 				D80C0C341C74107C00B936BF /* Images.xcassets */,
-				D8A778571CB316ED0039C41E /* TestVideoTableViewController.swift */,
-				D8A778591CB317050039C41E /* TestVideoTableViewCell.swift */,
-				D8DE63341CB484B80033E4AB /* NewTableViewController.swift */,
-				D8DE63361CB485310033E4AB /* NewTableViewCell.swift */,
 			);
 			path = Redwoods;
 			sourceTree = "<group>";
@@ -275,7 +255,6 @@
 				D80C0C361C74278A00B936BF /* ActivityTableViewController.swift */,
 				D80C0C381C7427A000B936BF /* ActivityTableViewCell.swift */,
 				D8D8A3101CBB2A8A00CA9443 /* ProfileTableViewController.swift */,
-				D80C0C3A1C742EA000B936BF /* TransactionViewController.swift */,
 				D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */,
 				D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */,
 				D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */,
@@ -416,14 +395,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8CF34051CB886F400250633 /* redwoodslogovariationsimple7.png in Resources */,
 				D80373651C93B61F00885C4C /* LaurasHome.mp4 in Resources */,
 				D80373661C93B61F00885C4C /* Berea.mp4 in Resources */,
 				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
 				D80C0C351C74107C00B936BF /* Images.xcassets in Resources */,
 				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
 				D80C0C081C73F71900B936BF /* Main.storyboard in Resources */,
-				D8ACFD071CBAD21900774766 /* OldStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,13 +477,9 @@
 				D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */,
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
-				D8A778581CB316ED0039C41E /* TestVideoTableViewController.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
 				D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */,
-				D8DE63371CB485310033E4AB /* NewTableViewCell.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
-				D8DE63351CB484B80033E4AB /* NewTableViewController.swift in Sources */,
-				D80C0C3B1C742EA000B936BF /* TransactionViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
@@ -516,7 +489,6 @@
 				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
 				D87B6C201CAB5D5700CB2A3C /* TestTableView.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
-				D8A7785A1CB317050039C41E /* TestVideoTableViewCell.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
 				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,
 			);

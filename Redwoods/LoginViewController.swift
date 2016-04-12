@@ -13,11 +13,15 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
+        
+        //indicator hidden by default
+        self.indicator.hidden = true
+        
+        
         txtEmail.becomeFirstResponder()
     }
 
@@ -27,6 +31,10 @@ class LoginViewController: UIViewController {
     
     //Submit button
     @IBAction func btnSubmit(sender: AnyObject) {
+        
+        //indicator animates until user is authenticated
+        self.indicator.hidden = false
+        self.indicator.startAnimating()
         
         let user = txtEmail.text as String!
         let password = txtPassword.text as String!
@@ -42,6 +50,10 @@ class LoginViewController: UIViewController {
                 if let _ = response.result.error {
                     print("incorrect credentials")
                     print(response.result.error)
+                    
+                    //stop indicator if error
+                    self.indicator.hidden = true
+                    self.indicator.stopAnimating()
                     
                     //Alert if user enters invalid username or password.  Two buttons on the alert:  Ok and Reset Account
                     let alertController = UIAlertController(title: "Invalid Credentials", message: "You've entered an invalid username/password combination.", preferredStyle: .Alert)
@@ -76,8 +88,10 @@ class LoginViewController: UIViewController {
                     let statusCode = (response.response?.statusCode)!
                     print(statusCode)
                     
-//                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
-//                    self.presentViewController(viewController, animated: false, completion: nil)
+                    
+                    //hide indicator
+                    self.indicator.hidden = true
+                    self.indicator.stopAnimating()
                     
                     self.performSegueWithIdentifier("Segue", sender: sender)
                     

@@ -15,16 +15,25 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtZipCode: UITextField!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //indicator hidden by default
+        self.indicator.hidden = true
+        
         txtEmail.becomeFirstResponder()
         
     }
 
     //submit button.  on submit, performs POST to api/user/register using username and password parameters.  If result returns "username already exists", a series of alert controllers are used to have them register or re-enter their credentials.  Else, open FeedViewController.
     @IBAction func btnSubmit(sender: AnyObject) {
+        
+        //indicator animates until user is registered
+        self.indicator.hidden = false
+        self.indicator.startAnimating()
         
         let user = txtEmail.text as String!
         let password = txtPassword.text as String!
@@ -45,6 +54,10 @@ class RegisterViewController: UIViewController {
                         let response = JSON as! NSDictionary
                         //get value of msg key from JSON string
                             if let msg = response.objectForKey("msg"){
+                                
+                                //stop indicator if error
+                                self.indicator.hidden = true
+                                self.indicator.stopAnimating()
                             
                                 if msg as! String == "username already exists"{
                                     print("user already exists")
@@ -79,29 +92,28 @@ class RegisterViewController: UIViewController {
                                     self.presentViewController(alertController, animated: true) {
                                     }
 
-                                }//if msg as! String == "username already exists" closing brace
+                                }
                                 
-                                }//if let msg = response.objectForKey("msg") closing brace
-                                else {
-                                    print("successfully registered")
-                                    KeychainWrapper.setString(self.txtEmail.text!, forKey: "username")
-                                    KeychainWrapper.setString(self.txtPassword.text!, forKey: "password")
+                            }
+                            else {
                                 
-//                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CharitySearch") as UIViewController
-//                                    self.presentViewController(viewController, animated: false, completion: nil)
+                                //hide indicator
+                                self.indicator.hidden = true
+                                self.indicator.stopAnimating()
+                                
+                                
+                                print("successfully registered")
+                                KeychainWrapper.setString(self.txtEmail.text!, forKey: "username")
+                                KeychainWrapper.setString(self.txtPassword.text!, forKey: "password")
                                 
                                 self.performSegueWithIdentifier("Segue", sender: sender)
                                 
-                                
-                                
-                                
-                                
-                                }
                             }
                         }
-                    
                     }
+                    
                 }
+            }
         
     
     
