@@ -25,9 +25,9 @@
 		D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */; };
 		D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */; };
 		D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */; };
+		D8617B071CBDC6E300962216 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8617B061CBDC6E300962216 /* TestTableViewController.swift */; };
+		D8617B091CBDC6F400962216 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8617B081CBDC6F400962216 /* TestTableViewCell.swift */; };
 		D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8686C851CA369F600216488 /* RegisterViewController.swift */; };
-		D87B6C201CAB5D5700CB2A3C /* TestTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */; };
-		D87B6C221CAB5D6C00CB2A3C /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */; };
 		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
 		D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */; };
 		D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */; };
@@ -80,9 +80,9 @@
 		D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewController.swift; sourceTree = "<group>"; };
 		D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D8617B061CBDC6E300962216 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		D8617B081CBDC6F400962216 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		D8686C851CA369F600216488 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableView.swift; sourceTree = "<group>"; };
-		D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaurasHome.mp4; sourceTree = "<group>"; };
 		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainWrapper.swift; sourceTree = "<group>"; };
@@ -231,10 +231,10 @@
 			children = (
 				D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */,
 				D80373641C928BAE00885C4C /* Berea.mp4 */,
-				D87B6C1F1CAB5D5700CB2A3C /* TestTableView.swift */,
-				D87B6C211CAB5D6C00CB2A3C /* TestTableViewCell.swift */,
 				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
 				D80C0C321C74002800B936BF /* TableViewCell.swift */,
+				D8617B061CBDC6E300962216 /* TestTableViewController.swift */,
+				D8617B081CBDC6F400962216 /* TestTableViewCell.swift */,
 			);
 			name = VideoFeed;
 			sourceTree = "<group>";
@@ -477,17 +477,17 @@
 				D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */,
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
+				D8617B071CBDC6E300962216 /* TestTableViewController.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
 				D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
+				D8617B091CBDC6F400962216 /* TestTableViewCell.swift in Sources */,
 				D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */,
 				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
-				D87B6C221CAB5D6C00CB2A3C /* TestTableViewCell.swift in Sources */,
 				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
-				D87B6C201CAB5D5700CB2A3C /* TestTableView.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
 				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,

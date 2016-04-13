@@ -8,6 +8,8 @@
 
 import UIKit
 import MediaPlayer
+import AVKit
+import AVFoundation
 
 class TableViewCell: UITableViewCell {
 
@@ -19,20 +21,16 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var lblAmount: UILabel!
 
     
-    
-    
-    var completelyVisible: Bool = false
+    var moviePlayer:MPMoviePlayerController!
+    var videoURL:NSURL!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //initialize movie player
+        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
         
     }
     
-    override func layoutSubviews() {
-        //layout movieplayer
-        
-    }
 
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -40,5 +38,31 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func layoutSubviews() {
+        //layout movieplayer
+        moviePlayer.view.frame = movieView.bounds
+        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
+        movieView.addSubview(moviePlayer.view)
+    }
+    
+    //Action to load video
+    func displayVideo() {
+        
+        
+        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
+        moviePlayer.controlStyle = MPMovieControlStyle.None
+        moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
+        moviePlayer.movieSourceType = MPMovieSourceType.File
+        moviePlayer.repeatMode = MPMovieRepeatMode.One
+        moviePlayer.initialPlaybackTime = -1.0
+        moviePlayer.view.frame = movieView.bounds
+        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
+        movieView.addSubview(moviePlayer.view)
+        moviePlayer.prepareToPlay()
+        moviePlayer.play()
+    }
+    
+    
 
 }

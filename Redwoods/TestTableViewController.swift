@@ -1,10 +1,11 @@
 //
-//  TableViewController.swift
+//  TestTableViewController.swift
 //  Redwoods
 //
-//  Created by Ken Churchill on 2/16/16.
+//  Created by Ken Churchill on 4/12/16.
 //  Copyright © 2016 Ken Churchill. All rights reserved.
 //
+
 
 import UIKit
 import Alamofire
@@ -13,12 +14,10 @@ import AVKit
 import AVFoundation
 import MediaPlayer
 
-
-class TableViewController: UITableViewController {
-    
+class TestTableViewController: UITableViewController {
     
     var objects = [[String: String]]()
-    
+
     
     
     override func viewDidLoad() {
@@ -59,14 +58,6 @@ class TableViewController: UITableViewController {
         }
         
         
-        
-        
-            
-            
-            
-    
-        
-        
     }
     
     //function to parse and load JSON results in objects array as ["storyLink","storyTimestamp","description","org"]
@@ -81,13 +72,11 @@ class TableViewController: UITableViewController {
                 let description = result2["description"].stringValue
                 let amount = result1["amount"].stringValue
                 //print(storyLink)
-                let obj = ["storyLink": storyLink, "storyTimestamp": storyTimestamp, "description": description, "org": org, "Amount": amount]
+                let obj = ["storyLink": storyLink, "storyTimestamp": storyTimestamp, "description": description, "org": org, "amount": amount]
                 objects.append(obj)
             }
         }
         tableView.reloadData()
-        
-       
     }
     
     
@@ -112,8 +101,8 @@ class TableViewController: UITableViewController {
     }
     
     override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        
+
+      
         
         
         
@@ -134,9 +123,8 @@ class TableViewController: UITableViewController {
             print("\(indexPaths![0].row) row 1 ")
             
             
-            let cell1:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TableViewCell
-            cell1.lblCharity.text = self.objects[indexPaths![0].row]["org"]
-            cell1.lblAmount.text = "Your $" + self.objects[indexPaths![0].row]["Amount"]! + " monthly is doing this!"
+            let cell1:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TestTableViewCell
+            cell1.titleLabel.text = self.objects[indexPaths![0].row]["org"]
             
             
             var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![0])
@@ -163,13 +151,11 @@ class TableViewController: UITableViewController {
             
             
             
-            let cell1:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TableViewCell
-            cell1.lblCharity.text = self.objects[indexPaths![0].row]["org"]
-            cell1.lblAmount.text = "Your $" + self.objects[indexPaths![0].row]["Amount"]! + " monthly is doing this!"
+            let cell1:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TestTableViewCell
+            cell1.titleLabel.text = self.objects[indexPaths![0].row]["org"]
             
-            let cell2:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TableViewCell
-            cell2.lblCharity.text = self.objects[indexPaths![1].row]["org"]
-            cell2.lblAmount.text = "Your $" + self.objects[indexPaths![1].row]["Amount"]! + " monthly is doing this!"
+            let cell2:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TestTableViewCell
+            cell2.titleLabel.text = self.objects[indexPaths![1].row]["org"]
             
             print("\(indexPaths![0].row) row 1 \(self.objects[indexPaths![0].row]["org"]) \(indexPaths![0])")
             print("\(indexPaths![1].row) row 2 \(self.objects[indexPaths![1].row]["org"]) \(indexPaths![1])")
@@ -210,19 +196,16 @@ class TableViewController: UITableViewController {
         } else if indexPaths?.count > 2 {
             
             
-            let cell1:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TableViewCell
-            cell1.lblCharity.text = self.objects[indexPaths![0].row]["org"]
-            cell1.lblAmount.text = "Your $" + self.objects[indexPaths![0].row]["Amount"]! + " monthly is doing this!"
+            let cell1:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TestTableViewCell
+            cell1.titleLabel.text = self.objects[indexPaths![0].row]["org"]
             
             
-            let cell2:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TableViewCell
-            cell2.lblCharity.text = self.objects[indexPaths![1].row]["org"]
-            cell2.lblAmount.text = "Your $" + self.objects[indexPaths![1].row]["Amount"]! + " monthly is doing this!"
+            let cell2:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TestTableViewCell
+            cell2.titleLabel.text = self.objects[indexPaths![1].row]["org"]
             
             
-            let cell3:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![2] as NSIndexPath) as! TableViewCell
-            cell3.lblCharity.text = self.objects[indexPaths![2].row]["org"]
-            cell3.lblAmount.text = "Your $" + self.objects[indexPaths![2].row]["Amount"]! + " monthly is doing this!"
+            let cell3:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![2] as NSIndexPath) as! TestTableViewCell
+            cell3.titleLabel.text = self.objects[indexPaths![2].row]["org"]
             
             
             print("\(indexPaths![0].row) row 1 \(self.objects[indexPaths![0].row]["org"]) \(indexPaths![0])")
@@ -277,30 +260,17 @@ class TableViewController: UITableViewController {
     }
     
     override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+
         
-        
-        
+
     }
     
     
     //populate each cell based on index path of array
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
-        
-        cell.lblCharity.text = self.objects[indexPath.row]["org"]
-        cell.lblAmount.text = "Your $" + self.objects[indexPath.row]["Amount"]! + " monthly is doing this!"
-        
-        var cellRect1 : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
-        cellRect1 = self.tableView.superview!.convertRect(cellRect1, fromView: self.tableView)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TestTableViewCell
         
         
-        
-        if self.tableView.frame.contains(cellRect1) {
-       
-                cell.videoURL = NSURL(string: self.objects[indexPath.row]["storyLink"]!)!
-                cell.displayVideo()
-           
-        }
         
         return cell
     }
@@ -309,37 +279,14 @@ class TableViewController: UITableViewController {
     
     //Prepare for segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! TableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! TestTableViewCell
         
-        let indexPaths = tableView.indexPathsForVisibleRows
-        
-        
-        
-        if indexPaths?.count == 2{
-            let cell1:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TableViewCell
-            let cell2:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TableViewCell
-            
-            if cell1.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                cell1.moviePlayer.stop()
-            }else if cell2.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                cell2.moviePlayer.stop()
-            }
-        }else if indexPaths?.count > 2 {
-            let cell1:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TableViewCell
-            let cell2:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TableViewCell
-            let cell3:TableViewCell = tableView.cellForRowAtIndexPath(indexPaths![2] as NSIndexPath) as! TableViewCell
-            
-            if cell1.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                cell1.moviePlayer.stop()
-            }else if cell2.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                cell2.moviePlayer.stop()
-            }else if cell3.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                cell3.moviePlayer.stop()
-            }
+        if self.objects.count > 1{
+            cell.moviePlayer.stop()
         }
         
-        
     }
+    
 
 
 }
