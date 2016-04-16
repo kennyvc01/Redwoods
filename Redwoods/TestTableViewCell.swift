@@ -8,47 +8,102 @@
 
 import UIKit
 import MediaPlayer
+import AVKit
+import AVFoundation
 
 class TestTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel:UILabel!
-    @IBOutlet weak var movieView:UIView! //Set up in storyboard
+    @IBOutlet weak var movieView:UIView!
+    
+    @IBOutlet weak var lblCharity: UILabel!
+    @IBOutlet weak var lblAmount: UILabel!
     
     
-    var moviePlayer:MPMoviePlayerController!
-    var videoURL:NSURL!
+    var moviePlayer:AVPlayerViewController!
+    var videoUrl = ""
+    var visible = "true"
+    var playing = ""
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         //initialize movie player
-        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
+        
         
     }
     
+    
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
     override func layoutSubviews() {
-        //layout movieplayer
-        moviePlayer.view.frame = movieView.bounds
-        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
-        movieView.addSubview(moviePlayer.view)
+
+        
+        
     }
     
     //Action to load video
     func displayVideo() {
 
+//        let url = NSURL(string:
+//            self.videoUrl)
+//        let player = AVPlayer(URL: url!)
+//        let playerController = AVPlayerViewController()
+//        
+//        playerController.player = player
+//       // cell.addChildViewController(playerController)
+//        movieView.addSubview(playerController.view)
+//        playerController.view.frame = movieView.frame
+//        
+//        player.play()
+
+        
+        let url = NSURL(string: self.videoUrl)
+        let player = AVPlayer(URL: url!)
+        let playerController = AVPlayerViewController()
+        
+        playerController.player = player
+        // cell.addChildViewController(playerController)
+        self.movieView.addSubview(playerController.view)
+        playerController.view.frame = self.movieView.frame
+
+            player.play()
+
         
         
-        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
-        moviePlayer.controlStyle = MPMovieControlStyle.None
-        moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
-        moviePlayer.movieSourceType = MPMovieSourceType.File
-        moviePlayer.repeatMode = MPMovieRepeatMode.One
-        moviePlayer.initialPlaybackTime = -1.0
-        moviePlayer.view.frame = movieView.bounds
-        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
-        movieView.addSubview(moviePlayer.view)
-        moviePlayer.prepareToPlay()
-        moviePlayer.play()
+
+        
     }
+    
+    
+    //Action to load video
+    func pauseVideo() {
+        //        //this works
+        //        let url = NSURL(string:
+        //            self.videoUrl)
+        //        let player = AVPlayer(URL: url!)
+        //        let playerController = AVPlayerViewController()
+        //
+        //        playerController.player = player
+        //       // cell.addChildViewController(playerController)
+        //        movieView.addSubview(playerController.view)
+        //        playerController.view.frame = movieView.frame
+        //
+        //        player.play()
+        
+        
+
+        let player = AVPlayer()
+        
+        
+        player.pause()
+        
+        
+    }
+
 
 }

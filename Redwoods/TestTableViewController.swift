@@ -17,14 +17,15 @@ import MediaPlayer
 class TestTableViewController: UITableViewController {
     
     var objects = [[String: String]]()
-
+    var moviePlayer:MPMoviePlayerController!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        // Do any additional setup after loading the view.
+        // logo in navbar
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 138, height: 138))
         imageView.contentMode = .ScaleAspectFit
         let image = UIImage(named: "RedwoodsMasterLogoWhite")
@@ -33,7 +34,6 @@ class TestTableViewController: UITableViewController {
         
         
     }
-    
     
     override func viewDidAppear(animated: Bool) {
         
@@ -72,14 +72,15 @@ class TestTableViewController: UITableViewController {
                 let description = result2["description"].stringValue
                 let amount = result1["amount"].stringValue
                 //print(storyLink)
-                let obj = ["storyLink": storyLink, "storyTimestamp": storyTimestamp, "description": description, "org": org, "amount": amount]
+                let obj = ["storyLink": storyLink, "storyTimestamp": storyTimestamp, "description": description, "org": org, "Amount": amount]
                 objects.append(obj)
+                
             }
         }
         tableView.reloadData()
+        
+        
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -102,43 +103,101 @@ class TestTableViewController: UITableViewController {
     
     override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 
-      
-        
-        
-        
-    }
-    
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
-        print("____________________NEW SCROLL____________________")
+
         
         
         let indexPaths = tableView.indexPathsForVisibleRows
         
-        
-        
-        
         if indexPaths?.count == 1 {
             
             
-            print("\(indexPaths![0].row) row 1 ")
+            let cell1:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TestTableViewCell
+            
+                    var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![0])
+                    cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
+                    let url = NSURL(string: self.objects[indexPaths![0].row]["storyLink"]!)!
+                    let player = AVPlayer(URL: url)
+                    let playerController = AVPlayerViewController()
+            
+                    playerController.player = player
+                    cell1.movieView.addSubview(playerController.view)
+                    if self.tableView.frame.contains(cellRect) {
+            
+                    playerController.view.frame = cell1.movieView.frame
+                    
+                        player.play()} else{
+                        player.pause()
+                    }
+            
+            
+            
+        }
+            
+            
+            
+            
+        else if indexPaths?.count == 2 {
+            
             
             
             let cell1:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TestTableViewCell
-            cell1.titleLabel.text = self.objects[indexPaths![0].row]["org"]
+            
+            let cell2:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TestTableViewCell
             
             
             var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![0])
             cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
+            let url = NSURL(string: self.objects[indexPaths![0].row]["storyLink"]!)!
+            let player = AVPlayer(URL: url)
+            let playerController = AVPlayerViewController()
+            
+            
+            var cellRect2 : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![1])
+            cellRect2 = self.tableView.superview!.convertRect(cellRect2, fromView: self.tableView)
+            let url2 = NSURL(string: self.objects[indexPaths![1].row]["storyLink"]!)!
+            let player2 = AVPlayer(URL: url2)
+            let playerController2 = AVPlayerViewController()
+            
+            playerController2.player = player2
+            cell2.movieView.addSubview(playerController2.view)
+            
+            playerController.player = player
+            cell1.movieView.addSubview(playerController.view)
+            
+            
             
             
             if self.tableView.frame.contains(cellRect) {
                 
-                if cell1.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                    print("keep playing")
+                playerController.view.frame = cell1.movieView.frame
+                if cell1.playing == "yes"{
+                
                 }else{
-                    cell1.videoURL = NSURL(string: self.objects[indexPaths![0].row]["storyLink"]!)!
+                    player.play()
+                    cell1.playing = "yes"
+                }
+                
+                
+                
+                playerController2.view.frame = cell2.movieView.frame
+                
+                player2.pause()
+                cell2.playing = "no"
+                
+                
+            } else{
+                playerController.view.frame = cell1.movieView.frame
+                
+                player.pause()
+                cell1.playing = "no"
+                
+                if cell2.playing == "yes"{
+                
+                }else{
+                    playerController2.view.frame = cell2.movieView.frame
                     
-                    cell1.displayVideo()
+                    player2.play()
+                    cell2.playing = "yes"
                 }
                 
                 
@@ -147,49 +206,6 @@ class TestTableViewController: UITableViewController {
             
             
             
-        }else if indexPaths?.count == 2 {
-            
-            
-            
-            let cell1:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TestTableViewCell
-            cell1.titleLabel.text = self.objects[indexPaths![0].row]["org"]
-            
-            let cell2:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TestTableViewCell
-            cell2.titleLabel.text = self.objects[indexPaths![1].row]["org"]
-            
-            print("\(indexPaths![0].row) row 1 \(self.objects[indexPaths![0].row]["org"]) \(indexPaths![0])")
-            print("\(indexPaths![1].row) row 2 \(self.objects[indexPaths![1].row]["org"]) \(indexPaths![1])")
-            
-            
-            
-            var cellRect1 : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![0])
-            cellRect1 = self.tableView.superview!.convertRect(cellRect1, fromView: self.tableView)
-            
-            var cellRect2 : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![1])
-            cellRect2 = self.tableView.superview!.convertRect(cellRect2, fromView: self.tableView)
-            
-            
-            if self.tableView.frame.contains(cellRect1) {
-                
-                if cell1.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                    print("keep playing")
-                }else{
-                    cell1.videoURL = NSURL(string: self.objects[indexPaths![0].row]["storyLink"]!)!
-                    cell1.displayVideo()
-                }
-                
-                
-            } else if self.tableView.frame.contains(cellRect2) {
-                
-                if cell2.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                    print("keep playing")
-                } else {
-                    cell2.videoURL = NSURL(string: self.objects[indexPaths![1].row]["storyLink"]!)!
-                    cell2.displayVideo()
-                    
-                }
-                
-            }
             
             
             
@@ -197,93 +213,172 @@ class TestTableViewController: UITableViewController {
             
             
             let cell1:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![0] as NSIndexPath) as! TestTableViewCell
-            cell1.titleLabel.text = self.objects[indexPaths![0].row]["org"]
             
             
             let cell2:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![1] as NSIndexPath) as! TestTableViewCell
-            cell2.titleLabel.text = self.objects[indexPaths![1].row]["org"]
-            
             
             let cell3:TestTableViewCell = tableView.cellForRowAtIndexPath(indexPaths![2] as NSIndexPath) as! TestTableViewCell
-            cell3.titleLabel.text = self.objects[indexPaths![2].row]["org"]
             
+            var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![0])
+            cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
+            let url = NSURL(string: self.objects[indexPaths![0].row]["storyLink"]!)!
+            let player = AVPlayer(URL: url)
+            let playerController = AVPlayerViewController()
             
-            print("\(indexPaths![0].row) row 1 \(self.objects[indexPaths![0].row]["org"]) \(indexPaths![0])")
-            print("\(indexPaths![1].row) row 2 \(self.objects[indexPaths![1].row]["org"]) \(indexPaths![1])")
-            print("\(indexPaths![2].row) row 3 \(self.objects[indexPaths![2].row]["org"]) \(indexPaths![2])")
-            
-            
-            
-            var cellRect1 : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![0])
-            cellRect1 = self.tableView.superview!.convertRect(cellRect1, fromView: self.tableView)
             
             var cellRect2 : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![1])
             cellRect2 = self.tableView.superview!.convertRect(cellRect2, fromView: self.tableView)
+            let url2 = NSURL(string: self.objects[indexPaths![1].row]["storyLink"]!)!
+            let player2 = AVPlayer(URL: url2)
+            let playerController2 = AVPlayerViewController()
             
             var cellRect3 : CGRect = self.tableView.rectForRowAtIndexPath(indexPaths![2])
             cellRect3 = self.tableView.superview!.convertRect(cellRect3, fromView: self.tableView)
+            let url3 = NSURL(string: self.objects[indexPaths![2].row]["storyLink"]!)!
+            let player3 = AVPlayer(URL: url3)
+            let playerController3 = AVPlayerViewController()
+            
+            playerController.player = player
+            cell1.movieView.addSubview(playerController.view)
+            
+            playerController2.player = player2
+            cell2.movieView.addSubview(playerController2.view)
+
+            playerController3.player = player3
+            cell2.movieView.addSubview(playerController2.view)
+
             
             
-            if self.tableView.frame.contains(cellRect1) {
+            
+            
+            if self.tableView.frame.contains(cellRect) {
                 
-                if cell1.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                    print("keep playing")
-                }else{
-                    cell1.videoURL = NSURL(string: self.objects[indexPaths![0].row]["storyLink"]!)!
-                    cell1.displayVideo()
-                }
+                playerController.view.frame = cell1.movieView.frame
+    
+                player.play()
                 
-            } else if self.tableView.frame.contains(cellRect2) {
                 
-                if cell2.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                    print("keep playing")
-                } else {
-                    cell2.videoURL = NSURL(string: self.objects[indexPaths![1].row]["storyLink"]!)!
-                    cell2.displayVideo()
-                    
-                }
+                playerController2.view.frame = cell2.movieView.frame
                 
-            } else if self.tableView.frame.contains(cellRect2) {
-                if cell3.moviePlayer.playbackState == MPMoviePlaybackState.Playing {
-                    print("keep playing")
-                } else {
-                    cell3.videoURL = NSURL(string: self.objects[indexPaths![2].row]["storyLink"]!)!
-                    cell3.displayVideo()
-                    
-                }
+                player2.pause()
+                
+                playerController3.view.frame = cell3.movieView.frame
+                
+                player3.pause()
+                
+            } else if self.tableView.frame.contains(cellRect2){
+                playerController.view.frame = cell1.movieView.frame
+                
+                player.pause()
+                
+                playerController2.view.frame = cell2.movieView.frame
+
+                player2.play()
+                
+                playerController3.view.frame = cell3.movieView.frame
+                
+                player3.pause()
+            } else if self.tableView.frame.contains(cellRect3) {
+                playerController.view.frame = cell1.movieView.frame
+                
+                player.pause()
+                
+                playerController2.view.frame = cell2.movieView.frame
+                
+                player2.pause()
+                
+                playerController3.view.frame = cell3.movieView.frame
+     
+                player3.play()
             }
-            
-            
             
         }
         
+        
+        
+    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+
+            self.tableView.reloadData()
     }
     
     override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-
         
-
+        
+        
     }
     
+    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TestTableViewCell
+    }
     
     //populate each cell based on index path of array
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TestTableViewCell
+
+//        //#1
+//        
+//        let path: String = self.objects[indexPath.row]["storyLink"]!
+//        let movieurl: NSURL = NSURL.fileURLWithPath(path)
+//        let movie : AVPlayerViewController = AVPlayerViewController()
+//        
+//        movie.view.frame = cell.movieView.bounds
+//        
+//        let player: AVPlayer = AVPlayer(URL: movieurl)
+//        movie.player? = player
+//        
+//        cell.movieView.addSubview(movie.view)
+//        player.play()
         
         
+        
+//        
+//        //#2
+//        let url = NSURL(string:
+//            objects[indexPath.row]["storyLink"]!)
+//        let player = AVPlayer(URL: url!)
+//        let playerController = AVPlayerViewController()
+//        
+//        playerController.player = player
+//        self.addChildViewController(playerController)
+//        cell.movieView.addSubview(playerController.view)
+//        playerController.view.frame = self.view.frame
+//        
+//        player.play()
+        
+        //#3
+        
+//        var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
+//        cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
+//        let url = NSURL(string:
+//            self.objects[indexPath.row]["storyLink"]!)
+//        let player = AVPlayer(URL: url!)
+//        let playerController = AVPlayerViewController()
+//        
+//        playerController.player = player
+//        // cell.addChildViewController(playerController)
+//        cell.movieView.addSubview(playerController.view)
+//        if self.tableView.frame.contains(cellRect) {
+//        
+//        playerController.view.frame = cell.movieView.frame
+//        
+//            player.play()} else{
+//            player.pause()
+//        }
+//        
+
         
         return cell
     }
     
     
+
+    
     
     //Prepare for segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! TestTableViewCell
         
-        if self.objects.count > 1{
-            cell.moviePlayer.stop()
-        }
         
     }
     

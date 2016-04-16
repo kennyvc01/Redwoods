@@ -81,9 +81,9 @@ class CharitySearchTableViewController: UITableViewController {
             let website = result["website"].stringValue
             let description = result["description"].stringValue
             let name = result["name"].stringValue
-            let obj = ["orgId": orgId, "website": website, "description": description, "name": name]
+            let introUrl = result["introUrl"].stringValue
+            let obj = ["orgId": orgId, "website": website, "description": description, "name": name, "introUrl": introUrl]
             browseOrgobjects.append(obj)
-            //print(browseOrgobjects)
         }
     }
     
@@ -147,6 +147,10 @@ class CharitySearchTableViewController: UITableViewController {
             dvc.CharityLabel = data["name"]!
             dvc.orgId = data["orgId"]!
             dvc.donation = cell.lblDonor.text!
+            dvc.introUrl = data["introUrl"]!
+            
+            print(data["introUrl"])
+
             
 
         }

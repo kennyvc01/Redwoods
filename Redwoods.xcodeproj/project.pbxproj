@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00DEA6F3D6AB3D52F1F9E603 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1AF172A861C464E58D680B /* Pods.framework */; };
-		D80373651C93B61F00885C4C /* LaurasHome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */; };
-		D80373661C93B61F00885C4C /* Berea.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D80373641C928BAE00885C4C /* Berea.mp4 */; };
 		D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C021C73F71900B936BF /* AppDelegate.swift */; };
 		D80C0C081C73F71900B936BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C061C73F71900B936BF /* Main.storyboard */; };
 		D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C091C73F71900B936BF /* Assets.xcassets */; };
@@ -31,6 +29,8 @@
 		D87EAB6D1C7ABC56001299AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */; };
 		D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */; };
 		D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */; };
+		D8B609C81CC1798400E6ECAC /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609C71CC1798400E6ECAC /* PictureViewController.swift */; };
+		D8B609CA1CC2ADDC00E6ECAC /* LoopingVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */; };
 		D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */; };
 		D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */; };
 		D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */; };
@@ -58,7 +58,6 @@
 		2B4B98ECF29F27E61446CA3C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1AF172A861C464E58D680B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05EBDC135DBB4076D4780C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D80373641C928BAE00885C4C /* Berea.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Berea.mp4; path = "../../../Movies/iSkysoft Video Converter/Downloaded/Converted/Berea.mp4"; sourceTree = "<group>"; };
 		D80C0BFF1C73F71900B936BF /* Redwoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redwoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80C0C021C73F71900B936BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D80C0C071C73F71900B936BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,10 +82,11 @@
 		D8617B061CBDC6E300962216 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		D8617B081CBDC6F400962216 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		D8686C851CA369F600216488 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaurasHome.mp4; sourceTree = "<group>"; };
 		D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D89360531CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKeyChainWrapper.swift; sourceTree = "<group>"; };
 		D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDonationViewController.swift; sourceTree = "<group>"; };
+		D8B609C71CC1798400E6ECAC /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopingVideoView.swift; sourceTree = "<group>"; };
 		D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewController.swift; sourceTree = "<group>"; };
 		D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +181,7 @@
 		D80C0C011C73F71900B936BF /* Redwoods */ = {
 			isa = PBXGroup;
 			children = (
+				D8B609CB1CC2AFEF00E6ECAC /* Models */,
 				D8CF33F11CB884C300250633 /* Resources */,
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
 				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
@@ -192,6 +193,7 @@
 				D80C0C0E1C73F71900B936BF /* Info.plist */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
 				D80C0C341C74107C00B936BF /* Images.xcassets */,
+				D8B609C71CC1798400E6ECAC /* PictureViewController.swift */,
 			);
 			path = Redwoods;
 			sourceTree = "<group>";
@@ -229,8 +231,7 @@
 		D831E93E1CAE140700669CC5 /* VideoFeed */ = {
 			isa = PBXGroup;
 			children = (
-				D87EAB691C7AB1D7001299AE /* LaurasHome.mp4 */,
-				D80373641C928BAE00885C4C /* Berea.mp4 */,
+				D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */,
 				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
 				D80C0C321C74002800B936BF /* TableViewCell.swift */,
 				D8617B061CBDC6E300962216 /* TestTableViewController.swift */,
@@ -260,6 +261,13 @@
 				D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		D8B609CB1CC2AFEF00E6ECAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		D8CF33F11CB884C300250633 /* Resources */ = {
@@ -395,8 +403,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D80373651C93B61F00885C4C /* LaurasHome.mp4 in Resources */,
-				D80373661C93B61F00885C4C /* Berea.mp4 in Resources */,
 				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
 				D80C0C351C74107C00B936BF /* Images.xcassets in Resources */,
 				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
@@ -482,6 +488,7 @@
 				D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
+				D8B609C81CC1798400E6ECAC /* PictureViewController.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
 				D8617B091CBDC6F400962216 /* TestTableViewCell.swift in Sources */,
@@ -491,6 +498,7 @@
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
 				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,
+				D8B609CA1CC2ADDC00E6ECAC /* LoopingVideoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +643,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Redwoods/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,6 +660,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Redwoods/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
 				PRODUCT_NAME = "$(TARGET_NAME)";

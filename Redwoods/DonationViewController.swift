@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MediaPlayer
 
 class DonationViewController: UIViewController, UIPickerViewDelegate {
 
@@ -16,21 +17,29 @@ class DonationViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var lblCharity: UILabel!
     @IBOutlet weak var lblDonor: UIButton!
     @IBOutlet weak var pkPicker: UIPickerView!
+    @IBOutlet weak var vwMovieView: UIView!
     
     var CharityLabel = ""
     var orgId = ""
     var donation = ""
+    var introUrl = ""
     var Amount = ["5","10","15","20","25","30","35","40","45","50","75","100","150","200","250","300","350","400","500","750","1000"]
     var selectedAmount = "25"
+    var moviePlayer:MPMoviePlayerController!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //picker
         pkPicker.selectRow(4, inComponent: 0, animated: true)
         
+        
+        //charity label
         self.lblCharity.text = self.CharityLabel + " is an amazing organization!"
         
+        //button.  if user is donating then "Change Monthly Donation" else "Begin Monthly Donation"
         if self.donation == "I'm donating" {
             
             self.lblDonor.setTitle("Change Monthly Donation", forState: .Normal)
@@ -41,7 +50,38 @@ class DonationViewController: UIViewController, UIPickerViewDelegate {
         }
         
         
-          }
+        
+        
+        
+        
+        //video
+        var videoURL = NSURL(string: self.introUrl)!
+        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
+        layoutSubviews()
+        moviePlayer.prepareToPlay()
+        moviePlayer.play()
+
+    }
+    
+    func layoutSubviews() {
+        
+        moviePlayer.backgroundView.backgroundColor = UIColor.clearColor()
+        moviePlayer.view.backgroundColor = UIColor.clearColor()
+        for subView in moviePlayer!.view.subviews as [UIView] {
+            subView.backgroundColor = UIColor.clearColor()
+        }
+
+        self.moviePlayer.prepareToPlay()
+        moviePlayer.scalingMode = MPMovieScalingMode.Fill
+        self.moviePlayer.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.vwMovieView.frame.size.height)
+        self.vwMovieView.addSubview(self.moviePlayer.view)
+        self.moviePlayer.fullscreen = true
+        self.moviePlayer.movieSourceType = .File
+        self.moviePlayer.controlStyle = .None
+        self.moviePlayer.repeatMode = .One
+        
+        
+    }
 
     @IBAction func btnSubmitDonation(sender: AnyObject) {
         

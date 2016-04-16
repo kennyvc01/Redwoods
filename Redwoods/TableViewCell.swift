@@ -12,55 +12,54 @@ import AVKit
 import AVFoundation
 
 class TableViewCell: UITableViewCell {
-
-
     
-    @IBOutlet weak var movieView:UIView!
+    @IBOutlet var movieView: LoopingVideoView!
     
     @IBOutlet weak var lblCharity: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
 
     
-    var moviePlayer:MPMoviePlayerController!
-    var videoURL:NSURL!
+    var videoURL: NSURL!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //initialize movie player
-        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
-        
     }
-    
-
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     override func layoutSubviews() {
-        //layout movieplayer
-        moviePlayer.view.frame = movieView.bounds
-        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
-        movieView.addSubview(moviePlayer.view)
+        super.layoutSubviews()
+
     }
     
     //Action to load video
-    func displayVideo() {
+//    func displayVideo() {
+//
+//        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
+//        moviePlayer.controlStyle = MPMovieControlStyle.None
+//        moviePlayer.scalingMode = MPMovieScalingMode.Fill
+//        moviePlayer.movieSourceType = MPMovieSourceType.File
+//        moviePlayer.repeatMode = MPMovieRepeatMode.One
+//        moviePlayer.initialPlaybackTime = -1.0
+//        moviePlayer.view.frame = movieView.bounds
+//        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
+//        movieView.addSubview(moviePlayer.view)
+//        
+//
+//        moviePlayer.prepareToPlay()
+//        moviePlayer.play()
+//
+//    }
+//    
+    override func prepareForReuse() {
+        super.prepareForReuse()
         
+        videoURL = nil
         
-        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
-        moviePlayer.controlStyle = MPMovieControlStyle.None
-        moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
-        moviePlayer.movieSourceType = MPMovieSourceType.File
-        moviePlayer.repeatMode = MPMovieRepeatMode.One
-        moviePlayer.initialPlaybackTime = -1.0
-        moviePlayer.view.frame = movieView.bounds
-        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
-        movieView.addSubview(moviePlayer.view)
-        moviePlayer.prepareToPlay()
-        moviePlayer.play()
     }
     
     
