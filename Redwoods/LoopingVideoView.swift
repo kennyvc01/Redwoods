@@ -28,7 +28,7 @@ import AVFoundation
         }
     }
     
-    func play(url: NSURL, count: Int = 1, autoplay: Bool = true) {
+    func play(url: NSURL, count: Int = 1, autoplay: Bool = true) -> AVAsset {
         let asset = self.dynamicType.composedAsset(url, count: count)
         let playerLayer = self.dynamicType.createPlayerLayer(asset)
         playerLayer.frame = layer.bounds
@@ -44,20 +44,21 @@ import AVFoundation
             name: AVPlayerItemDidPlayToEndTimeNotification,
             object: self.playerLayer.player!.currentItem)
         playing = true
+        return asset
     }
     
     func videoDidFinish() {
         self.stop()
-        playerLayer.player!.play()
+        playerLayer.player?.play()
     }
     
     func pause() {
-        playerLayer.player!.pause()
+        playerLayer.player?.pause()
         playing = false
     }
     
     func stop() {
-        playerLayer.player!.seekToTime(CMTimeMake(0, 600))
+        playerLayer.player?.seekToTime(CMTimeMake(0, 600))
         playing = false
     }
     

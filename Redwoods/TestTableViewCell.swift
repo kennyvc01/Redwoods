@@ -10,100 +10,88 @@ import UIKit
 import MediaPlayer
 import AVKit
 import AVFoundation
+import Haneke
+import Alamofire
+import SwiftyJSON
 
 class TestTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var movieView:UIView!
+    
+    @IBOutlet var movieView: LoopingVideoView!
     
     @IBOutlet weak var lblCharity: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
     
     
-    var moviePlayer:AVPlayerViewController!
-    var videoUrl = ""
-    var visible = "true"
-    var playing = ""
+    var videoURL: NSURL!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //initialize movie player
-        
         
     }
-    
-    
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
     override func layoutSubviews() {
-
-        
+        super.layoutSubviews()
         
     }
     
     //Action to load video
-    func displayVideo() {
-
-//        let url = NSURL(string:
-//            self.videoUrl)
-//        let player = AVPlayer(URL: url!)
-//        let playerController = AVPlayerViewController()
-//        
-//        playerController.player = player
-//       // cell.addChildViewController(playerController)
-//        movieView.addSubview(playerController.view)
-//        playerController.view.frame = movieView.frame
-//        
-//        player.play()
-
+    //    func displayVideo() {
+    //
+    //        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
+    //        moviePlayer.controlStyle = MPMovieControlStyle.None
+    //        moviePlayer.scalingMode = MPMovieScalingMode.Fill
+    //        moviePlayer.movieSourceType = MPMovieSourceType.File
+    //        moviePlayer.repeatMode = MPMovieRepeatMode.One
+    //        moviePlayer.initialPlaybackTime = -1.0
+    //        moviePlayer.view.frame = movieView.bounds
+    //        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
+    //        movieView.addSubview(moviePlayer.view)
+    //
+    //
+    //        moviePlayer.prepareToPlay()
+    //        moviePlayer.play()
+    //
+    //    }
+    //
+    override func prepareForReuse() {
+        super.prepareForReuse()
         
-        let url = NSURL(string: self.videoUrl)
-        let player = AVPlayer(URL: url!)
-        let playerController = AVPlayerViewController()
-        
-        playerController.player = player
-        // cell.addChildViewController(playerController)
-        self.movieView.addSubview(playerController.view)
-        playerController.view.frame = self.movieView.frame
-
-            player.play()
-
-        
-        
-
+        videoURL = nil
         
     }
     
-    
-    //Action to load video
-    func pauseVideo() {
-        //        //this works
-        //        let url = NSURL(string:
-        //            self.videoUrl)
-        //        let player = AVPlayer(URL: url!)
-        //        let playerController = AVPlayerViewController()
-        //
-        //        playerController.player = player
-        //       // cell.addChildViewController(playerController)
-        //        movieView.addSubview(playerController.view)
-        //        playerController.view.frame = movieView.frame
-        //
-        //        player.play()
+    func getJsonCache() {
         
         
+        let user: String = KeychainWrapper.stringForKey("username")!
+        let password: String = KeychainWrapper.stringForKey("password")!
 
-        let player = AVPlayer()
+        let cache = Cache<Haneke.JSON>(name: "github")
+        let URL = NSURL(string: "https://redwoods-engine-test.herokuapp.com/api/feed")!
         
+        //Credentials for basic authentication using text fields for username and password
+        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
+        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
         
-        player.pause()
-        
-        
-    }
+        //GET Method for api/feed
+        Alamofire.request(.GET, URL, headers: headers)
+            .response { (request, response, json, error) in
+                
+            cache.fetch(URL: URL).onSuccess { JSON in
+                print(JSON.dictionary?["org"]!["stories"])
+            }
+            
+        }
 
+                    
+                }
 
 }

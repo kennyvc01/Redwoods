@@ -7,20 +7,50 @@
 //
 
 import UIKit
-import MediaPlayer
 import AVKit
 import AVFoundation
+import Haneke
 
 class TableViewCell: UITableViewCell {
     
-    @IBOutlet var movieView: LoopingVideoView!
     
+    //var shouldPlay = false
+    var indexPath : NSInteger = 0
+    var story: Story? {
+        didSet {
+            if (story != nil) { populate(story!)}
+            
+        }
+    }
+    
+    
+    @IBOutlet var movieView: LoopingVideoView!
     @IBOutlet weak var lblCharity: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
 
-    
-    var videoURL: NSURL!
+    private func populate(story: Story) {
+        lblCharity.text = story.organization.name ?? ""
+        lblAmount.text = "Your $\(story.organization.amount) monthly is doing this!"
+        
+        let cache = Haneke.Shared.dataCache
+        
+        cache.fetch(URL: story.link).onSuccess { (_) in
+            let path = NSURL(string: DiskCache.basePath())!.URLByAppendingPathComponent("shared-data/original")
+            let cached = DiskCache(path: path.absoluteString).pathForKey(story.link.absoluteString)
+            let file = NSURL(fileURLWithPath: cached)
+            
+            //self.movieView.play(fileURL)
 
+            if self.indexPath == 1 {
+                self.movieView.play(file)
+                self.movieView.pause()
+            } else {
+                self.movieView.play(file)
+            }
+        }.onFailure { (error) in
+            print(error)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,38 +58,15 @@ class TableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-    }
-    
-    //Action to load video
-//    func displayVideo() {
-//
-//        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
-//        moviePlayer.controlStyle = MPMovieControlStyle.None
-//        moviePlayer.scalingMode = MPMovieScalingMode.Fill
-//        moviePlayer.movieSourceType = MPMovieSourceType.File
-//        moviePlayer.repeatMode = MPMovieRepeatMode.One
-//        moviePlayer.initialPlaybackTime = -1.0
-//        moviePlayer.view.frame = movieView.bounds
-//        moviePlayer.view.center = CGPointMake(CGRectGetMidX(movieView.bounds), CGRectGetMidY(movieView.bounds))
-//        movieView.addSubview(moviePlayer.view)
-//        
-//
-//        moviePlayer.prepareToPlay()
-//        moviePlayer.play()
-//
-//    }
-//    
     override func prepareForReuse() {
         super.prepareForReuse()
-        
-        videoURL = nil
-        
+    
+        story = nil
+        lblCharity.text = nil
+        lblAmount.text = nil
+        movieView.playerLayer.player = nil
     }
     
     
