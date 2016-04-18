@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Haneke
 
 @IBDesignable class LoopingVideoView: UIView {
     @IBInspectable var mainBundleFileName : NSString?
@@ -28,7 +29,31 @@ import AVFoundation
         }
     }
     
-    func play(url: NSURL, count: Int = 1, autoplay: Bool = true) -> AVAsset {
+    func prepare(url: NSURL, autoplay: Bool = false, succeed: (() -> ())?, failure: ((ErrorType?) -> ())?) {
+        
+        let cache = Haneke.Shared.dataCache
+        
+        cache.fetch(URL: url).onSuccess { (_) in
+            let path = NSURL(string: DiskCache.basePath())!.URLByAppendingPathComponent("shared-data/original")
+            let cached = DiskCache(path: path.absoluteString).pathForKey(url.absoluteString)
+            let file = NSURL(fileURLWithPath: cached)
+            
+            self.play(file, autoplay: autoplay)
+            
+            succeed?()
+            //            if self.indexPath == 1 {
+            //                self.movieView.play(file)
+            //                self.movieView.pause()
+            //            } else {
+            //                self.movieView.play(file)
+            //            }
+        }.onFailure { (error) in
+            print(error)
+            failure?(error)
+        }
+    }
+    
+    func play(url: NSURL, count: Int = 1, autoplay: Bool = false) -> AVAsset {
         let asset = self.dynamicType.composedAsset(url, count: count)
         let playerLayer = self.dynamicType.createPlayerLayer(asset)
         playerLayer.frame = layer.bounds

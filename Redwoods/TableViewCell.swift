@@ -13,16 +13,13 @@ import Haneke
 
 class TableViewCell: UITableViewCell {
     
-    
-    //var shouldPlay = false
-    var indexPath : NSInteger = 0
+    var shouldPlay = false
     var story: Story? {
         didSet {
             if (story != nil) { populate(story!)}
             
         }
     }
-    
     
     @IBOutlet var movieView: LoopingVideoView!
     @IBOutlet weak var lblCharity: UILabel!
@@ -32,22 +29,9 @@ class TableViewCell: UITableViewCell {
         lblCharity.text = story.organization.name ?? ""
         lblAmount.text = "Your $\(story.organization.amount) monthly is doing this!"
         
-        let cache = Haneke.Shared.dataCache
-        
-        cache.fetch(URL: story.link).onSuccess { (_) in
-            let path = NSURL(string: DiskCache.basePath())!.URLByAppendingPathComponent("shared-data/original")
-            let cached = DiskCache(path: path.absoluteString).pathForKey(story.link.absoluteString)
-            let file = NSURL(fileURLWithPath: cached)
-            
-            //self.movieView.play(fileURL)
-
-            if self.indexPath == 1 {
-                self.movieView.play(file)
-                self.movieView.pause()
-            } else {
-                self.movieView.play(file)
-            }
-        }.onFailure { (error) in
+        movieView.prepare(story.link, autoplay: shouldPlay, succeed: {
+            print("Asset has been prepared")
+        }) { (error) in
             print(error)
         }
     }
