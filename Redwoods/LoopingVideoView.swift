@@ -29,6 +29,7 @@ import Haneke
         }
     }
     
+<<<<<<< HEAD
     func prepare(url: NSURL, autoplay: Bool = false, succeed: (() -> ())?, failure: ((ErrorType?) -> ())?) {
         
         let cache = Haneke.Shared.dataCache
@@ -54,6 +55,9 @@ import Haneke
     }
     
     func play(url: NSURL, count: Int = 1, autoplay: Bool = false) -> AVAsset {
+=======
+    func play(url: NSURL, count: Int = 1, autoplay: Bool = true) {
+>>>>>>> parent of c716e88... Video Feed
         let asset = self.dynamicType.composedAsset(url, count: count)
         let playerLayer = self.dynamicType.createPlayerLayer(asset)
         playerLayer.frame = layer.bounds
@@ -69,21 +73,20 @@ import Haneke
             name: AVPlayerItemDidPlayToEndTimeNotification,
             object: self.playerLayer.player!.currentItem)
         playing = true
-        return asset
     }
     
     func videoDidFinish() {
         self.stop()
-        playerLayer.player?.play()
+        playerLayer.player!.play()
     }
     
     func pause() {
-        playerLayer.player?.pause()
+        playerLayer.player!.pause()
         playing = false
     }
     
     func stop() {
-        playerLayer.player?.seekToTime(CMTimeMake(0, 600))
+        playerLayer.player!.seekToTime(CMTimeMake(0, 600))
         playing = false
     }
     

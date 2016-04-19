@@ -7,16 +7,22 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import Moya
 import Moya_ObjectMapper
+=======
+import Alamofire
+import SwiftyJSON
+>>>>>>> parent of c716e88... Video Feed
 import AVKit
 import AVFoundation
+import MediaPlayer
 
 
 class TableViewController: UITableViewController {
     
-    // DZNEmptyDataSet
     
+<<<<<<< HEAD
     let provider = MoyaProvider<Redwoods>(plugins: [CredentialsPlugin { _ -> NSURLCredential? in
         return NSURLCredential(
             user: KeychainWrapper.stringForKey("username")!,
@@ -47,6 +53,14 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad()
     {
+=======
+    var objects = [[String: String]]()
+    var moviePlayer:MPMoviePlayerController!
+    
+    
+    
+    override func viewDidLoad() {
+>>>>>>> parent of c716e88... Video Feed
         super.viewDidLoad()
         
         // logo in navbar
@@ -62,6 +76,7 @@ class TableViewController: UITableViewController {
     {
         super.viewDidAppear(animated)
         
+<<<<<<< HEAD
         provider.requestArray(.Feed, succeed: { (organizations: [Organization]) in
             self.orgs = organizations
         }) { (error) in
@@ -72,9 +87,58 @@ class TableViewController: UITableViewController {
     
     override func didReceiveMemoryWarning()
     {
+=======
+        self.objects.removeAll()
+        //set username and password = key chain
+        let user: String = KeychainWrapper.stringForKey("username")!
+        let password: String = KeychainWrapper.stringForKey("password")!
+        
+        //Credentials for basic authentication using text fields for username and password
+        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
+        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        //GET Method for api/feed
+        Alamofire.request(.GET, "https://redwoods-engine-test.herokuapp.com/api/feed", headers: headers)
+            .response { (request, response, json, error) in
+                //if json api/feed returns results then pars json using the parseJSON function
+                if json != nil {
+                    let json = JSON(data: json!)
+                    self.parseJSON(json)
+                }
+        }
+        
+        
+    }
+    
+    //function to parse and load JSON results in objects array as ["storyLink","storyTimestamp","description","org"]
+    func parseJSON(json: JSON) {
+        //loop through json results
+        for result1 in json[].arrayValue {
+            //loop through json results again to get stories of each org
+            for result2 in result1["org"]["stories"].arrayValue{
+                let org = result1["org"]["name"].stringValue
+                let storyLink  = result2["link"].stringValue
+                let storyTimestamp = result2["timestamp"].stringValue
+                let description = result2["description"].stringValue
+                let amount = result1["amount"].stringValue
+                //print(storyLink)
+                let obj = ["storyLink": storyLink, "storyTimestamp": storyTimestamp, "description": description, "org": org, "Amount": amount]
+                objects.append(obj)
+  
+            }
+        }
+        tableView.reloadData()
+        
+       
+    }
+    
+    
+    
+    override func didReceiveMemoryWarning() {
+>>>>>>> parent of c716e88... Video Feed
         super.didReceiveMemoryWarning()
         
-        orgs = []
     }
     
     // MARK: UITableViewDataSource
@@ -84,15 +148,24 @@ class TableViewController: UITableViewController {
         return 1
     }
     
+<<<<<<< HEAD
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.stories.count
+=======
+    
+    //Number of table view rows
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return self.objects.count
+>>>>>>> parent of c716e88... Video Feed
     }
     
     
     //populate each cell based on index path of array
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+<<<<<<< HEAD
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
 
         cell.shouldPlay = indexPath.row == 0
@@ -110,9 +183,14 @@ class TableViewController: UITableViewController {
 
     
     override func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+=======
+        cell.lblCharity.text = self.objects[indexPath.row]["org"]
+        cell.lblAmount.text = "Your $" + self.objects[indexPath.row]["Amount"]! + " monthly is doing this!"
+>>>>>>> parent of c716e88... Video Feed
         
-        let indexPaths = tableView.indexPathsForVisibleRows
+        //cell.movieView.play(NSURL(string: self.objects[indexPath.row]["storyLink"]!)!, autoplay: false)
         
+<<<<<<< HEAD
         let actualPosition = scrollView.panGestureRecognizer.translationInView(scrollView.superview)
         if (actualPosition.y > 0){
             
@@ -124,8 +202,28 @@ class TableViewController: UITableViewController {
             //scroll down
             tableView.scrollToRowAtIndexPath(indexPaths![1], atScrollPosition: .Bottom, animated: true)
         }
+=======
+        cell.movieView.play(NSURL(string: self.objects[indexPath.row]["storyLink"]!)!)
+        
+//        var cellRect1 : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
+//        cellRect1 = self.tableView.superview!.convertRect(cellRect1, fromView: self.tableView)
+//        
+//
+//        if self.tableView.frame.contains(cellRect1) {
+//            
+//            cell.awakeFromNib()
+//            
+//            cell.videoURL = NSURL(string: self.objects[indexPath.row]["storyLink"]!)!
+//            
+//            cell.displayVideo()
+//       
+//           
+//           
+//        }
+
+        return cell
+>>>>>>> parent of c716e88... Video Feed
     }
-    
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
 
@@ -190,6 +288,7 @@ class TableViewController: UITableViewController {
 //        
         
         for indexPath in tableView.indexPathsForVisibleRows ?? [] {
+<<<<<<< HEAD
             if let cell : TableViewCell = tableView.cellForRowAtIndexPath(indexPath)! as? TableViewCell {
                             var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
                             cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
@@ -208,6 +307,10 @@ class TableViewController: UITableViewController {
         
         
         
+=======
+            if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+                tableView(tableView, willDisplayCell: cell, forRowAtIndexPath: indexPath)
+>>>>>>> parent of c716e88... Video Feed
             }
         }
     }
@@ -217,6 +320,7 @@ class TableViewController: UITableViewController {
 //    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
 //        if let _cell = cell as? TableViewCell {
             
+<<<<<<< HEAD
             
             //_cell.shouldPlay = true
 //            var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
@@ -230,6 +334,33 @@ class TableViewController: UITableViewController {
 //                //    _cell.shouldPlay = true
 //                }
 //            }else {
+=======
+            var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
+            cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
+            
+            if tableView.frame.contains(cellRect) {
+                if _cell.movieView.playing == true {
+                
+                }else{
+                    _cell.movieView.stop()
+                    _cell.movieView.playing = true
+                    _cell.movieView.playerLayer.player?.play()
+                }
+            }else {
+                _cell.movieView.pause()
+            }
+            
+
+//
+//            //DONT MODIFY
+//            
+//            if tableView.frame.contains(cell.frame) && !_cell.movieView.playing {
+//                _cell.movieView.playing = true
+//                _cell.movieView.playerLayer.player!.play()
+//                print("Did play video at indexpath")
+//                return
+//            } else if _cell.movieView.playing {
+>>>>>>> parent of c716e88... Video Feed
 //                _cell.movieView.pause()
 //                
 //            }
@@ -246,7 +377,6 @@ class TableViewController: UITableViewController {
 //        }
 //    }
     
-
     //Prepare for segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 

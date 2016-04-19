@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r2K-ap-qdP">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -449,35 +450,40 @@
         <scene sceneID="L2w-rK-WnK">
             <objects>
                 <tableViewController storyboardIdentifier="FeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WFh-4b-U7c" customClass="TableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
+<<<<<<< HEAD
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="532" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQN-Ki-oUy">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+=======
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="355" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQN-Ki-oUy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+>>>>>>> parent of c716e88... Video Feed
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="532" id="D1c-YE-1U5" customClass="TableViewCell" customModule="Redwoods" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="532"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="355" id="D1c-YE-1U5" customClass="TableViewCell" customModule="Redwoods" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="355"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D1c-YE-1U5" id="hJ1-oS-XEL">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="531.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="354.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgz-We-SeD" customClass="LoopingVideoView" customModule="Redwoods">
-                                            <rect key="frame" x="0.0" y="51" width="600" height="443"/>
+                                            <rect key="frame" x="0.0" y="51" width="600" height="266"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGC-Ku-DnY">
                                             <rect key="frame" x="8" y="22" width="584" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Mb9-gT-a09"/>
+                                                <constraint firstAttribute="height" constant="21" id="DXs-PI-HnF"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                             <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtB-Qy-Gl4">
-                                            <rect key="frame" x="8" y="502" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="325" width="584" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="aAs-Yb-ZSK"/>
+                                                <constraint firstAttribute="height" constant="21" id="p3t-fU-hzQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                             <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -485,16 +491,16 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="UtB-Qy-Gl4" secondAttribute="bottom" constant="0.5" id="ERF-n2-VqW"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="trailing" secondItem="UtB-Qy-Gl4" secondAttribute="trailing" id="FZ8-xi-8nQ"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="top" secondItem="hJ1-oS-XEL" secondAttribute="topMargin" constant="14" id="IW9-T1-Nxx"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="UtB-Qy-Gl4" secondAttribute="leading" id="Ma0-WW-aAy"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leadingMargin" id="TQW-rU-cMi"/>
-                                        <constraint firstItem="lgz-We-SeD" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leading" id="Zne-QI-jmR"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="centerX" secondItem="lgz-We-SeD" secondAttribute="centerX" id="eXx-SC-ZxC"/>
-                                        <constraint firstAttribute="trailing" secondItem="lgz-We-SeD" secondAttribute="trailing" id="ht1-ut-14S"/>
-                                        <constraint firstItem="lgz-We-SeD" firstAttribute="top" secondItem="rGC-Ku-DnY" secondAttribute="bottom" constant="8" symbolic="YES" id="kIm-6D-KwC"/>
-                                        <constraint firstItem="UtB-Qy-Gl4" firstAttribute="top" secondItem="lgz-We-SeD" secondAttribute="bottom" constant="8" symbolic="YES" id="nmF-Yy-hvO"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="top" secondItem="hJ1-oS-XEL" secondAttribute="topMargin" constant="14" id="0tl-gB-Ksc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UtB-Qy-Gl4" secondAttribute="bottom" constant="0.5" id="2P6-Rf-0UW"/>
+                                        <constraint firstItem="lgz-We-SeD" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leading" id="57i-vi-a5c"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="UtB-Qy-Gl4" secondAttribute="leading" id="Fk8-7J-doa"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="trailing" secondItem="UtB-Qy-Gl4" secondAttribute="trailing" id="Pak-nP-iUf"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leadingMargin" id="QKY-f1-f4s"/>
+                                        <constraint firstItem="UtB-Qy-Gl4" firstAttribute="top" secondItem="lgz-We-SeD" secondAttribute="bottom" constant="8" symbolic="YES" id="a6G-Hn-BJN"/>
+                                        <constraint firstItem="lgz-We-SeD" firstAttribute="top" secondItem="rGC-Ku-DnY" secondAttribute="bottom" constant="8" symbolic="YES" id="gq9-Vo-hx9"/>
+                                        <constraint firstAttribute="trailing" secondItem="lgz-We-SeD" secondAttribute="trailing" id="hKH-pz-dmZ"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="centerX" secondItem="lgz-We-SeD" secondAttribute="centerX" id="nT3-t6-tfY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1537,7 +1543,11 @@
         <image name="RedwoodsMasterLogoWhite" width="960" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="tSX-uk-TAO"/>
+=======
+        <segue reference="E97-fS-K0N"/>
+>>>>>>> parent of c716e88... Video Feed
         <segue reference="gI3-UC-9MO"/>
     </inferredMetricsTieBreakers>
 </document>
