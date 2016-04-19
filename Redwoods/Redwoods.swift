@@ -11,6 +11,7 @@ import Moya
 
 enum Redwoods {
     case Feed
+    case BrowseOrgs
 }
 
 extension Redwoods: TargetType {
@@ -21,11 +22,15 @@ extension Redwoods: TargetType {
         switch self {
         case .Feed:
             return "/feed"
+        case .BrowseOrgs:
+            return "/profile/browseorgs"
         }
     }
     var method: Moya.Method {
         switch self {
         case .Feed:
+            return .GET
+        case .BrowseOrgs:
             return .GET
         }
     }

@@ -23,7 +23,11 @@ class TestTableViewCell: UITableViewCell {
     @IBOutlet weak var lblAmount: UILabel!
     
     
-    var videoURL: NSURL!
+    var videoURL: NSURL! 
+
+    var shouldPlay = false
+    
+
     
     
     override func awakeFromNib() {
@@ -63,35 +67,9 @@ class TestTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        movieView = nil
         videoURL = nil
         
     }
-    
-    func getJsonCache() {
-        
-        
-        let user: String = KeychainWrapper.stringForKey("username")!
-        let password: String = KeychainWrapper.stringForKey("password")!
-
-        let cache = Cache<Haneke.JSON>(name: "github")
-        let URL = NSURL(string: "https://redwoods-engine-test.herokuapp.com/api/feed")!
-        
-        //Credentials for basic authentication using text fields for username and password
-        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
-        
-        //GET Method for api/feed
-        Alamofire.request(.GET, URL, headers: headers)
-            .response { (request, response, json, error) in
-                
-            cache.fetch(URL: URL).onSuccess { JSON in
-                print(JSON.dictionary?["org"]!["stories"])
-            }
-            
-        }
-
-                    
-                }
 
 }

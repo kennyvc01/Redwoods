@@ -108,13 +108,21 @@ class TestTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TestTableViewCell
         
-        
-        cell.getJsonCache()
-        
         cell.lblCharity.text = self.objects[indexPath.row]["org"]
         cell.lblAmount.text = "Your $" + self.objects[indexPath.row]["Amount"]! + " monthly is doing this!"
         
         //cell.movieView.play(NSURL(string: self.objects[indexPath.row]["storyLink"]!)!, autoplay: false)
+        //print(objects[indexPath.row])
+
+//        if self.objects[indexPath.row]["storyLink"] != nil{
+//            cell.movieView.prepare((NSURL(string: self.objects[indexPath.row]["storyLink"]!))!, autoplay: true, succeed: {
+//                print("Asset has been prepared")
+//            }) { (error) in
+//                print(error)
+//            }
+//        }
+
+        
         
         cell.movieView.play(NSURL(string: self.objects[indexPath.row]["storyLink"]!)!)
         
@@ -122,34 +130,34 @@ class TestTableViewController: UITableViewController {
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-        for indexPath in tableView.indexPathsForVisibleRows ?? [] {
-            if let cell = tableView.cellForRowAtIndexPath(indexPath) {
-                tableView(tableView, willDisplayCell: cell, forRowAtIndexPath: indexPath)
-            }
-        }
+//        
+//        for indexPath in tableView.indexPathsForVisibleRows ?? [] {
+//            if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+//                tableView(tableView, willDisplayCell: cell, forRowAtIndexPath: indexPath)
+//            }
+//        }
     }
     
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let _cell = cell as? TestTableViewCell {
-            
-            var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
-            cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
-            
-            if tableView.frame.contains(cellRect) {
-                if _cell.movieView.playing == true {
-                    
-                }else{
-                    _cell.movieView.stop()
-                    _cell.movieView.playing = true
-                    _cell.movieView.playerLayer.player?.play()
-                }
-            }else {
-                _cell.movieView.pause()
-            }
-            
-            
+//        if let _cell = cell as? TestTableViewCell {
+//            
+//            var cellRect : CGRect = self.tableView.rectForRowAtIndexPath(indexPath)
+//            cellRect = self.tableView.superview!.convertRect(cellRect, fromView: self.tableView)
+//            
+//            if tableView.frame.contains(cellRect) {
+//                if _cell.movieView.playing == true {
+//                    
+//                }else{
+//                    _cell.movieView.stop()
+//                    _cell.movieView.playing = true
+//                    _cell.movieView.playerLayer.player?.play()
+//                }
+//            }else {
+//                _cell.movieView.pause()
+//            }
+//            
+        
             //
             //            //DONT MODIFY
             //
@@ -162,7 +170,7 @@ class TestTableViewController: UITableViewController {
             //                _cell.movieView.pause()
             //                print("Did pause video at indexpath")
             //            }
-        }
+        //}
     }
     //
     //    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

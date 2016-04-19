@@ -29,7 +29,6 @@ class TableViewController: UITableViewController {
             print(error)
         }
     }
-    var objects = [[String: String]]()
     var orgs: [Organization] = [] {
         didSet {
             tableView.reloadData()
@@ -108,10 +107,6 @@ class TableViewController: UITableViewController {
     }
     
     // MARK: UITableViewDelegate
-    
-//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
 
     
     override func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
@@ -217,7 +212,7 @@ class TableViewController: UITableViewController {
         }
     }
     
-    // This will only be called on load of the table view data and when the cell has been off screen and is about to come onto screen.
+//// This will only be called on load of the table view data and when the cell has been off screen and is about to come onto screen.
     
 //    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
 //        if let _cell = cell as? TableViewCell {
