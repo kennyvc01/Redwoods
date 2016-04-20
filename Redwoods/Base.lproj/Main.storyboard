@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r2K-ap-qdP">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -256,10 +255,10 @@
                         <viewControllerLayoutGuide type="bottom" id="6NV-Qe-FW1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="big-fJ-QBM">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-gP-2bF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-gP-2bF">
                                 <rect key="frame" x="20" y="56" width="560" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="DDt-To-2CI"/>
@@ -268,14 +267,14 @@
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose a new monthly donation amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-1Y-KXX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a new monthly donation amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-1Y-KXX">
                                 <rect key="frame" x="20" y="97" width="560" height="21"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7c-Ec-hkO">
-                                <rect key="frame" x="20" y="429" width="560" height="30"/>
+                                <rect key="frame" x="20" y="493" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Update Monthly Giving">
@@ -291,7 +290,7 @@
                                     <segue destination="WFh-4b-U7c" kind="show" identifier="UpdateSegue" id="smr-lX-5kZ"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-7w-PFY">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-7w-PFY">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="OOv-AU-BGe" id="e4M-Tb-XG4"/>
@@ -299,7 +298,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzt-kD-qOg">
-                                <rect key="frame" x="20" y="486" width="560" height="30"/>
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Cancel Monthly Giving">
@@ -450,40 +449,35 @@
         <scene sceneID="L2w-rK-WnK">
             <objects>
                 <tableViewController storyboardIdentifier="FeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WFh-4b-U7c" customClass="TableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
-<<<<<<< HEAD
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="532" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQN-Ki-oUy">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-=======
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="355" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQN-Ki-oUy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
->>>>>>> parent of c716e88... Video Feed
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="355" id="D1c-YE-1U5" customClass="TableViewCell" customModule="Redwoods" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="355"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="532" id="D1c-YE-1U5" customClass="TableViewCell" customModule="Redwoods" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="532"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D1c-YE-1U5" id="hJ1-oS-XEL">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="354.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="531.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgz-We-SeD" customClass="LoopingVideoView" customModule="Redwoods">
-                                            <rect key="frame" x="0.0" y="51" width="600" height="266"/>
+                                            <rect key="frame" x="0.0" y="51" width="600" height="443"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGC-Ku-DnY">
                                             <rect key="frame" x="8" y="22" width="584" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="DXs-PI-HnF"/>
+                                                <constraint firstAttribute="height" constant="21" id="Mb9-gT-a09"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                             <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtB-Qy-Gl4">
-                                            <rect key="frame" x="8" y="325" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="502" width="584" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="p3t-fU-hzQ"/>
+                                                <constraint firstAttribute="height" constant="21" id="aAs-Yb-ZSK"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                             <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -491,16 +485,16 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="top" secondItem="hJ1-oS-XEL" secondAttribute="topMargin" constant="14" id="0tl-gB-Ksc"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="UtB-Qy-Gl4" secondAttribute="bottom" constant="0.5" id="2P6-Rf-0UW"/>
-                                        <constraint firstItem="lgz-We-SeD" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leading" id="57i-vi-a5c"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="UtB-Qy-Gl4" secondAttribute="leading" id="Fk8-7J-doa"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="trailing" secondItem="UtB-Qy-Gl4" secondAttribute="trailing" id="Pak-nP-iUf"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leadingMargin" id="QKY-f1-f4s"/>
-                                        <constraint firstItem="UtB-Qy-Gl4" firstAttribute="top" secondItem="lgz-We-SeD" secondAttribute="bottom" constant="8" symbolic="YES" id="a6G-Hn-BJN"/>
-                                        <constraint firstItem="lgz-We-SeD" firstAttribute="top" secondItem="rGC-Ku-DnY" secondAttribute="bottom" constant="8" symbolic="YES" id="gq9-Vo-hx9"/>
-                                        <constraint firstAttribute="trailing" secondItem="lgz-We-SeD" secondAttribute="trailing" id="hKH-pz-dmZ"/>
-                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="centerX" secondItem="lgz-We-SeD" secondAttribute="centerX" id="nT3-t6-tfY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UtB-Qy-Gl4" secondAttribute="bottom" constant="0.5" id="ERF-n2-VqW"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="trailing" secondItem="UtB-Qy-Gl4" secondAttribute="trailing" id="FZ8-xi-8nQ"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="top" secondItem="hJ1-oS-XEL" secondAttribute="topMargin" constant="14" id="IW9-T1-Nxx"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="UtB-Qy-Gl4" secondAttribute="leading" id="Ma0-WW-aAy"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leadingMargin" id="TQW-rU-cMi"/>
+                                        <constraint firstItem="lgz-We-SeD" firstAttribute="leading" secondItem="hJ1-oS-XEL" secondAttribute="leading" id="Zne-QI-jmR"/>
+                                        <constraint firstItem="rGC-Ku-DnY" firstAttribute="centerX" secondItem="lgz-We-SeD" secondAttribute="centerX" id="eXx-SC-ZxC"/>
+                                        <constraint firstAttribute="trailing" secondItem="lgz-We-SeD" secondAttribute="trailing" id="ht1-ut-14S"/>
+                                        <constraint firstItem="lgz-We-SeD" firstAttribute="top" secondItem="rGC-Ku-DnY" secondAttribute="bottom" constant="8" symbolic="YES" id="kIm-6D-KwC"/>
+                                        <constraint firstItem="UtB-Qy-Gl4" firstAttribute="top" secondItem="lgz-We-SeD" secondAttribute="bottom" constant="8" symbolic="YES" id="nmF-Yy-hvO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -976,7 +970,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="CharitySearchFromFeed" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lMq-hI-Dwy" customClass="CharitySearchTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="228" sectionHeaderHeight="28" sectionFooterHeight="28" id="9aQ-GS-N20">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1064,7 +1058,7 @@
             <objects>
                 <tableViewController id="1av-gS-YEk" customClass="ProfileTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d2j-dK-BEh">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="6nJ-Hh-0F0">
@@ -1243,7 +1237,7 @@
             <objects>
                 <tableViewController id="bPD-BE-c56" customClass="PortfolioTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="TcT-uG-0xJ">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1297,7 +1291,7 @@
             <objects>
                 <tableViewController id="xLL-N5-TGs" customClass="ActivityTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Jb-Kw-9is">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1372,20 +1366,20 @@
                         <viewControllerLayoutGuide type="bottom" id="QJ4-d5-yv8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3R2-xO-Kho">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="smg-mu-1Ge">
-                                <rect key="frame" x="20" y="2" width="560" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="smg-mu-1Ge">
+                                <rect key="frame" x="20" y="2" width="560" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Yfn-Ou-bkz"/>
+                                    <constraint firstAttribute="height" constant="33" id="vbs-Pv-pgp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPQ-EJ-VDm">
-                                <rect key="frame" x="20" y="422" width="560" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPQ-EJ-VDm">
+                                <rect key="frame" x="20" y="498" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Begin Monthly Donations">
@@ -1401,44 +1395,45 @@
                                     <segue destination="WFh-4b-U7c" kind="show" identifier="DonationSegue" id="E97-fS-K0N"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an amount to give monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-sd-IUT">
-                                <rect key="frame" x="20" y="290" width="560" height="21"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POU-3O-myu">
-                                <rect key="frame" x="20" y="319" width="560" height="95"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POU-3O-myu">
+                                <rect key="frame" x="20" y="367" width="560" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="FM7-rC-mgS"/>
+                                    <constraint firstAttribute="height" constant="123" id="zau-ND-Btp"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="frX-Bu-iUU" id="BWJ-Lf-Per"/>
                                 </connections>
                             </pickerView>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-xX-huF" customClass="LoopingVideoView" customModule="Redwoods">
-                                <rect key="frame" x="0.0" y="54" width="600" height="212"/>
+                            <view contentMode="scaleAspectFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-xX-huF" customClass="LoopingVideoView" customModule="Redwoods">
+                                <rect key="frame" x="0.0" y="43" width="600" height="296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an amount to give monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-sd-IUT">
+                                <rect key="frame" x="20" y="347" width="560" height="21"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S7p-xX-huF" firstAttribute="leading" secondItem="3R2-xO-Kho" secondAttribute="leading" id="6pP-vD-ShY"/>
-                            <constraint firstItem="POU-3O-myu" firstAttribute="top" secondItem="Epg-sd-IUT" secondAttribute="bottom" constant="8" symbolic="YES" id="82W-d2-bTu"/>
-                            <constraint firstItem="Epg-sd-IUT" firstAttribute="leading" secondItem="POU-3O-myu" secondAttribute="leading" id="ARG-5U-Dks"/>
-                            <constraint firstItem="POU-3O-myu" firstAttribute="leading" secondItem="uPQ-EJ-VDm" secondAttribute="leading" id="CBY-5N-ldH"/>
-                            <constraint firstItem="S7p-xX-huF" firstAttribute="top" secondItem="smg-mu-1Ge" secondAttribute="bottom" constant="8" symbolic="YES" id="J0z-YA-gEy"/>
-                            <constraint firstItem="Epg-sd-IUT" firstAttribute="trailing" secondItem="POU-3O-myu" secondAttribute="trailing" id="JXl-zC-d73"/>
-                            <constraint firstItem="QJ4-d5-yv8" firstAttribute="top" secondItem="uPQ-EJ-VDm" secondAttribute="bottom" constant="84" id="XwL-Yt-7pr"/>
-                            <constraint firstItem="Epg-sd-IUT" firstAttribute="top" secondItem="S7p-xX-huF" secondAttribute="bottom" constant="24" id="Z5Q-m7-YhF"/>
-                            <constraint firstAttribute="trailing" secondItem="S7p-xX-huF" secondAttribute="trailing" id="ewv-wx-X7H"/>
-                            <constraint firstItem="smg-mu-1Ge" firstAttribute="top" secondItem="3R2-xO-Kho" secondAttribute="topMargin" constant="2" id="gfR-0I-oIs"/>
-                            <constraint firstItem="smg-mu-1Ge" firstAttribute="trailing" secondItem="Epg-sd-IUT" secondAttribute="trailing" id="iqy-4x-i8Z"/>
-                            <constraint firstItem="S7p-xX-huF" firstAttribute="centerX" secondItem="Epg-sd-IUT" secondAttribute="centerX" id="kxg-ft-1cb"/>
-                            <constraint firstItem="smg-mu-1Ge" firstAttribute="leading" secondItem="3R2-xO-Kho" secondAttribute="leadingMargin" id="n0t-sQ-6jz"/>
-                            <constraint firstItem="uPQ-EJ-VDm" firstAttribute="top" secondItem="POU-3O-myu" secondAttribute="bottom" constant="8" symbolic="YES" id="nei-cw-om7"/>
-                            <constraint firstItem="POU-3O-myu" firstAttribute="trailing" secondItem="uPQ-EJ-VDm" secondAttribute="trailing" id="qqk-tG-YQS"/>
-                            <constraint firstItem="smg-mu-1Ge" firstAttribute="leading" secondItem="Epg-sd-IUT" secondAttribute="leading" id="uX2-jk-Jxh"/>
+                            <constraint firstItem="Epg-sd-IUT" firstAttribute="top" secondItem="S7p-xX-huF" secondAttribute="bottom" constant="8" symbolic="YES" id="0pa-Hy-jdx"/>
+                            <constraint firstItem="S7p-xX-huF" firstAttribute="top" secondItem="3R2-xO-Kho" secondAttribute="top" constant="43" id="1GT-eg-5sl"/>
+                            <constraint firstItem="smg-mu-1Ge" firstAttribute="leading" secondItem="3R2-xO-Kho" secondAttribute="leadingMargin" id="65r-ne-ZI9"/>
+                            <constraint firstItem="smg-mu-1Ge" firstAttribute="top" secondItem="tOy-T4-o5R" secondAttribute="bottom" constant="2" id="Axx-HS-Lgt"/>
+                            <constraint firstItem="POU-3O-myu" firstAttribute="trailing" secondItem="uPQ-EJ-VDm" secondAttribute="trailing" id="Hme-qp-W6F"/>
+                            <constraint firstAttribute="trailing" secondItem="S7p-xX-huF" secondAttribute="trailing" id="Tpc-je-Nib"/>
+                            <constraint firstItem="S7p-xX-huF" firstAttribute="leading" secondItem="3R2-xO-Kho" secondAttribute="leading" id="X4l-d0-Fu5"/>
+                            <constraint firstItem="Epg-sd-IUT" firstAttribute="leading" secondItem="POU-3O-myu" secondAttribute="leading" id="ZAQ-eM-WFo"/>
+                            <constraint firstItem="smg-mu-1Ge" firstAttribute="trailing" secondItem="Epg-sd-IUT" secondAttribute="trailing" id="bXp-hE-kFZ"/>
+                            <constraint firstItem="Epg-sd-IUT" firstAttribute="trailing" secondItem="POU-3O-myu" secondAttribute="trailing" id="cAe-Cf-GDO"/>
+                            <constraint firstItem="POU-3O-myu" firstAttribute="leading" secondItem="uPQ-EJ-VDm" secondAttribute="leading" id="ck2-J6-vop"/>
+                            <constraint firstItem="smg-mu-1Ge" firstAttribute="leading" secondItem="Epg-sd-IUT" secondAttribute="leading" id="lj3-NE-OFl"/>
+                            <constraint firstItem="S7p-xX-huF" firstAttribute="centerX" secondItem="Epg-sd-IUT" secondAttribute="centerX" id="ngI-Dh-V3Y"/>
+                            <constraint firstItem="QJ4-d5-yv8" firstAttribute="top" secondItem="uPQ-EJ-VDm" secondAttribute="bottom" constant="8" symbolic="YES" id="oX7-Oy-KQE"/>
+                            <constraint firstAttribute="bottom" secondItem="S7p-xX-huF" secondAttribute="bottom" constant="261" id="rQx-ea-tIZ"/>
+                            <constraint firstItem="S7p-xX-huF" firstAttribute="top" secondItem="smg-mu-1Ge" secondAttribute="bottom" constant="8" symbolic="YES" id="uEE-nw-Nqi"/>
+                            <constraint firstItem="uPQ-EJ-VDm" firstAttribute="top" secondItem="POU-3O-myu" secondAttribute="bottom" constant="8" symbolic="YES" id="zZg-Np-gOd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1543,11 +1538,7 @@
         <image name="RedwoodsMasterLogoWhite" width="960" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="tSX-uk-TAO"/>
-=======
-        <segue reference="E97-fS-K0N"/>
->>>>>>> parent of c716e88... Video Feed
         <segue reference="gI3-UC-9MO"/>
+        <segue reference="E97-fS-K0N"/>
     </inferredMetricsTieBreakers>
 </document>

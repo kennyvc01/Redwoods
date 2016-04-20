@@ -8,13 +8,14 @@
 
 import UIKit
 import AVFoundation
-import Haneke
 
 @IBDesignable class LoopingVideoView: UIView {
     @IBInspectable var mainBundleFileName : NSString?
     var playCount : Int = 100
     var playerLayer = AVPlayerLayer()
     var playing: Bool = false
+    var fill : Bool = true
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -29,37 +30,9 @@ import Haneke
         }
     }
     
-<<<<<<< HEAD
-    func prepare(url: NSURL, autoplay: Bool = false, succeed: (() -> ())?, failure: ((ErrorType?) -> ())?) {
-        
-        let cache = Haneke.Shared.dataCache
-        
-        cache.fetch(URL: url).onSuccess { (_) in
-            let path = NSURL(string: DiskCache.basePath())!.URLByAppendingPathComponent("shared-data/original")
-            let cached = DiskCache(path: path.absoluteString).pathForKey(url.absoluteString)
-            let file = NSURL(fileURLWithPath: cached)
-            
-            self.play(file, autoplay: autoplay)
-            
-            succeed?()
-            //            if self.indexPath == 1 {
-            //                self.movieView.play(file)
-            //                self.movieView.pause()
-            //            } else {
-            //                self.movieView.play(file)
-            //            }
-        }.onFailure { (error) in
-            print(error)
-            failure?(error)
-        }
-    }
-    
-    func play(url: NSURL, count: Int = 1, autoplay: Bool = false) -> AVAsset {
-=======
-    func play(url: NSURL, count: Int = 1, autoplay: Bool = true) {
->>>>>>> parent of c716e88... Video Feed
+    func play(url: NSURL, count: Int = 1, autoplay: Bool = true) -> AVAsset {
         let asset = self.dynamicType.composedAsset(url, count: count)
-        let playerLayer = self.dynamicType.createPlayerLayer(asset)
+        let playerLayer = self.dynamicType.createPlayerLayer(asset, aspectFill: self.fill)
         playerLayer.frame = layer.bounds
         layer.addSublayer(playerLayer)
         if autoplay {
@@ -73,20 +46,21 @@ import Haneke
             name: AVPlayerItemDidPlayToEndTimeNotification,
             object: self.playerLayer.player!.currentItem)
         playing = true
+        return asset
     }
     
     func videoDidFinish() {
         self.stop()
-        playerLayer.player!.play()
+        playerLayer.player?.play()
     }
     
     func pause() {
-        playerLayer.player!.pause()
+        playerLayer.player?.pause()
         playing = false
     }
     
     func stop() {
-        playerLayer.player!.seekToTime(CMTimeMake(0, 600))
+        playerLayer.player?.seekToTime(CMTimeMake(0, 600))
         playing = false
     }
     
@@ -117,11 +91,16 @@ import Haneke
         return finalAsset;
     }
     
-    class func createPlayerLayer(asset:AVAsset) -> AVPlayerLayer {
+    class func createPlayerLayer(asset:AVAsset, aspectFill: Bool) -> AVPlayerLayer {
         let playerItem = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: playerItem)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        var playerLayer = AVPlayerLayer(player: player)
+        if aspectFill {
+            playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        } else {
+            playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        }
+        
         return playerLayer;
     }
     

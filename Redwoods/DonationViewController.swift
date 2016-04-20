@@ -9,9 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import MediaPlayer
 import AVKit
-
+import AVFoundation
 
 class DonationViewController: UIViewController, UIPickerViewDelegate {
 
@@ -27,7 +26,8 @@ class DonationViewController: UIViewController, UIPickerViewDelegate {
     var introUrl = ""
     var Amount = ["5","10","15","20","25","30","35","40","45","50","75","100","150","200","250","300","350","400","500","750","1000"]
     var selectedAmount = "25"
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,24 +41,33 @@ class DonationViewController: UIViewController, UIPickerViewDelegate {
         
         //button.  if user is donating then "Change Monthly Donation" else "Begin Monthly Donation"
         if self.donation == "I'm donating" {
+            
             self.lblDonor.setTitle("Change Monthly Donation", forState: .Normal)
+            
         }else{
+            
             self.lblDonor.setTitle("Begin Monthly Donation", forState: .Normal)
         }
+
+        //video
+        //LoopingVideoView.videoAspect = "Aspect"
         
-        vwMovieView.prepare(NSURL(string: self.introUrl)!, autoplay: true, succeed: {
-            print("Asset has been prepared")
-        }) { (error) in
-            print(error)
-        }
+        self.vwMovieView.fill = true
+        
+        self.vwMovieView.play(NSURL(string: self.introUrl)!)
     }
-
-
+    
+   
+    
     @IBAction func btnSubmitDonation(sender: AnyObject) {
+        
+        
+        
         let todaysDate:NSDate = NSDate()
         let dateFormatter:NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd"
         let todayString:String = dateFormatter.stringFromDate(todaysDate)
+        
         
         //Added [ String : AnyObject] to handle int type
         let parameters : [ String : AnyObject] =  [
@@ -67,23 +76,32 @@ class DonationViewController: UIViewController, UIPickerViewDelegate {
         ]
         let user: String = KeychainWrapper.stringForKey("username")!
         let password: String = KeychainWrapper.stringForKey("password")!
-       
+        
+        
         //Credentials for basic authentication using text fields for username and password
         let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         //PUT to api/user/register
-       
+        
         Alamofire.request(.PUT, "https://redwoods-engine-test.herokuapp.com/api/profiles/portfolio/" + orgId, headers: headers, parameters: parameters)
             .response { (request, response, json, error) in
+                
                 if error != nil {
                     self.performSegueWithIdentifier("DonationSegue", sender: sender)
                 }
+                
+                
                 //store json result in objects array
                 if json != nil {
                     let jsonObj = JSON(data: json!)
+                    
                 }
+                
         }
+        
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

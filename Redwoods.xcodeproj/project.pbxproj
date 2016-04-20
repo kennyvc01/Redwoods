@@ -31,6 +31,12 @@
 		D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */; };
 		D8B609C81CC1798400E6ECAC /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609C71CC1798400E6ECAC /* PictureViewController.swift */; };
 		D8B609CA1CC2ADDC00E6ECAC /* LoopingVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */; };
+		D8B609D11CC3EC7E00E6ECAC /* Berea.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8B609D01CC3EC7700E6ECAC /* Berea.mp4 */; };
+		D8B609D31CC52AF700E6ECAC /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609D21CC52AF700E6ECAC /* Story.swift */; };
+		D8B609D51CC52C2500E6ECAC /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609D41CC52C2500E6ECAC /* URLTransform.swift */; };
+		D8B609D81CC52D4C00E6ECAC /* Redwoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609D71CC52D4C00E6ECAC /* Redwoods.swift */; };
+		D8B609DC1CC52DB600E6ECAC /* TargetType+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609DB1CC52DB600E6ECAC /* TargetType+Default.swift */; };
+		D8B609DE1CC5314900E6ECAC /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609DD1CC5314900E6ECAC /* Organization.swift */; };
 		D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */; };
 		D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */; };
 		D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */; };
@@ -87,6 +93,12 @@
 		D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDonationViewController.swift; sourceTree = "<group>"; };
 		D8B609C71CC1798400E6ECAC /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopingVideoView.swift; sourceTree = "<group>"; };
+		D8B609D01CC3EC7700E6ECAC /* Berea.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Berea.mp4; sourceTree = "<group>"; };
+		D8B609D21CC52AF700E6ECAC /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		D8B609D41CC52C2500E6ECAC /* URLTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTransform.swift; sourceTree = "<group>"; };
+		D8B609D71CC52D4C00E6ECAC /* Redwoods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redwoods.swift; sourceTree = "<group>"; };
+		D8B609DB1CC52DB600E6ECAC /* TargetType+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TargetType+Default.swift"; sourceTree = "<group>"; };
+		D8B609DD1CC5314900E6ECAC /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewController.swift; sourceTree = "<group>"; };
 		D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +172,8 @@
 			children = (
 				D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */,
 				D80C0C011C73F71900B936BF /* Redwoods */,
+				D80C0C061C73F71900B936BF /* Main.storyboard */,
+				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
 				D80C0C161C73F71900B936BF /* RedwoodsTests */,
 				D80C0C211C73F71900B936BF /* RedwoodsUITests */,
 				0AB9CC33D7AC308CAC06225A /* Pods */,
@@ -181,34 +195,20 @@
 		D80C0C011C73F71900B936BF /* Redwoods */ = {
 			isa = PBXGroup;
 			children = (
-				D8B609CB1CC2AFEF00E6ECAC /* Models */,
-				D8CF33F11CB884C300250633 /* Resources */,
+				D80C0C0E1C73F71900B936BF /* Info.plist */,
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
-<<<<<<< HEAD
 				D8B609C71CC1798400E6ECAC /* PictureViewController.swift */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
 				D80C0C341C74107C00B936BF /* Images.xcassets */,
-				D8B609D61CC52D3B00E6ECAC /* Targets */,
-				D8B609CB1CC2AFEF00E6ECAC /* Models */,
 				D8B609DA1CC52D8800E6ECAC /* Categories */,
 				D8B609D91CC52D7800E6ECAC /* Transforms */,
 				D831E93E1CAE140700669CC5 /* VideoFeed */,
 				D831E93F1CAE143700669CC5 /* CharitySearch */,
 				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
+				D8B609CB1CC2AFEF00E6ECAC /* Models */,
 				D831E9401CAE147600669CC5 /* Profile */,
 				D8CF33F11CB884C300250633 /* Resources */,
-=======
-				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
-				D831E93E1CAE140700669CC5 /* VideoFeed */,
-				D831E93F1CAE143700669CC5 /* CharitySearch */,
-				D831E9401CAE147600669CC5 /* Profile */,
-				D80C0C061C73F71900B936BF /* Main.storyboard */,
-				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
-				D80C0C0E1C73F71900B936BF /* Info.plist */,
-				D80C0C091C73F71900B936BF /* Assets.xcassets */,
-				D80C0C341C74107C00B936BF /* Images.xcassets */,
-				D8B609C71CC1798400E6ECAC /* PictureViewController.swift */,
->>>>>>> parent of c716e88... Video Feed
+				D8B609D61CC52D3B00E6ECAC /* Targets */,
 			);
 			path = Redwoods;
 			sourceTree = "<group>";
@@ -246,6 +246,7 @@
 		D831E93E1CAE140700669CC5 /* VideoFeed */ = {
 			isa = PBXGroup;
 			children = (
+				D8B609D01CC3EC7700E6ECAC /* Berea.mp4 */,
 				D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */,
 				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
 				D80C0C321C74002800B936BF /* TableViewCell.swift */,
@@ -281,8 +282,34 @@
 		D8B609CB1CC2AFEF00E6ECAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D8B609D21CC52AF700E6ECAC /* Story.swift */,
+				D8B609DD1CC5314900E6ECAC /* Organization.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D8B609D61CC52D3B00E6ECAC /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				D8B609D71CC52D4C00E6ECAC /* Redwoods.swift */,
+			);
+			name = Targets;
+			sourceTree = "<group>";
+		};
+		D8B609D91CC52D7800E6ECAC /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				D8B609D41CC52C2500E6ECAC /* URLTransform.swift */,
+			);
+			name = Transforms;
+			sourceTree = "<group>";
+		};
+		D8B609DA1CC52D8800E6ECAC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D8B609DB1CC52DB600E6ECAC /* TargetType+Default.swift */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		D8CF33F11CB884C300250633 /* Resources */ = {
@@ -418,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B609D11CC3EC7E00E6ECAC /* Berea.mp4 in Resources */,
 				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
 				D80C0C351C74107C00B936BF /* Images.xcassets in Resources */,
 				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
@@ -497,6 +525,7 @@
 				D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */,
 				D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */,
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
+				D8B609DE1CC5314900E6ECAC /* Organization.swift in Sources */,
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
 				D8617B071CBDC6E300962216 /* TestTableViewController.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
@@ -504,13 +533,17 @@
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
 				D8B609C81CC1798400E6ECAC /* PictureViewController.swift in Sources */,
+				D8B609D81CC52D4C00E6ECAC /* Redwoods.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
 				D8617B091CBDC6F400962216 /* TestTableViewCell.swift in Sources */,
 				D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */,
+				D8B609D31CC52AF700E6ECAC /* Story.swift in Sources */,
 				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
+				D8B609D51CC52C2500E6ECAC /* URLTransform.swift in Sources */,
 				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
+				D8B609DC1CC52DB600E6ECAC /* TargetType+Default.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
 				D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */,
 				D8B609CA1CC2ADDC00E6ECAC /* LoopingVideoView.swift in Sources */,
@@ -555,6 +588,7 @@
 				D80C0C071C73F71900B936BF /* Base */,
 			);
 			name = Main.storyboard;
+			path = Redwoods;
 			sourceTree = "<group>";
 		};
 		D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */ = {
@@ -563,6 +597,7 @@
 				D80C0C0C1C73F71900B936BF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Redwoods;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -10,52 +10,38 @@ import UIKit
 import MediaPlayer
 import AVKit
 import AVFoundation
+import Haneke
+import Alamofire
+import SwiftyJSON
 
 class TestTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var movieView:UIView!
+    
+    @IBOutlet var movieView: LoopingVideoView!
     
     @IBOutlet weak var lblCharity: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
     
     
-<<<<<<< HEAD
-    var videoURL: NSURL! 
-
-    var shouldPlay = false
-    
-
-=======
-    var moviePlayer:AVPlayerViewController!
-    var videoUrl = ""
-    var visible = "true"
-    var playing = ""
->>>>>>> parent of c716e88... Video Feed
+    var videoURL: NSURL!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //initialize movie player
-        
         
     }
-    
-    
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
     override func layoutSubviews() {
-
-        
+        super.layoutSubviews()
         
     }
     
     //Action to load video
-<<<<<<< HEAD
     //    func displayVideo() {
     //
     //        moviePlayer = MPMoviePlayerController(contentURL: videoURL)
@@ -77,69 +63,35 @@ class TestTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        movieView = nil
         videoURL = nil
         
     }
-=======
-    func displayVideo() {
-
-//        let url = NSURL(string:
-//            self.videoUrl)
-//        let player = AVPlayer(URL: url!)
-//        let playerController = AVPlayerViewController()
-//        
-//        playerController.player = player
-//       // cell.addChildViewController(playerController)
-//        movieView.addSubview(playerController.view)
-//        playerController.view.frame = movieView.frame
-//        
-//        player.play()
-
-        
-        let url = NSURL(string: self.videoUrl)
-        let player = AVPlayer(URL: url!)
-        let playerController = AVPlayerViewController()
-        
-        playerController.player = player
-        // cell.addChildViewController(playerController)
-        self.movieView.addSubview(playerController.view)
-        playerController.view.frame = self.movieView.frame
-
-            player.play()
-
-        
-        
-
-        
-    }
     
-    
-    //Action to load video
-    func pauseVideo() {
-        //        //this works
-        //        let url = NSURL(string:
-        //            self.videoUrl)
-        //        let player = AVPlayer(URL: url!)
-        //        let playerController = AVPlayerViewController()
-        //
-        //        playerController.player = player
-        //       // cell.addChildViewController(playerController)
-        //        movieView.addSubview(playerController.view)
-        //        playerController.view.frame = movieView.frame
-        //
-        //        player.play()
+    func getJsonCache() {
         
         
+        let user: String = KeychainWrapper.stringForKey("username")!
+        let password: String = KeychainWrapper.stringForKey("password")!
 
-        let player = AVPlayer()
+        let cache = Cache<Haneke.JSON>(name: "github")
+        let URL = NSURL(string: "https://redwoods-engine-test.herokuapp.com/api/feed")!
         
+        //Credentials for basic authentication using text fields for username and password
+        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
+        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
         
-        player.pause()
-        
-        
-    }
+        //GET Method for api/feed
+        Alamofire.request(.GET, URL, headers: headers)
+            .response { (request, response, json, error) in
+                
+            cache.fetch(URL: URL).onSuccess { JSON in
+                print(JSON.dictionary?["org"]!["stories"])
+            }
+            
+        }
 
->>>>>>> parent of c716e88... Video Feed
+                    
+                }
 
 }
