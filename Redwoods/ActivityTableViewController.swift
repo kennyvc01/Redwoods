@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class ActivityTableViewController: UITableViewController {
     
     var ActivityObjects1: NSMutableArray! = NSMutableArray()

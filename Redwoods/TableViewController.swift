@@ -7,8 +7,6 @@
 //
 
 import UIKit
-//import Alamofire
-//import SwiftyJSON
 import Moya
 import Moya_ObjectMapper
 import AVKit
@@ -31,7 +29,7 @@ class TableViewController: UITableViewController {
             print(error)
         }
     }
-    var objects = [[String: String]]()
+    //var objects = [[String: String]]()
     var orgs: [Organization] = [] {
         didSet {
             tableView.reloadData()
@@ -47,6 +45,9 @@ class TableViewController: UITableViewController {
         }
         return _stories
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -142,7 +143,6 @@ class TableViewController: UITableViewController {
     //populate each cell based on index path of array
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
-        
 //        cell.story = stories[indexPath.row]
 //        print(stories[indexPath.row])
         if indexPath.row == 1 {

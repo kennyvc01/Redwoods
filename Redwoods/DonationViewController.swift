@@ -23,7 +23,7 @@ class DonationViewController: UIViewController, UIPickerViewDelegate {
     var CharityLabel = ""
     var orgId = ""
     var donation = ""
-    var introUrl = ""
+    var introUrl : NSURL?
     var Amount = ["5","10","15","20","25","30","35","40","45","50","75","100","150","200","250","300","350","400","500","750","1000"]
     var selectedAmount = "25"
     
@@ -54,10 +54,12 @@ class DonationViewController: UIViewController, UIPickerViewDelegate {
         
         self.vwMovieView.fill = true
         
-        self.vwMovieView.play(NSURL(string: self.introUrl)!)
+        self.vwMovieView.play(self.introUrl!)
     }
     
-   
+    override func viewWillDisappear(animated: Bool) {
+        self.vwMovieView.pause()
+    }
     
     @IBAction func btnSubmitDonation(sender: AnyObject) {
         

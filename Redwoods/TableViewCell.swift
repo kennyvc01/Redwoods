@@ -12,14 +12,11 @@ import AVFoundation
 import Haneke
 
 class TableViewCell: UITableViewCell {
-    
-    
-    //var shouldPlay = false
+
     var indexPath : NSInteger = 0
     var story: Story? {
         didSet {
             if (story != nil) { populate(story!)}
-            
         }
     }
     
@@ -39,8 +36,6 @@ class TableViewCell: UITableViewCell {
             let cached = DiskCache(path: path.absoluteString).pathForKey(story.link.absoluteString)
             let file = NSURL(fileURLWithPath: cached)
             
-            //self.movieView.play(fileURL)
-
             if self.indexPath == 1 {
                 self.movieView.play(file)
                 self.movieView.pause()

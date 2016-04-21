@@ -114,23 +114,10 @@ class RegisterViewController: UIViewController {
                     
                 }
             }
-        
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    //Exit button
-    
-    
-    //Can be deleted...old format
-//    @IBAction func btnExit(sender: AnyObject) {
-//        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController
-//        self.presentViewController(viewController, animated: true, completion: nil)
-//    }
-    
-
 }

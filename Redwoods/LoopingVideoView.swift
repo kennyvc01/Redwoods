@@ -94,7 +94,7 @@ import AVFoundation
     class func createPlayerLayer(asset:AVAsset, aspectFill: Bool) -> AVPlayerLayer {
         let playerItem = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: playerItem)
-        var playerLayer = AVPlayerLayer(player: player)
+        let playerLayer = AVPlayerLayer(player: player)
         if aspectFill {
             playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         } else {

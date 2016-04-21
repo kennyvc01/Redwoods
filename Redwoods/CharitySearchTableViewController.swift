@@ -7,13 +7,34 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+import Moya
+import Moya_ObjectMapper
 
 class CharitySearchTableViewController: UITableViewController {
-
-    var browseOrgobjects = [[String: String]]()
-    var feedObjects = [String]()
+    
+    let provider = MoyaProvider<Redwoods>(plugins: [CredentialsPlugin { _ -> NSURLCredential? in
+        return NSURLCredential(
+            user: KeychainWrapper.stringForKey("username")!,
+            password: KeychainWrapper.stringForKey("password")!,
+            persistence: .None
+        )
+        }])
+    var error: ErrorType? {
+        didSet {
+            print(error)
+        }
+    }
+    var objects = [[String: String]]()
+    var orgs: [BrowseOrgs] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    var feed: [Organization] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,79 +44,31 @@ class CharitySearchTableViewController: UITableViewController {
     
     
     override func viewDidAppear(animated: Bool) {
-
         
-        self.feedObjects.removeAll()
-        self.browseOrgobjects.removeAll()
-        //set username and password = key chain
-        let user: String = KeychainWrapper.stringForKey("username")!
-        let password: String = KeychainWrapper.stringForKey("password")!
-        
-        //Credentials for basic authentication using text fields for username and password
-        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
-        
-        //GET Method for api/feed
-        Alamofire.request(.GET, "https://redwoods-engine-test.herokuapp.com/api/feed", headers: headers)
-            .response { (request, response, json, error) in
-                let json = JSON(data: json!)
-                self.parseFeedJSON(json)
-                self.tableView.reloadData()
+        //BrowseOrgs API request
+        provider.requestArray(.BrowseOrgs, succeed: { (organizations: [BrowseOrgs]) in
+            self.orgs = organizations
+        }) { (error) in
+            self.error = error
+            print(error)
         }
-        
-        //GET Method for api/feed
-        Alamofire.request(.GET, "https://redwoods-engine-test.herokuapp.com/api/profile/browseorgs", headers: headers)
-            .response { (request, response, json, error) in
-                //if json api/feed returns results then pars json using the parseJSON function
-                if json != nil {
-                    let json = JSON(data: json!)
-                    self.parseBrowseOrgJSON(json)
-                    self.tableView.reloadData()
-                }
-        }
-
-        
-    }
-    
-    //function to parse and load JSON results in objects array as ["storyLink","storyTimestamp","description","org"]
-    func parseFeedJSON(json: JSON) {
-        
-        for result in json.arrayValue {
-            let orgId = result["org"]["_id"].stringValue
-            feedObjects.append(orgId)
-            print(orgId)
+        //Feed API request
+        provider.requestArray(.Feed, succeed: { (organizations: [Organization]) in
+            self.feed = organizations
+        }) { (error) in
+            self.error = error
+            print(error)
         }
     }
-    
-    
-    
-    
-    
-    //function to parse and load JSON results in objects array as ["storyLink","storyTimestamp","description","org"]
-    func parseBrowseOrgJSON(json: JSON) {
-        //print(json)
-        //loop through json results
-        for result in json.arrayValue {
-            let orgId = result["_id"].stringValue
-            let website = result["website"].stringValue
-            let description = result["description"].stringValue
-            let name = result["name"].stringValue
-            let introUrl = result["introUrl"].stringValue
-            let obj = ["orgId": orgId, "website": website, "description": description, "name": name, "introUrl": introUrl]
-            browseOrgobjects.append(obj)
-        }
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        orgs = []
     }
     
 
     @IBAction func btnSkip(sender: AnyObject) {
-        
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FeedViewController") as UIViewController
         self.presentViewController(viewController, animated: false, completion: nil)
     }
@@ -110,54 +83,54 @@ class CharitySearchTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return browseOrgobjects.count
+        return orgs.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CharitySearchTableViewCell
-        let data = browseOrgobjects[indexPath.row]
-        let dataOrgId = data["orgId"]
         
-        if self.feedObjects.contains(dataOrgId!){
+        cell.lblCharity.text = orgs[indexPath.row].name
+        cell.lblCharityDescription.text = orgs[indexPath.row].description
+        cell.txtWebsite.text = orgs[indexPath.row].website
+        
+        if donating(indexPath) {
             cell.lblDonor.text = "I'm donating"
         }else{
             cell.lblDonor.text = ""
         }
         
-        cell.lblCharity.text = data["name"]
-        cell.lblCharityDescription.text = data["description"]
-        cell.txtWebsite.text = data["website"]
-        
         return cell
     }
+    
+    //MARK: - Table view delegate 
+    
+    // function to loop through feed to see if user is donating.  Return true if they're donating.
+    func donating(indexPath : NSIndexPath) -> Bool {
+        var donating : Bool = false
+        for _feed in self.feed {
+            if _feed.id == orgs[indexPath.row].id{
+                donating = true
+            }
+        }
+       return donating
+    }
+ 
     
     //Prepare for segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Segue" {
-            
-            
-            
             let dvc = segue.destinationViewController as! DonationViewController
-            
             let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-            let data = browseOrgobjects[indexPath.row]
+            let data = orgs[indexPath.row]
             let cell = tableView.cellForRowAtIndexPath(indexPath) as! CharitySearchTableViewCell!;
             
-            dvc.CharityLabel = data["name"]!
-            dvc.orgId = data["orgId"]!
+            dvc.CharityLabel = data.name!
+            dvc.orgId = data.id!
             dvc.donation = cell.lblDonor.text!
-            dvc.introUrl = data["introUrl"]!
-            
-            print(data["introUrl"])
-
-            
+            dvc.introUrl = data.introURL!
 
         }
     }
-
-
-
-    
 
 }
