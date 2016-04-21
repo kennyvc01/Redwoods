@@ -166,23 +166,23 @@ class TableViewController: UITableViewController {
         let actualPosition = scrollView.panGestureRecognizer.translationInView(scrollView.superview)
         if (actualPosition.y > 0){
             
-            //scroll up
-            tableView.scrollToRowAtIndexPath(indexPaths![0], atScrollPosition: .Top, animated: true)
-            print("scroll")
-
+            //check if it's the first index path.  if it is don't scroll up
+            for index in indexPaths! {
+                if index.row != 0 {
+                    //scroll up
+                    tableView.scrollToRowAtIndexPath(indexPaths![0], atScrollPosition: .Top, animated: true)
+                }
+            }
         }else {
+            //check if it's the last index path.  if it is don't scroll down
             for index in indexPaths! {
                 if index.row < self.stories.count-1 {
+                    //scroll down
                     tableView.scrollToRowAtIndexPath(indexPaths![1], atScrollPosition: .Bottom, animated: true)
                 }
             }
         }
-
-
-        
-
     }
-    
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
 
