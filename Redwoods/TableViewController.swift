@@ -168,12 +168,16 @@ class TableViewController: UITableViewController {
             
             //scroll up
             tableView.scrollToRowAtIndexPath(indexPaths![0], atScrollPosition: .Top, animated: true)
+            print("scroll")
 
-        }else{
-            
-            //scroll down
-            tableView.scrollToRowAtIndexPath(indexPaths![1], atScrollPosition: .Bottom, animated: true)
+        }else {
+            for index in indexPaths! {
+                if index.row < self.stories.count-1 {
+                    tableView.scrollToRowAtIndexPath(indexPaths![1], atScrollPosition: .Bottom, animated: true)
+                }
+            }
         }
+
 
         
 
