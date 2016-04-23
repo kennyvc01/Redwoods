@@ -59,6 +59,7 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -278,7 +279,7 @@
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Update Monthly Giving">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -302,7 +303,7 @@
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Cancel Monthly Giving">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -380,7 +381,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="0.92103987070000004" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -510,7 +511,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="iT3-cq-6fW">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="dmC-te-fIH">
+                        <barButtonItem key="backBarButtonItem" title=" " id="8lF-38-nHa"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="dmC-te-fIH">
                             <connections>
                                 <segue destination="1av-gS-YEk" kind="show" id="eK2-2k-UKC"/>
                             </connections>
@@ -854,13 +856,13 @@
                                     <outlet property="delegate" destination="7ci-Yr-ZIZ" id="WHc-tZ-4s7"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose an amount to give monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIH-KP-EiA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an amount to give monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIH-KP-EiA">
                                 <rect key="frame" x="20" y="317" width="560" height="21"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XfN-KG-bkU" customClass="LoopingVideoView" customModule="Redwoods">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="XfN-KG-bkU" customClass="LoopingVideoView" customModule="Redwoods">
                                 <rect key="frame" x="0.0" y="55" width="600" height="238"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -904,7 +906,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gJp-HU-zqV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -947,10 +949,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u6T-gT-QGM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="37V-CB-a6H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="37V-CB-a6H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -965,7 +967,7 @@
             </objects>
             <point key="canvasLocation" x="709" y="393"/>
         </scene>
-        <!--Choose a Charity-->
+        <!--Charity Search Table View Controller-->
         <scene sceneID="6WP-BP-u06">
             <objects>
                 <tableViewController storyboardIdentifier="CharitySearchFromFeed" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lMq-hI-Dwy" customClass="CharitySearchTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
@@ -1047,11 +1049,84 @@
                             <outlet property="delegate" destination="lMq-hI-Dwy" id="1rz-vP-E9h"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Choose a Charity" id="d0J-4O-YUP"/>
+                    <navigationItem key="navigationItem" id="d0J-4O-YUP">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Vnt-Ev-SO3"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn0-C6-5rJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1982" y="393"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Mv2-01-wfA">
+            <objects>
+                <viewController id="LGr-qj-gL6" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ghm-o8-jQS"/>
+                        <viewControllerLayoutGuide type="bottom" id="buh-Pz-bGS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5fo-19-1lT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ze-C1-xc0">
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Link Accounts">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapConnect:" destination="LGr-qj-gL6" eventType="touchUpInside" id="Vry-WL-Jyp"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Yr-G5-kzK">
+                                <rect key="frame" x="0.0" y="8" width="600" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="K0Q-pE-GDY">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K0Q-pE-GDY" id="nzo-US-lh8">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-wA-mGX">
+                                                    <rect key="frame" x="8" y="11" width="584" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nz6-wA-mGX" firstAttribute="centerY" secondItem="nzo-US-lh8" secondAttribute="centerY" id="YU2-jO-Dak"/>
+                                                <constraint firstItem="nz6-wA-mGX" firstAttribute="trailing" secondItem="nzo-US-lh8" secondAttribute="trailingMargin" id="aJH-mb-Slr"/>
+                                                <constraint firstItem="nz6-wA-mGX" firstAttribute="leading" secondItem="nzo-US-lh8" secondAttribute="leadingMargin" id="dly-Ow-uGl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ze-C1-xc0" firstAttribute="top" secondItem="3Yr-G5-kzK" secondAttribute="bottom" constant="67" id="4eg-mr-d5Q"/>
+                            <constraint firstItem="4ze-C1-xc0" firstAttribute="leading" secondItem="5fo-19-1lT" secondAttribute="leadingMargin" id="LfH-E0-WfF"/>
+                            <constraint firstAttribute="bottom" secondItem="4ze-C1-xc0" secondAttribute="bottom" constant="20" symbolic="YES" id="NgH-XO-NVp"/>
+                            <constraint firstItem="3Yr-G5-kzK" firstAttribute="top" secondItem="5fo-19-1lT" secondAttribute="topMargin" constant="8" id="gec-1P-R0I"/>
+                            <constraint firstAttribute="trailing" secondItem="3Yr-G5-kzK" secondAttribute="trailing" id="hIm-65-OQM"/>
+                            <constraint firstItem="3Yr-G5-kzK" firstAttribute="leading" secondItem="5fo-19-1lT" secondAttribute="leading" id="oE6-Y9-bZi"/>
+                            <constraint firstItem="3Yr-G5-kzK" firstAttribute="centerX" secondItem="4ze-C1-xc0" secondAttribute="centerX" id="vsX-7z-Ykz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbe-Qq-pLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="1150"/>
         </scene>
         <!--Profile Table View Controller-->
         <scene sceneID="a8S-ph-Q1v">
@@ -1202,7 +1277,7 @@
                                             <segue destination="xLL-N5-TGs" kind="show" id="maN-Qi-sQF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="8Z2-oM-dIy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BankCell" id="8Z2-oM-dIy">
                                         <rect key="frame" x="0.0" y="297" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Z2-oM-dIy" id="GEf-M7-9gY">
@@ -1217,11 +1292,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1qO-0l-jZv" firstAttribute="centerY" secondItem="GEf-M7-9gY" secondAttribute="centerY" id="41o-32-mjA"/>
-                                                <constraint firstAttribute="trailing" secondItem="1qO-0l-jZv" secondAttribute="trailing" id="C9q-ch-1Ug"/>
-                                                <constraint firstItem="1qO-0l-jZv" firstAttribute="leading" secondItem="GEf-M7-9gY" secondAttribute="leadingMargin" id="jdB-B6-8NH"/>
+                                                <constraint firstItem="1qO-0l-jZv" firstAttribute="leading" secondItem="GEf-M7-9gY" secondAttribute="leadingMargin" id="2d4-Z6-Usj"/>
+                                                <constraint firstItem="1qO-0l-jZv" firstAttribute="centerY" secondItem="GEf-M7-9gY" secondAttribute="centerY" id="Ia0-Ad-lnn"/>
+                                                <constraint firstAttribute="trailing" secondItem="1qO-0l-jZv" secondAttribute="trailing" id="oQl-Gq-dKZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LGr-qj-gL6" kind="show" id="2RR-BS-gPI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1378,8 +1456,8 @@
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPQ-EJ-VDm">
-                                <rect key="frame" x="20" y="498" width="560" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPQ-EJ-VDm">
+                                <rect key="frame" x="20" y="562" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Begin Monthly Donations">
@@ -1395,8 +1473,8 @@
                                     <segue destination="WFh-4b-U7c" kind="show" identifier="DonationSegue" id="E97-fS-K0N"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POU-3O-myu">
-                                <rect key="frame" x="20" y="367" width="560" height="123"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POU-3O-myu">
+                                <rect key="frame" x="20" y="431" width="560" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="123" id="zau-ND-Btp"/>
                                 </constraints>
@@ -1405,10 +1483,10 @@
                                 </connections>
                             </pickerView>
                             <view contentMode="scaleAspectFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-xX-huF" customClass="LoopingVideoView" customModule="Redwoods">
-                                <rect key="frame" x="0.0" y="43" width="600" height="296"/>
+                                <rect key="frame" x="0.0" y="43" width="600" height="232"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose an amount to give monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-sd-IUT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an amount to give monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-sd-IUT">
                                 <rect key="frame" x="20" y="347" width="560" height="21"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1500,45 +1578,75 @@
             </objects>
             <point key="canvasLocation" x="2817" y="1331"/>
         </scene>
-        <!--Picture View Controller-->
-        <scene sceneID="WPK-Cn-DEj">
+        <!--Root View Controller-->
+        <scene sceneID="vmM-iB-42h">
             <objects>
-                <viewController id="OqA-3u-58y" customClass="PictureViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p1d-qN-ICN" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dfG-1P-3Lj"/>
-                        <viewControllerLayoutGuide type="bottom" id="bl9-i7-h7b"/>
+                        <viewControllerLayoutGuide type="top" id="h3O-vR-vga"/>
+                        <viewControllerLayoutGuide type="bottom" id="RVe-Ma-uqY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TpR-wY-CnA">
+                    <view key="view" contentMode="scaleToFill" id="P16-rs-gl9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yi-GR-uFL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="339"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE1-BQ-eKY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCv-yh-yyb">
+                                        <rect key="frame" x="8" y="285" width="584" height="30"/>
+                                        <color key="backgroundColor" red="0.23689829949999999" green="0.89597448930000001" blue="0.47993282399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapConnect:" destination="p1d-qN-ICN" eventType="touchUpInside" id="FTv-8k-WpO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect your bank account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-xB-337">
+                                        <rect key="frame" x="8" y="139" width="584" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="XEo-ts-xgp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Z3f-xB-337" firstAttribute="trailing" secondItem="KCv-yh-yyb" secondAttribute="trailing" id="VmL-bV-YYo"/>
+                                    <constraint firstItem="KCv-yh-yyb" firstAttribute="centerY" secondItem="WE1-BQ-eKY" secondAttribute="centerY" id="YM0-pn-ynI"/>
+                                    <constraint firstItem="Z3f-xB-337" firstAttribute="top" secondItem="WE1-BQ-eKY" secondAttribute="top" constant="139" id="law-iP-DPn"/>
+                                    <constraint firstItem="Z3f-xB-337" firstAttribute="leading" secondItem="WE1-BQ-eKY" secondAttribute="leadingMargin" id="ocT-4P-j3r"/>
+                                    <constraint firstItem="Z3f-xB-337" firstAttribute="trailing" secondItem="WE1-BQ-eKY" secondAttribute="trailingMargin" id="sa0-37-lNr"/>
+                                    <constraint firstItem="Z3f-xB-337" firstAttribute="leading" secondItem="KCv-yh-yyb" secondAttribute="leading" id="uQD-7b-WNe"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2Yi-GR-uFL" secondAttribute="trailing" id="fKx-Tf-ycc"/>
-                            <constraint firstItem="2Yi-GR-uFL" firstAttribute="leading" secondItem="TpR-wY-CnA" secondAttribute="leading" id="pnJ-RJ-GcK"/>
-                            <constraint firstItem="2Yi-GR-uFL" firstAttribute="top" secondItem="TpR-wY-CnA" secondAttribute="top" id="qTZ-mh-c6m"/>
-                            <constraint firstItem="bl9-i7-h7b" firstAttribute="top" secondItem="2Yi-GR-uFL" secondAttribute="bottom" constant="261" id="tcY-P5-NIi"/>
+                            <constraint firstItem="WE1-BQ-eKY" firstAttribute="top" secondItem="P16-rs-gl9" secondAttribute="top" id="1i3-7q-8Eh"/>
+                            <constraint firstItem="WE1-BQ-eKY" firstAttribute="bottom" secondItem="RVe-Ma-uqY" secondAttribute="top" id="Ezv-Ri-Tgm"/>
+                            <constraint firstAttribute="trailing" secondItem="WE1-BQ-eKY" secondAttribute="trailing" id="GB7-IB-pwB"/>
+                            <constraint firstItem="WE1-BQ-eKY" firstAttribute="leading" secondItem="P16-rs-gl9" secondAttribute="leading" id="uSa-NZ-BdL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="vwPicture" destination="2Yi-GR-uFL" id="Dux-PL-qAE"/>
+                        <outlet property="titleLabel" destination="Z3f-xB-337" id="NDw-nU-1rH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H8b-rc-yla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4L-IC-1jo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4273" y="1135"/>
+            <point key="canvasLocation" x="3437" y="1337"/>
         </scene>
     </scenes>
     <resources>
         <image name="RedwoodsMasterLogoWhite" width="960" height="720"/>
+        <image name="menu" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Akc-IK-W8q"/>
         <segue reference="gI3-UC-9MO"/>
-        <segue reference="E97-fS-K0N"/>
     </inferredMetricsTieBreakers>
 </document>

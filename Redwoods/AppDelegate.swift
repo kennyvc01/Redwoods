@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import plaid_ios_sdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarPosition: .Any, barMetrics: .Default)
         UINavigationBar.appearance().shadowImage = UIImage()
+        
+        Plaid.sharedInstance().setPublicKey("ff124cbe3dba10797f407dcd4d5e52")
      
         return true
     }

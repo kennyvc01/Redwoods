@@ -13,11 +13,11 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 138, height: 138))
-        imageView.contentMode = .ScaleAspectFit
-        let image = UIImage(named: "RedwoodsMasterLogoWhite")
-        imageView.image = image
-        navigationItem.titleView = imageView
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 138, height: 138))
+//        imageView.contentMode = .ScaleAspectFit
+//        let image = UIImage(named: "RedwoodsMasterLogoWhite")
+//        imageView.image = image
+//        navigationItem.titleView = imageView
         
     }
 
@@ -34,6 +34,8 @@ class ProfileTableViewController: UITableViewController {
         //self.performSegueWithIdentifier("Segue", sender: sender)
         
     }
+    
+    
 
 //    // MARK: - Table view data source
 //

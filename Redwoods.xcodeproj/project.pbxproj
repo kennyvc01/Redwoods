@@ -25,6 +25,9 @@
 		D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */; };
 		D8617B071CBDC6E300962216 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8617B061CBDC6E300962216 /* TestTableViewController.swift */; };
 		D8617B091CBDC6F400962216 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8617B081CBDC6F400962216 /* TestTableViewCell.swift */; };
+		D863FA1E1CC9C04300B431CF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D863FA1D1CC9C04300B431CF /* RootViewController.xib */; };
+		D863FA221CC9C1E600B431CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863FA211CC9C1E600B431CF /* RootViewController.m */; };
+		D863FA261CC9C28700B431CF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863FA251CC9C28700B431CF /* TestViewController.swift */; };
 		D8646A551CC72DE300DC728A /* BrowseOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A541CC72DE300DC728A /* BrowseOrgs.swift */; };
 		D8646A571CC8078F00DC728A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A561CC8078F00DC728A /* Profile.swift */; };
 		D8646A591CC80B1B00DC728A /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A581CC80B1B00DC728A /* Portfolio.swift */; };
@@ -90,6 +93,11 @@
 		D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8617B061CBDC6E300962216 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		D8617B081CBDC6F400962216 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		D863FA1D1CC9C04300B431CF /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		D863FA1F1CC9C1E600B431CF /* Redwoods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redwoods-Bridging-Header.h"; sourceTree = "<group>"; };
+		D863FA201CC9C1E600B431CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D863FA211CC9C1E600B431CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D863FA251CC9C28700B431CF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D8646A541CC72DE300DC728A /* BrowseOrgs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseOrgs.swift; sourceTree = "<group>"; };
 		D8646A561CC8078F00DC728A /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D8646A581CC80B1B00DC728A /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 				D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */,
 				D80C0C011C73F71900B936BF /* Redwoods */,
 				D80C0C061C73F71900B936BF /* Main.storyboard */,
+				D863FA1D1CC9C04300B431CF /* RootViewController.xib */,
 				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
 				D80C0C161C73F71900B936BF /* RedwoodsTests */,
 				D80C0C211C73F71900B936BF /* RedwoodsUITests */,
@@ -202,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D80C0C0E1C73F71900B936BF /* Info.plist */,
+				D863FA1F1CC9C1E600B431CF /* Redwoods-Bridging-Header.h */,
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
 				D8B609C71CC1798400E6ECAC /* PictureViewController.swift */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
@@ -215,6 +225,8 @@
 				D831E93F1CAE143700669CC5 /* CharitySearch */,
 				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
 				D831E9401CAE147600669CC5 /* Profile */,
+				D863FA251CC9C28700B431CF /* TestViewController.swift */,
+				D863FA271CC9C72500B431CF /* PlaidLink */,
 			);
 			path = Redwoods;
 			sourceTree = "<group>";
@@ -283,6 +295,15 @@
 				D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		D863FA271CC9C72500B431CF /* PlaidLink */ = {
+			isa = PBXGroup;
+			children = (
+				D863FA201CC9C1E600B431CF /* RootViewController.h */,
+				D863FA211CC9C1E600B431CF /* RootViewController.m */,
+			);
+			name = PlaidLink;
 			sourceTree = "<group>";
 		};
 		D8B609CB1CC2AFEF00E6ECAC /* Models */ = {
@@ -411,7 +432,7 @@
 		D80C0BF71C73F71900B936BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Ken Churchill";
 				TargetAttributes = {
@@ -456,6 +477,7 @@
 			files = (
 				D8B609D11CC3EC7E00E6ECAC /* Berea.mp4 in Resources */,
 				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
+				D863FA1E1CC9C04300B431CF /* RootViewController.xib in Resources */,
 				D80C0C351C74107C00B936BF /* Images.xcassets in Resources */,
 				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
 				D80C0C081C73F71900B936BF /* Main.storyboard in Resources */,
@@ -541,6 +563,7 @@
 				D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
+				D863FA261CC9C28700B431CF /* TestViewController.swift in Sources */,
 				D8B609C81CC1798400E6ECAC /* PictureViewController.swift in Sources */,
 				D8B609D81CC52D4C00E6ECAC /* Redwoods.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
@@ -552,6 +575,7 @@
 				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
 				D8B609D51CC52C2500E6ECAC /* URLTransform.swift in Sources */,
 				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
+				D863FA221CC9C1E600B431CF /* RootViewController.m in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8B609DC1CC52DB600E6ECAC /* TargetType+Default.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
@@ -701,6 +725,7 @@
 			baseConfigurationReference = 2B4B98ECF29F27E61446CA3C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
@@ -710,6 +735,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Redwoods/Redwoods-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -718,6 +745,7 @@
 			baseConfigurationReference = B05EBDC135DBB4076D4780C0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
@@ -727,6 +755,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = s.Redwoods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Redwoods/Redwoods-Bridging-Header.h";
 			};
 			name = Release;
 		};

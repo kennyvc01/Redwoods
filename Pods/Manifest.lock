@@ -12,6 +12,9 @@ PODS:
     - Alamofire (~> 3.0)
     - Result (~> 2.0)
   - ObjectMapper (1.2.0)
+  - plaid-ios-link (0.1.1):
+    - plaid-ios-sdk
+  - plaid-ios-sdk (0.3.6)
   - Result (2.0.0)
   - SwiftyJSON (2.3.2)
 
@@ -19,6 +22,8 @@ DEPENDENCIES:
   - Alamofire (~> 3.0)
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`)
   - Moya-ObjectMapper
+  - plaid-ios-link
+  - plaid-ios-sdk
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -41,6 +46,8 @@ SPEC CHECKSUMS:
   Moya: 4d526954c8afd79820991393d40d7d8af756ceee
   Moya-ObjectMapper: 565c1e9e1e79bdf72e18fa8fa01a0741d042fa34
   ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
+  plaid-ios-link: b508d0cb64007ec036c98ff7f2f0ec1913e8467b
+  plaid-ios-sdk: e9865b0fe6a79b3d30d886171d7a26f7e1408935
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 

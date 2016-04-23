@@ -52,12 +52,24 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        // logo in navbar
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 138, height: 138))
-        imageView.contentMode = .ScaleAspectFit
-        let image = UIImage(named: "RedwoodsMasterLogoWhite")
-        imageView.image = image
-        navigationItem.titleView = imageView
+//        // logo in navbar
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 138, height: 138))
+//        imageView.contentMode = .ScaleAspectFit
+//        let image = UIImage(named: "RedwoodsMasterLogoWhite")
+//        imageView.image = image
+//        navigationItem.titleView = imageView
+        
+
+        //UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        //UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        //self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Noteworthy", size: 30)!]
+        
+        let attributes = [
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name: "Noteworthy", size: 30)!
+        ]
+        self.title = "Redwoods"
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
         
         
     }
@@ -122,7 +134,7 @@ class TableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-        orgs = []
+        //orgs = []
     }
     
     
@@ -161,6 +173,30 @@ class TableViewController: UITableViewController {
     
     override func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
         
+//        let indexPaths = tableView.indexPathsForVisibleRows
+//        
+//        let actualPosition = scrollView.panGestureRecognizer.translationInView(scrollView.superview)
+//        if (actualPosition.y > 0){
+//            
+//            //check if it's the first index path.  if it is don't scroll up
+//            for index in indexPaths! {
+//                if index.row != 0 {
+//                    //scroll up
+//                    tableView.scrollToRowAtIndexPath(indexPaths![0], atScrollPosition: .Top, animated: true)
+//                }
+//            }
+//        }else {
+//            //check if it's the last index path.  if it is don't scroll down
+//            for index in indexPaths! {
+//                if index.row < self.stories.count-1 {
+//                    //scroll down
+//                    tableView.scrollToRowAtIndexPath(indexPaths![1], atScrollPosition: .Bottom, animated: true)
+//                }
+//            }
+//        }
+    }
+    
+    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let indexPaths = tableView.indexPathsForVisibleRows
         
         let actualPosition = scrollView.panGestureRecognizer.translationInView(scrollView.superview)
@@ -185,6 +221,7 @@ class TableViewController: UITableViewController {
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
+        
 
         for indexPath in tableView.indexPathsForVisibleRows ?? [] {
             if let cell = tableView.cellForRowAtIndexPath(indexPath) {
