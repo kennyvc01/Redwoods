@@ -9,6 +9,7 @@
 import UIKit
 import Moya
 import Moya_ObjectMapper
+import Haneke
 
 class CharitySearchTableViewController: UITableViewController {
     
@@ -52,6 +53,7 @@ class CharitySearchTableViewController: UITableViewController {
             self.error = error
             print(error)
         }
+        
         //Feed API request
         provider.requestArray(.Feed, succeed: { (organizations: [Organization]) in
             self.feed = organizations
@@ -59,12 +61,14 @@ class CharitySearchTableViewController: UITableViewController {
             self.error = error
             print(error)
         }
+        
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        orgs = []
+//        
+//        orgs = []
     }
     
 
@@ -93,6 +97,8 @@ class CharitySearchTableViewController: UITableViewController {
         cell.lblCharity.text = orgs[indexPath.row].name
         cell.lblCharityDescription.text = orgs[indexPath.row].description
         cell.txtWebsite.text = orgs[indexPath.row].website
+        
+
         
         if donating(indexPath) {
             cell.lblDonor.text = "I'm donating"

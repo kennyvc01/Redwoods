@@ -23,11 +23,8 @@
 		D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */; };
 		D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */; };
 		D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */; };
-		D8617B071CBDC6E300962216 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8617B061CBDC6E300962216 /* TestTableViewController.swift */; };
-		D8617B091CBDC6F400962216 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8617B081CBDC6F400962216 /* TestTableViewCell.swift */; };
 		D863FA1E1CC9C04300B431CF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D863FA1D1CC9C04300B431CF /* RootViewController.xib */; };
 		D863FA221CC9C1E600B431CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863FA211CC9C1E600B431CF /* RootViewController.m */; };
-		D863FA261CC9C28700B431CF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863FA251CC9C28700B431CF /* TestViewController.swift */; };
 		D8646A551CC72DE300DC728A /* BrowseOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A541CC72DE300DC728A /* BrowseOrgs.swift */; };
 		D8646A571CC8078F00DC728A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A561CC8078F00DC728A /* Profile.swift */; };
 		D8646A591CC80B1B00DC728A /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A581CC80B1B00DC728A /* Portfolio.swift */; };
@@ -91,13 +88,10 @@
 		D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewController.swift; sourceTree = "<group>"; };
 		D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D8617B061CBDC6E300962216 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
-		D8617B081CBDC6F400962216 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		D863FA1D1CC9C04300B431CF /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		D863FA1F1CC9C1E600B431CF /* Redwoods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redwoods-Bridging-Header.h"; sourceTree = "<group>"; };
 		D863FA201CC9C1E600B431CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D863FA211CC9C1E600B431CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		D863FA251CC9C28700B431CF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D8646A541CC72DE300DC728A /* BrowseOrgs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseOrgs.swift; sourceTree = "<group>"; };
 		D8646A561CC8078F00DC728A /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D8646A581CC80B1B00DC728A /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
@@ -221,11 +215,10 @@
 				D8B609CB1CC2AFEF00E6ECAC /* Models */,
 				D8B609DA1CC52D8800E6ECAC /* Categories */,
 				D8B609D91CC52D7800E6ECAC /* Transforms */,
+				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
 				D831E93E1CAE140700669CC5 /* VideoFeed */,
 				D831E93F1CAE143700669CC5 /* CharitySearch */,
-				D831E93D1CAE13D600669CC5 /* LoginAndRegister */,
 				D831E9401CAE147600669CC5 /* Profile */,
-				D863FA251CC9C28700B431CF /* TestViewController.swift */,
 				D863FA271CC9C72500B431CF /* PlaidLink */,
 			);
 			path = Redwoods;
@@ -268,8 +261,6 @@
 				D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */,
 				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
 				D80C0C321C74002800B936BF /* TableViewCell.swift */,
-				D8617B061CBDC6E300962216 /* TestTableViewController.swift */,
-				D8617B081CBDC6F400962216 /* TestTableViewCell.swift */,
 			);
 			name = VideoFeed;
 			sourceTree = "<group>";
@@ -558,17 +549,14 @@
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
 				D8B609DE1CC5314900E6ECAC /* Organization.swift in Sources */,
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
-				D8617B071CBDC6E300962216 /* TestTableViewController.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
 				D8D8A3111CBB2A8A00CA9443 /* ProfileTableViewController.swift in Sources */,
 				D8CD8FE31CA6E48400D10F14 /* DonationViewController.swift in Sources */,
 				D8CD8FDD1CA642C200D10F14 /* CharitySearchTableViewController.swift in Sources */,
-				D863FA261CC9C28700B431CF /* TestViewController.swift in Sources */,
 				D8B609C81CC1798400E6ECAC /* PictureViewController.swift in Sources */,
 				D8B609D81CC52D4C00E6ECAC /* Redwoods.swift in Sources */,
 				D80C0C331C74002800B936BF /* TableViewCell.swift in Sources */,
 				D80C0C391C7427A000B936BF /* ActivityTableViewCell.swift in Sources */,
-				D8617B091CBDC6F400962216 /* TestTableViewCell.swift in Sources */,
 				D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */,
 				D8646A551CC72DE300DC728A /* BrowseOrgs.swift in Sources */,
 				D8B609D31CC52AF700E6ECAC /* Story.swift in Sources */,
