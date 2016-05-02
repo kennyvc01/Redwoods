@@ -91,8 +91,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/ObjectMapper.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/SwiftyJSON.framework"
-  install_framework "Pods/plaid_ios_link.framework"
-  install_framework "Pods/plaid_ios_sdk.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
@@ -102,6 +100,4 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/ObjectMapper.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/SwiftyJSON.framework"
-  install_framework "Pods/plaid_ios_link.framework"
-  install_framework "Pods/plaid_ios_sdk.framework"
 fi

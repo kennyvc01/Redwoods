@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00DEA6F3D6AB3D52F1F9E603 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1AF172A861C464E58D680B /* Pods.framework */; };
+		D807F4471CD4426F0039411A /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D807F4451CD4426F0039411A /* LinkViewController.m */; };
+		D807F44F1CD54EFC0039411A /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D807F44E1CD54EFC0039411A /* index.html */; };
 		D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C021C73F71900B936BF /* AppDelegate.swift */; };
 		D80C0C081C73F71900B936BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C061C73F71900B936BF /* Main.storyboard */; };
 		D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C091C73F71900B936BF /* Assets.xcassets */; };
@@ -23,8 +25,6 @@
 		D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */; };
 		D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */; };
 		D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */; };
-		D863FA1E1CC9C04300B431CF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D863FA1D1CC9C04300B431CF /* RootViewController.xib */; };
-		D863FA221CC9C1E600B431CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863FA211CC9C1E600B431CF /* RootViewController.m */; };
 		D8646A551CC72DE300DC728A /* BrowseOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A541CC72DE300DC728A /* BrowseOrgs.swift */; };
 		D8646A571CC8078F00DC728A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A561CC8078F00DC728A /* Profile.swift */; };
 		D8646A591CC80B1B00DC728A /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8646A581CC80B1B00DC728A /* Portfolio.swift */; };
@@ -67,6 +67,9 @@
 		2B4B98ECF29F27E61446CA3C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1AF172A861C464E58D680B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05EBDC135DBB4076D4780C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D807F4441CD4426F0039411A /* LinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkViewController.h; sourceTree = "<group>"; };
+		D807F4451CD4426F0039411A /* LinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
+		D807F44E1CD54EFC0039411A /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		D80C0BFF1C73F71900B936BF /* Redwoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redwoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80C0C021C73F71900B936BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D80C0C071C73F71900B936BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,10 +91,7 @@
 		D831E9381CAE076C00669CC5 /* PortfolioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewController.swift; sourceTree = "<group>"; };
 		D831E93A1CAE07AA00669CC5 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		D8546D1F1C7FE802001F82E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D863FA1D1CC9C04300B431CF /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		D863FA1F1CC9C1E600B431CF /* Redwoods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redwoods-Bridging-Header.h"; sourceTree = "<group>"; };
-		D863FA201CC9C1E600B431CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		D863FA211CC9C1E600B431CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D8646A541CC72DE300DC728A /* BrowseOrgs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseOrgs.swift; sourceTree = "<group>"; };
 		D8646A561CC8078F00DC728A /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D8646A581CC80B1B00DC728A /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
@@ -181,7 +181,6 @@
 				D87EAB6C1C7ABC56001299AE /* AVFoundation.framework */,
 				D80C0C011C73F71900B936BF /* Redwoods */,
 				D80C0C061C73F71900B936BF /* Main.storyboard */,
-				D863FA1D1CC9C04300B431CF /* RootViewController.xib */,
 				D80C0C0B1C73F71900B936BF /* LaunchScreen.storyboard */,
 				D80C0C161C73F71900B936BF /* RedwoodsTests */,
 				D80C0C211C73F71900B936BF /* RedwoodsUITests */,
@@ -204,8 +203,8 @@
 		D80C0C011C73F71900B936BF /* Redwoods */ = {
 			isa = PBXGroup;
 			children = (
-				D80C0C0E1C73F71900B936BF /* Info.plist */,
 				D863FA1F1CC9C1E600B431CF /* Redwoods-Bridging-Header.h */,
+				D80C0C0E1C73F71900B936BF /* Info.plist */,
 				D80C0C021C73F71900B936BF /* AppDelegate.swift */,
 				D8B609C71CC1798400E6ECAC /* PictureViewController.swift */,
 				D80C0C091C73F71900B936BF /* Assets.xcassets */,
@@ -291,8 +290,9 @@
 		D863FA271CC9C72500B431CF /* PlaidLink */ = {
 			isa = PBXGroup;
 			children = (
-				D863FA201CC9C1E600B431CF /* RootViewController.h */,
-				D863FA211CC9C1E600B431CF /* RootViewController.m */,
+				D807F4441CD4426F0039411A /* LinkViewController.h */,
+				D807F44E1CD54EFC0039411A /* index.html */,
+				D807F4451CD4426F0039411A /* LinkViewController.m */,
 			);
 			name = PlaidLink;
 			sourceTree = "<group>";
@@ -466,9 +466,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D807F44F1CD54EFC0039411A /* index.html in Resources */,
 				D8B609D11CC3EC7E00E6ECAC /* Berea.mp4 in Resources */,
 				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
-				D863FA1E1CC9C04300B431CF /* RootViewController.xib in Resources */,
 				D80C0C351C74107C00B936BF /* Images.xcassets in Resources */,
 				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
 				D80C0C081C73F71900B936BF /* Main.storyboard in Resources */,
@@ -547,6 +547,7 @@
 				D831E93B1CAE07AA00669CC5 /* PortfolioTableViewCell.swift in Sources */,
 				D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */,
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
+				D807F4471CD4426F0039411A /* LinkViewController.m in Sources */,
 				D8B609DE1CC5314900E6ECAC /* Organization.swift in Sources */,
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
@@ -563,7 +564,6 @@
 				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
 				D8B609D51CC52C2500E6ECAC /* URLTransform.swift in Sources */,
 				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
-				D863FA221CC9C1E600B431CF /* RootViewController.m in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8B609DC1CC52DB600E6ECAC /* TargetType+Default.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,
