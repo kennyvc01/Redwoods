@@ -7,8 +7,13 @@
 //
 
 #import "LinkViewController.h"
+#import "Redwoods-swift.h"
 
 @implementation LinkViewController
+
+NSString *account = @"";
+NSString *public_Token = @"";
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,20 +57,14 @@
 -(BOOL) webView:(UIWebView *)inWeb
         shouldStartLoadWithRequest:(NSURLRequest *)request
         navigationType:(UIWebViewNavigationType)type {
-    
-    //NSLog(request.URL.scheme);
+
     // these need to match the values defined in your JavaScript
     NSString *linkScheme = @"linkApp";
     NSString *actionScheme = request.URL.scheme;
     NSString *actionType = request.URL.host;
 
-
-    NSLog(@"actionScheme: %@\n", request.URL.scheme );
-    NSLog(@"actionType: %@\n", request.URL.host );
-
     
     if ([actionScheme isEqualToString:linkScheme]) {
-       // NSLog(@"%@", request.URL.scheme);
     }
     
     // look at the actionType and do whatever you want here
@@ -74,12 +73,15 @@
     }
     
     if ([[actionType substringToIndex:1] isEqualToString:@"~"]) {
-        //NSLog(@"public_token: %@", request.URL.fragment); // send this public_token to your server, where you can exchange it with for an access_token
         NSArray *parts = [actionType componentsSeparatedByString:@"~"];
-        NSLog(parts[1]);//Public Token
-        NSLog(parts[2]);//Account
+        NSString *account_id = parts[2];
+        NSString *Pub_Token = parts[1];
+        account = account_id;
+        public_Token = Pub_Token;
 
         [self dismissViewControllerAnimated:true completion:^(){}]; // close the WebView modal
+        [self performSegueWithIdentifier:@"Segue" sender:self];
+        
     } else if ([actionType isEqualToString:@"closeLinkModal"]) {
         NSLog(@"closeLinkModal");
     } else if ([actionType isEqualToString:@"handleOnLoad"]) {
@@ -92,12 +94,23 @@
 }
 
 
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Segue"]) {
+        
+        ProfileTableViewController *p = (ProfileTableViewController *)segue.destinationViewController;
+        if (account == nil && public_Token == nil) {
+            
+        }else{
+            p.account = account;
+            p.publicToken = public_Token;
+        }
+        
+    }
 }
 
 @end

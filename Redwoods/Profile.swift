@@ -15,6 +15,8 @@ class Profile: Mappable {
     var userId: String!
     var username: String!
     var admin: Bool = false
+    var bankId: String!
+    
     
     required init?(_ map: Map) {}
     
@@ -24,6 +26,7 @@ class Profile: Mappable {
         username <- map["user.username"]
         admin <- map["user.admin"]
         portfolio <- map["portfolio"]
+        bankId <- map["bank_acct._id"]
         
     }
 }

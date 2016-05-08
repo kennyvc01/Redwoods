@@ -66,12 +66,12 @@ class TableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         //Moya request array and map to Organization model
-        provider.requestArray(.Feed, succeed: { (organizations: [Organization]) in
-            self.orgs = organizations
-        }) { (error) in
-            self.error = error
-            print(error)
-        }
+//        provider.requestArray(.Feed, succeed: { (organizations: [Organization]) in
+//            self.orgs = organizations
+//        }) { (error) in
+//            self.error = error
+//            print(error)
+//        }
     }
     
     override func didReceiveMemoryWarning() {
