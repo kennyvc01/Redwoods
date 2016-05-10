@@ -6,6 +6,8 @@
 //  Copyright © 2016 Ken Churchill. All rights reserved.
 //
 
+//Used in initial registration
+
 import UIKit
 import Moya
 import Moya_ObjectMapper
@@ -97,30 +99,13 @@ class CharitySearchTableViewController: UITableViewController {
         cell.lblCharity.text = orgs[indexPath.row].name
         cell.lblCharityDescription.text = orgs[indexPath.row].description
         cell.txtWebsite.text = orgs[indexPath.row].website
-        
 
-        
-        if donating(indexPath) {
-            cell.lblDonor.text = "I'm donating"
-        }else{
-            cell.lblDonor.text = ""
-        }
         
         return cell
     }
     
     //MARK: - Table view delegate 
-    
-    // function to loop through feed to see if user is donating.  Return true if they're donating.
-    func donating(indexPath : NSIndexPath) -> Bool {
-        var donating : Bool = false
-        for _feed in self.feed {
-            if _feed.id == orgs[indexPath.row].id{
-                donating = true
-            }
-        }
-       return donating
-    }
+
  
     
     //Prepare for segue
@@ -129,11 +114,9 @@ class CharitySearchTableViewController: UITableViewController {
             let dvc = segue.destinationViewController as! DonationViewController
             let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
             let data = orgs[indexPath.row]
-            let cell = tableView.cellForRowAtIndexPath(indexPath) as! CharitySearchTableViewCell!;
             
             dvc.CharityLabel = data.name!
             dvc.orgId = data.id!
-            dvc.donation = cell.lblDonor.text!
             dvc.introUrl = data.introURL!
 
         }

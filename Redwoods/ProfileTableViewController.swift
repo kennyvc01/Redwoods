@@ -17,6 +17,7 @@ class ProfileTableViewController: UITableViewController {
     var publicToken = ""
     var account = ""
     
+    @IBOutlet weak var lblMonthlyGiving: UILabel!
     @IBOutlet weak var lblBank: UILabel!
     //Moya Provider
     let provider = MoyaProvider<Redwoods>(plugins: [CredentialsPlugin { _ -> NSURLCredential? in
@@ -32,11 +33,21 @@ class ProfileTableViewController: UITableViewController {
         }
     }
     var profile: [Profile] = []
+
+    var portfolio: [Portfolio] {
+        var _Portfolio = [Portfolio]()
+        for profiles in self.profile {
+            _Portfolio.appendContentsOf(profiles.portfolio.map({ (portfolios) -> Portfolio in
+                portfolios.profile = profiles
+                return portfolios
+            }))
+        }
+        return _Portfolio
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         //Check if user has a bank account linked.  First check if public token = "".  Need to check this since the post is done after the vc is loaded.  checkBank() is called in the Post function too.
         if publicToken == "" {
@@ -52,10 +63,12 @@ class ProfileTableViewController: UITableViewController {
         //Check if plaid variables are set.  The variables come from the LinkViewController.m.  If set, execute function to post account_id and public_token
         if self.publicToken != "" && self.account != "" {
             postPlaid()
-            print("public token: \(publicToken) account: \(account)")
         } else {
-            print("plaid variables are empty")
         }
+        
+        
+        //function to set total monthly giving label
+        monthlyGiving()
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +95,20 @@ class ProfileTableViewController: UITableViewController {
     }
     
     
+    //function used to get and set monthly giving amount
+    func monthlyGiving() {
+        
+        var totalAmount = 0
+        
+        for amount in portfolio {
+            totalAmount = totalAmount + amount.amount
+        }
+        
+        self.lblMonthlyGiving.text = "$" + String(totalAmount)
+        
+    }
+    
+    
     //Button to link or change bank.  If user already has an account, segue to ChangeBank.  If user doesn't have account then segue to LinkBank
     @IBAction func btnBank(sender: AnyObject) {
         if (self.profile[0].bankId != nil) {
@@ -90,16 +117,18 @@ class ProfileTableViewController: UITableViewController {
             performSegueWithIdentifier("LinkBank", sender: self)
         }
     }
+    
+    //logout button
     @IBAction func btnLogout(sender: AnyObject) {
         KeychainWrapper.removeObjectForKey("username")
         KeychainWrapper.removeObjectForKey("password")
         
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController
         self.presentViewController(viewController, animated: true, completion: nil)
-        //self.performSegueWithIdentifier("Segue", sender: sender)
         
     }
     
+    //Plaid function
     func postPlaid() {
         //Added [ String : AnyObject] to handle int type
         let parameters : [ String : AnyObject] =  [
@@ -127,4 +156,5 @@ class ProfileTableViewController: UITableViewController {
             }
         }
     }
+    
 }

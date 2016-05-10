@@ -10,6 +10,8 @@
 		00DEA6F3D6AB3D52F1F9E603 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1AF172A861C464E58D680B /* Pods.framework */; };
 		D807F4471CD4426F0039411A /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D807F4451CD4426F0039411A /* LinkViewController.m */; };
 		D807F44F1CD54EFC0039411A /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D807F44E1CD54EFC0039411A /* index.html */; };
+		D808BBD71CE16EDA00BB8641 /* OrgTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D808BBD61CE16EDA00BB8641 /* OrgTableViewController.swift */; };
+		D808BBD91CE16F0600BB8641 /* OrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D808BBD81CE16F0600BB8641 /* OrgTableViewCell.swift */; };
 		D80C0C031C73F71900B936BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C0C021C73F71900B936BF /* AppDelegate.swift */; };
 		D80C0C081C73F71900B936BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C061C73F71900B936BF /* Main.storyboard */; };
 		D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80C0C091C73F71900B936BF /* Assets.xcassets */; };
@@ -34,7 +36,6 @@
 		D89506C61CAEC6C3007748C8 /* EditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */; };
 		D8B609C81CC1798400E6ECAC /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609C71CC1798400E6ECAC /* PictureViewController.swift */; };
 		D8B609CA1CC2ADDC00E6ECAC /* LoopingVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */; };
-		D8B609D11CC3EC7E00E6ECAC /* Berea.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8B609D01CC3EC7700E6ECAC /* Berea.mp4 */; };
 		D8B609D31CC52AF700E6ECAC /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609D21CC52AF700E6ECAC /* Story.swift */; };
 		D8B609D51CC52C2500E6ECAC /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609D41CC52C2500E6ECAC /* URLTransform.swift */; };
 		D8B609D81CC52D4C00E6ECAC /* Redwoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B609D71CC52D4C00E6ECAC /* Redwoods.swift */; };
@@ -70,6 +71,8 @@
 		D807F4441CD4426F0039411A /* LinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkViewController.h; sourceTree = "<group>"; };
 		D807F4451CD4426F0039411A /* LinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
 		D807F44E1CD54EFC0039411A /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D808BBD61CE16EDA00BB8641 /* OrgTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgTableViewController.swift; sourceTree = "<group>"; };
+		D808BBD81CE16F0600BB8641 /* OrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgTableViewCell.swift; sourceTree = "<group>"; };
 		D80C0BFF1C73F71900B936BF /* Redwoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redwoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80C0C021C73F71900B936BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D80C0C071C73F71900B936BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,7 +104,6 @@
 		D89506C51CAEC6C3007748C8 /* EditDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDonationViewController.swift; sourceTree = "<group>"; };
 		D8B609C71CC1798400E6ECAC /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopingVideoView.swift; sourceTree = "<group>"; };
-		D8B609D01CC3EC7700E6ECAC /* Berea.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Berea.mp4; sourceTree = "<group>"; };
 		D8B609D21CC52AF700E6ECAC /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		D8B609D41CC52C2500E6ECAC /* URLTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTransform.swift; sourceTree = "<group>"; };
 		D8B609D71CC52D4C00E6ECAC /* Redwoods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redwoods.swift; sourceTree = "<group>"; };
@@ -256,7 +258,6 @@
 		D831E93E1CAE140700669CC5 /* VideoFeed */ = {
 			isa = PBXGroup;
 			children = (
-				D8B609D01CC3EC7700E6ECAC /* Berea.mp4 */,
 				D8B609C91CC2ADDC00E6ECAC /* LoopingVideoView.swift */,
 				D80C0C301C73FF9100B936BF /* TableViewController.swift */,
 				D80C0C321C74002800B936BF /* TableViewCell.swift */,
@@ -269,6 +270,8 @@
 			children = (
 				D8CD8FDC1CA642C200D10F14 /* CharitySearchTableViewController.swift */,
 				D8CD8FDE1CA6441A00D10F14 /* CharitySearchTableViewCell.swift */,
+				D808BBD61CE16EDA00BB8641 /* OrgTableViewController.swift */,
+				D808BBD81CE16F0600BB8641 /* OrgTableViewCell.swift */,
 				D8CD8FE21CA6E48400D10F14 /* DonationViewController.swift */,
 			);
 			name = CharitySearch;
@@ -467,7 +470,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D807F44F1CD54EFC0039411A /* index.html in Resources */,
-				D8B609D11CC3EC7E00E6ECAC /* Berea.mp4 in Resources */,
 				D80C0C0D1C73F71900B936BF /* LaunchScreen.storyboard in Resources */,
 				D80C0C351C74107C00B936BF /* Images.xcassets in Resources */,
 				D80C0C0A1C73F71900B936BF /* Assets.xcassets in Resources */,
@@ -548,6 +550,7 @@
 				D8CD8FDF1CA6441A00D10F14 /* CharitySearchTableViewCell.swift in Sources */,
 				D80C0C371C74278A00B936BF /* ActivityTableViewController.swift in Sources */,
 				D807F4471CD4426F0039411A /* LinkViewController.m in Sources */,
+				D808BBD71CE16EDA00BB8641 /* OrgTableViewController.swift in Sources */,
 				D8B609DE1CC5314900E6ECAC /* Organization.swift in Sources */,
 				D89360541CA9BDA00014AC91 /* SwiftKeyChainWrapper.swift in Sources */,
 				D8686C861CA369F600216488 /* RegisterViewController.swift in Sources */,
@@ -564,6 +567,7 @@
 				D8546D201C7FE802001F82E7 /* LoginViewController.swift in Sources */,
 				D8B609D51CC52C2500E6ECAC /* URLTransform.swift in Sources */,
 				D831E9391CAE076C00669CC5 /* PortfolioTableViewController.swift in Sources */,
+				D808BBD91CE16F0600BB8641 /* OrgTableViewCell.swift in Sources */,
 				D80C0C311C73FF9100B936BF /* TableViewController.swift in Sources */,
 				D8B609DC1CC52DB600E6ECAC /* TargetType+Default.swift in Sources */,
 				D8186B8E1C7696E300D1F7BF /* LaunchViewController.swift in Sources */,

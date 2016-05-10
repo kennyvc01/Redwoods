@@ -44,25 +44,27 @@ class LaunchViewController: UIViewController, UIPageViewControllerDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         if (KeychainWrapper.stringForKey("username") != nil){
-            provider.requestArray(.Profile, succeed: { (profiles: [Profile]) in
-                self.profile = profiles
-                print("success")
-                self.performSegueWithIdentifier("Segue", sender: self)
-            }) { (error) in
-                self.error = error
-                //Add child view controller to parent page view controller
-                if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("LaunchPageViewController"){
-                    self.addChildViewController(vc)
-                    self.view.addSubview(vc.view)
-                    self.pageViewController = vc as! UIPageViewController
-                    //configure data source and delegate
-                    self.pageViewController.dataSource = self
-                    self.pageViewController.delegate = self
-                    //set at index 0 of pages array - uses viewcontrollerAtIndex method below
-                    self.pageViewController.setViewControllers([self.viewcontrollerAtIndex(0)!], direction: .Forward, animated: true, completion: nil)
-                    self.pageViewController.didMoveToParentViewController(self)
-                }
-            }
+            
+//OLD WAY TO AUTHENTICATE USER:
+//            provider.requestArray(.Profile, succeed: { (profiles: [Profile]) in
+//                self.profile = profiles
+//                self.performSegueWithIdentifier("Segue", sender: self)
+//            }) { (error) in
+//                self.error = error
+//                //Add child view controller to parent page view controller
+//                if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("LaunchPageViewController"){
+//                    self.addChildViewController(vc)
+//                    self.view.addSubview(vc.view)
+//                    self.pageViewController = vc as! UIPageViewController
+//                    //configure data source and delegate
+//                    self.pageViewController.dataSource = self
+//                    self.pageViewController.delegate = self
+//                    //set at index 0 of pages array - uses viewcontrollerAtIndex method below
+//                    self.pageViewController.setViewControllers([self.viewcontrollerAtIndex(0)!], direction: .Forward, animated: true, completion: nil)
+//                    self.pageViewController.didMoveToParentViewController(self)
+//                }
+//            }
+            self.performSegueWithIdentifier("Segue", sender: self)
         } else {  //if keychain is nil
             //Add child view controller to parent page view controller
             if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("LaunchPageViewController"){

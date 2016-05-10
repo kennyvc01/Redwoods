@@ -29,7 +29,6 @@ class PortfolioTableViewController: UITableViewController {
     var profile: [Profile] = [] {
         didSet {
             tableView.reloadData()
-            print("set")
         }
     }
     var portfolio: [Portfolio] {
@@ -53,7 +52,6 @@ class PortfolioTableViewController: UITableViewController {
 
         provider.requestArray(.Profile, succeed: { (profiles: [Profile]) in
             self.profile = profiles
-            print("success")
         }) { (error) in
             self.error = error
             print(error)

@@ -45,6 +45,12 @@ class TableViewController: UITableViewController {
         return _stories
     }
     
+    var browseOrgs: [BrowseOrgs] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,13 +71,29 @@ class TableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        //Moya request array and map to Organization model
+//        //Moya request array and map to Organization model
 //        provider.requestArray(.Feed, succeed: { (organizations: [Organization]) in
 //            self.orgs = organizations
 //        }) { (error) in
 //            self.error = error
-//            print(error)
+//            //error code 5 is invalid credentials.  If invalid, remove username and password from Key chain and launch "MainLaunchPageViewController"
+//            if error._code == 5 {
+//                KeychainWrapper.removeObjectForKey("username")
+//                KeychainWrapper.removeObjectForKey("password")
+//                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainLaunchPageViewController") as UIViewController
+//                self.presentViewController(viewController, animated: true, completion: nil)
+//            }
+//            print(error._code)
 //        }
+//        
+        
+        //BrowseOrgs API request
+        provider.requestArray(.BrowseOrgs, succeed: { (organizations: [BrowseOrgs]) in
+            self.browseOrgs = organizations
+        }) { (error) in
+            self.error = error
+            print(error)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -110,10 +132,6 @@ class TableViewController: UITableViewController {
                 cell.indexPath = indexPath.row
             }
             cell.story = stories[indexPath.row]
-            
-            //        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("Berea", withExtension: "mp4")!
-            //        cell.movieView.play(videoURL)
-            
             
         } else {
             
@@ -187,6 +205,12 @@ class TableViewController: UITableViewController {
                     cell.movieView.playerLayer.player = nil
                 }
             }
+        }
+        
+        
+        if segue.identifier == "Search" {
+            let orgVC = segue.destinationViewController as! OrgTableViewController
+            orgVC.browseOrgs = self.browseOrgs
         }
 
     }

@@ -64,17 +64,7 @@ class EditDonationViewController: UIViewController, UIPickerViewDelegate {
                     if error != nil {
                         self.performSegueWithIdentifier("UpdateSegue", sender: sender)
                     }
-                    
-                    //store json result in objects array
-                    if json != nil {
-                        let jsonObj = JSON(data: json!)
-                        print(jsonObj)
-                    }
-            }
-       
-        
-        
-        
+        }
     }
     
  
@@ -96,13 +86,7 @@ class EditDonationViewController: UIViewController, UIPickerViewDelegate {
                 if error != nil {
                     self.performSegueWithIdentifier("CancelSegue", sender: sender)
                 }
-                
-                //store json result in objects array
-                if json != nil {
-                    let jsonObj = JSON(data: json!)
-                    print(jsonObj)
-                    
-                }
+
         }
     }
     
@@ -129,7 +113,6 @@ class EditDonationViewController: UIViewController, UIPickerViewDelegate {
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         self.selectedAmount = PickerAmount[row]
-        print(self.selectedAmount)
     }
 
     

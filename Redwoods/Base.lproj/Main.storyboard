@@ -258,10 +258,10 @@
                         <viewControllerLayoutGuide type="bottom" id="6NV-Qe-FW1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="big-fJ-QBM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-gP-2bF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-gP-2bF">
                                 <rect key="frame" x="20" y="56" width="560" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="DDt-To-2CI"/>
@@ -270,14 +270,14 @@
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a new monthly donation amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-1Y-KXX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose a new monthly donation amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-1Y-KXX">
                                 <rect key="frame" x="20" y="97" width="560" height="21"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7c-Ec-hkO">
-                                <rect key="frame" x="20" y="493" width="560" height="30"/>
+                                <rect key="frame" x="20" y="429" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Update Monthly Giving">
@@ -293,7 +293,7 @@
                                     <segue destination="WFh-4b-U7c" kind="show" identifier="UpdateSegue" id="smr-lX-5kZ"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-7w-PFY">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-7w-PFY">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="OOv-AU-BGe" id="e4M-Tb-XG4"/>
@@ -301,7 +301,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzt-kD-qOg">
-                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <rect key="frame" x="20" y="486" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Cancel Monthly Giving">
@@ -453,7 +453,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="FeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WFh-4b-U7c" customClass="TableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="532" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQN-Ki-oUy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -468,7 +468,7 @@
                                             <rect key="frame" x="0.0" y="51" width="600" height="443"/>
                                             <color key="backgroundColor" red="0.89541903410000001" green="0.89541903410000001" blue="0.89541903410000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGC-Ku-DnY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGC-Ku-DnY">
                                             <rect key="frame" x="8" y="22" width="584" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Mb9-gT-a09"/>
@@ -521,14 +521,17 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="z4j-wg-d3y">
                             <connections>
-                                <segue destination="lMq-hI-Dwy" kind="show" identifier="Search" id="UTu-A9-n12"/>
+                                <segue destination="lMq-hI-Dwy" kind="show" identifier="Search" id="TcQ-4H-k8R"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="bd3-MJ-GFu" kind="show" identifier="logoutSegue" id="Rrb-h9-4xZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zA-Wn-4zL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="393"/>
+            <point key="canvasLocation" x="1361" y="393"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DKw-V4-6Te">
@@ -607,7 +610,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WSo-ln-puU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8KH-QQ-4ac">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -643,10 +646,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjR-ft-VF9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjR-ft-VF9">
                                 <rect key="frame" x="17" y="293" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedwoodsMasterLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="eMS-dz-ozr">
                                 <rect key="frame" x="17" y="72" width="563" height="84"/>
@@ -707,9 +710,9 @@
                     <navigationItem key="navigationItem" id="uO6-1p-VqM"/>
                     <connections>
                         <outlet property="indicator" destination="HY0-p6-UgE" id="v8U-Ku-Hfq"/>
+                        <outlet property="txtConfirmPassword" destination="BjR-ft-VF9" id="xGr-o5-Qkq"/>
                         <outlet property="txtEmail" destination="hEI-GD-16i" id="7j1-rE-O81"/>
                         <outlet property="txtPassword" destination="Wdk-mT-yqi" id="aNe-fR-Kg7"/>
-                        <outlet property="txtZipCode" destination="BjR-ft-VF9" id="Min-mO-B5l"/>
                         <segue destination="0qs-ug-C5h" kind="show" identifier="Segue" id="aOt-8m-d0Y"/>
                     </connections>
                 </viewController>
@@ -735,9 +738,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUv-6v-xdb">
-                                            <rect key="frame" x="8" y="23" width="339" height="21"/>
+                                            <rect key="frame" x="8" y="23" width="559" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="339" id="LVW-TH-xBA"/>
+                                                <constraint firstAttribute="height" constant="21" id="iVI-wD-fFC"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
                                             <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -747,15 +750,6 @@
                                             <rect key="frame" x="8" y="52" width="559" height="123"/>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                             <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm donating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOi-dW-U5x">
-                                            <rect key="frame" x="464" y="29" width="103" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="103" id="jNC-Oc-RHF"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-lb-Vbk">
@@ -769,26 +763,23 @@
                                         </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="SUv-6v-xdb" firstAttribute="top" secondItem="abm-kU-CQi" secondAttribute="topMargin" constant="15" id="23R-vV-QfY"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="p6L-lb-Vbk" secondAttribute="bottom" constant="1.5" id="2oC-aT-ZEo"/>
-                                        <constraint firstItem="p6L-lb-Vbk" firstAttribute="top" secondItem="Hdh-mF-mO5" secondAttribute="bottom" constant="8" symbolic="YES" id="2wy-et-LEw"/>
-                                        <constraint firstItem="Hdh-mF-mO5" firstAttribute="centerY" secondItem="abm-kU-CQi" secondAttribute="centerY" id="6qn-Ht-vVC"/>
-                                        <constraint firstItem="VOi-dW-U5x" firstAttribute="trailing" secondItem="Hdh-mF-mO5" secondAttribute="trailing" id="CyJ-wh-LF6"/>
-                                        <constraint firstItem="Hdh-mF-mO5" firstAttribute="top" secondItem="VOi-dW-U5x" secondAttribute="bottom" constant="2" id="OoM-VT-Gkc"/>
-                                        <constraint firstItem="VOi-dW-U5x" firstAttribute="baseline" secondItem="SUv-6v-xdb" secondAttribute="firstBaseline" id="OrX-4L-1JY"/>
-                                        <constraint firstItem="SUv-6v-xdb" firstAttribute="leading" secondItem="abm-kU-CQi" secondAttribute="leadingMargin" id="WGT-uB-GCX"/>
-                                        <constraint firstItem="SUv-6v-xdb" firstAttribute="leading" secondItem="Hdh-mF-mO5" secondAttribute="leading" id="ahd-OU-Cyd"/>
-                                        <constraint firstItem="Hdh-mF-mO5" firstAttribute="leading" secondItem="p6L-lb-Vbk" secondAttribute="leading" id="bL0-aF-TwI"/>
-                                        <constraint firstAttribute="trailing" secondItem="VOi-dW-U5x" secondAttribute="trailing" id="eVk-c0-5cQ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="p6L-lb-Vbk" secondAttribute="trailing" constant="-13" id="eei-q3-9P2"/>
-                                        <constraint firstItem="Hdh-mF-mO5" firstAttribute="top" secondItem="SUv-6v-xdb" secondAttribute="bottom" constant="8" symbolic="YES" id="x2C-gP-E50"/>
+                                        <constraint firstItem="SUv-6v-xdb" firstAttribute="leading" secondItem="abm-kU-CQi" secondAttribute="leadingMargin" id="3ac-nh-bl6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="p6L-lb-Vbk" secondAttribute="bottom" constant="1.5" id="AD7-Cc-Jvy"/>
+                                        <constraint firstItem="p6L-lb-Vbk" firstAttribute="top" secondItem="Hdh-mF-mO5" secondAttribute="bottom" constant="8" symbolic="YES" id="Bdm-2S-Bkh"/>
+                                        <constraint firstItem="SUv-6v-xdb" firstAttribute="leading" secondItem="Hdh-mF-mO5" secondAttribute="leading" id="ExX-Ui-C0b"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="p6L-lb-Vbk" secondAttribute="trailing" constant="-13" id="Guq-80-FWx"/>
+                                        <constraint firstItem="SUv-6v-xdb" firstAttribute="top" secondItem="abm-kU-CQi" secondAttribute="topMargin" constant="15" id="MG6-bT-r6M"/>
+                                        <constraint firstItem="Hdh-mF-mO5" firstAttribute="top" secondItem="SUv-6v-xdb" secondAttribute="bottom" constant="8" symbolic="YES" id="c7G-fa-fcH"/>
+                                        <constraint firstItem="Hdh-mF-mO5" firstAttribute="centerY" secondItem="abm-kU-CQi" secondAttribute="centerY" id="cD4-Jf-JAW"/>
+                                        <constraint firstAttribute="trailing" secondItem="SUv-6v-xdb" secondAttribute="trailing" id="cw0-Bg-z5x"/>
+                                        <constraint firstItem="SUv-6v-xdb" firstAttribute="trailing" secondItem="Hdh-mF-mO5" secondAttribute="trailing" id="exc-b2-eAk"/>
+                                        <constraint firstItem="Hdh-mF-mO5" firstAttribute="leading" secondItem="p6L-lb-Vbk" secondAttribute="leading" id="sau-2o-E01"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="lblCharity" destination="SUv-6v-xdb" id="LbH-9Z-D1F"/>
                                     <outlet property="lblCharityDescription" destination="Hdh-mF-mO5" id="g7i-Ea-6YY"/>
-                                    <outlet property="lblDonor" destination="VOi-dW-U5x" id="qsc-HU-fI6"/>
                                     <outlet property="txtWebsite" destination="p6L-lb-Vbk" id="eqr-ah-lsM"/>
                                     <segue destination="7ci-Yr-ZIZ" kind="show" identifier="Segue" id="cVR-TR-h1I"/>
                                 </connections>
@@ -969,17 +960,17 @@
             </objects>
             <point key="canvasLocation" x="709" y="393"/>
         </scene>
-        <!--Charity Search Table View Controller-->
+        <!--Org Table View Controller-->
         <scene sceneID="6WP-BP-u06">
             <objects>
-                <tableViewController storyboardIdentifier="CharitySearchFromFeed" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lMq-hI-Dwy" customClass="CharitySearchTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CharitySearchFromFeed" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lMq-hI-Dwy" customClass="OrgTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="228" sectionHeaderHeight="28" sectionFooterHeight="28" id="9aQ-GS-N20">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="228" id="K5M-Ct-uoR" customClass="CharitySearchTableViewCell" customModule="Redwoods" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="228" id="K5M-Ct-uoR" customClass="OrgTableViewCell" customModule="Redwoods" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="228"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5M-Ct-uoR" id="sz1-hh-Y1c">
@@ -1038,10 +1029,10 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="lblCharity" destination="DL8-Tz-nyW" id="UiC-a7-JEd"/>
-                                    <outlet property="lblCharityDescription" destination="Lqv-Gz-yDa" id="fAZ-Xp-qWG"/>
-                                    <outlet property="lblDonor" destination="xpT-Hp-jrA" id="mis-gu-XK3"/>
-                                    <outlet property="txtWebsite" destination="bGY-4O-EBl" id="0VJ-37-RDh"/>
+                                    <outlet property="lblCharity" destination="DL8-Tz-nyW" id="M5C-ET-XLh"/>
+                                    <outlet property="lblDescription" destination="Lqv-Gz-yDa" id="O8y-Ji-6ek"/>
+                                    <outlet property="lblDonor" destination="xpT-Hp-jrA" id="vc4-Ln-XmB"/>
+                                    <outlet property="txtWebsite" destination="bGY-4O-EBl" id="t3A-Lp-Vfz"/>
                                     <segue destination="frX-Bu-iUU" kind="show" identifier="Segue" id="ekF-LH-JYv"/>
                                 </connections>
                             </tableViewCell>
@@ -1057,7 +1048,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn0-C6-5rJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992" y="392"/>
+            <point key="canvasLocation" x="2166" y="358"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mv2-01-wfA">
@@ -1325,11 +1316,11 @@ If you have any questions or concerns regarding our privacy policies, please sen
             <objects>
                 <tableViewController id="1av-gS-YEk" customClass="ProfileTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d2j-dK-BEh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="6nJ-Hh-0F0">
-                            <rect key="frame" x="0.0" y="341" width="600" height="258"/>
+                            <rect key="frame" x="0.0" y="344" width="600" height="258"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XT-zh-IRC">
@@ -1352,19 +1343,19 @@ If you have any questions or concerns regarding our privacy policies, please sen
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="2XT-zh-IRC" firstAttribute="bottom" secondItem="6nJ-Hh-0F0" secondAttribute="bottomMargin" id="Ir4-je-NnS"/>
-                                <constraint firstItem="2XT-zh-IRC" firstAttribute="trailing" secondItem="6nJ-Hh-0F0" secondAttribute="trailingMargin" id="bwc-N8-4Pn"/>
-                                <constraint firstItem="2XT-zh-IRC" firstAttribute="leading" secondItem="6nJ-Hh-0F0" secondAttribute="leadingMargin" id="p6h-9g-KcT"/>
+                                <constraint firstItem="2XT-zh-IRC" firstAttribute="trailing" secondItem="6nJ-Hh-0F0" secondAttribute="trailingMargin" id="0hh-ZA-ZQn"/>
+                                <constraint firstItem="2XT-zh-IRC" firstAttribute="leading" secondItem="6nJ-Hh-0F0" secondAttribute="leadingMargin" id="9ve-ep-caL"/>
+                                <constraint firstItem="2XT-zh-IRC" firstAttribute="bottom" secondItem="6nJ-Hh-0F0" secondAttribute="bottomMargin" id="B9E-f5-Fsq"/>
                             </constraints>
                         </view>
                         <sections>
                             <tableViewSection id="iQn-V2-ruG">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="209" id="aWZ-Oy-Qcg">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="209"/>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="212" id="aWZ-Oy-Qcg">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="212"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="aWZ-Oy-Qcg" id="Gql-dr-Oqk">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="208.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="211.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Monthly Giving" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xhj-A2-00D">
@@ -1382,7 +1373,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vuD-u5-OxF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vuD-u5-OxF">
                                                     <rect key="frame" x="8" y="130" width="131.5" height="35"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="29"/>
                                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
@@ -1422,7 +1413,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="X0m-s3-fb3">
-                                        <rect key="frame" x="0.0" y="209" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="212" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X0m-s3-fb3" id="axe-le-lVf">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1446,7 +1437,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="ox6-kZ-Jth">
-                                        <rect key="frame" x="0.0" y="253" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="256" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ox6-kZ-Jth" id="GUD-79-3Iz">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1470,7 +1461,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BankCell" id="8Z2-oM-dIy">
-                                        <rect key="frame" x="0.0" y="297" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="300" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Z2-oM-dIy" id="GEf-M7-9gY">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1506,6 +1497,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                     </tableView>
                     <connections>
                         <outlet property="lblBank" destination="1qO-0l-jZv" id="JMl-gu-PeW"/>
+                        <outlet property="lblMonthlyGiving" destination="vuD-u5-OxF" id="9Ej-iO-OcO"/>
                         <segue destination="7qt-i7-KAs" kind="show" identifier="LinkBank" id="bTq-h6-pbH"/>
                         <segue destination="VxJ-Ka-nQu" kind="show" identifier="ChangeBank" id="Fq2-1R-C8x"/>
                     </connections>
@@ -1519,7 +1511,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
             <objects>
                 <tableViewController id="bPD-BE-c56" customClass="PortfolioTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="TcT-uG-0xJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1573,7 +1565,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
             <objects>
                 <tableViewController id="xLL-N5-TGs" customClass="ActivityTableViewController" customModule="Redwoods" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Jb-Kw-9is">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1639,6 +1631,52 @@ If you have any questions or concerns regarding our privacy policies, please sen
             </objects>
             <point key="canvasLocation" x="1354" y="1151"/>
         </scene>
+        <!--Org Search Table View Controller-->
+        <scene sceneID="4Vp-Rs-Wnp">
+            <objects>
+                <tableViewController id="12b-lM-bwB" customClass="OrgSearchTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" sectionHeaderHeight="28" sectionFooterHeight="28" id="rDT-vl-AKa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="137" id="XaL-Ye-iJW" customClass="TestTableViewCell" customModule="Redwoods" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="137"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XaL-Ye-iJW" id="doK-m7-PQW">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="136.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nf-2E-Cxy">
+                                            <rect key="frame" x="8" y="23" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGT-27-x2j">
+                                            <rect key="frame" x="8" y="63" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblCharity" destination="2nf-2E-Cxy" id="Aph-SI-A4T"/>
+                                    <outlet property="lblDescription2" destination="jGT-27-x2j" id="6US-M8-Beq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="12b-lM-bwB" id="aWo-uE-Xpc"/>
+                            <outlet property="delegate" destination="12b-lM-bwB" id="c4J-Zw-pKn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWI-9f-pPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000" y="1143"/>
+        </scene>
         <!--Donation View Controller-->
         <scene sceneID="bL1-XO-6tI">
             <objects>
@@ -1648,7 +1686,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                         <viewControllerLayoutGuide type="bottom" id="QJ4-d5-yv8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3R2-xO-Kho">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="smg-mu-1Ge">
@@ -1661,7 +1699,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPQ-EJ-VDm">
-                                <rect key="frame" x="20" y="698" width="374" height="30"/>
+                                <rect key="frame" x="20" y="634" width="374" height="30"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Begin Monthly Donations">
@@ -1678,7 +1716,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POU-3O-myu">
-                                <rect key="frame" x="20" y="567" width="374" height="123"/>
+                                <rect key="frame" x="20" y="503" width="374" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="123" id="MD3-t8-qtp"/>
                                 </constraints>
@@ -1687,13 +1725,13 @@ If you have any questions or concerns regarding our privacy policies, please sen
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an amount to give monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-sd-IUT">
-                                <rect key="frame" x="20" y="483" width="374" height="21"/>
+                                <rect key="frame" x="20" y="419" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-xX-huF" customClass="LoopingVideoView" customModule="Redwoods">
-                                <rect key="frame" x="4" y="69" width="406" height="241"/>
+                                <rect key="frame" x="4" y="69" width="406" height="177"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -1733,7 +1771,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDq-IW-YB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613.5" y="392.5"/>
+            <point key="canvasLocation" x="2737" y="426"/>
         </scene>
         <!--Test Table View Controller-->
         <scene sceneID="DLR-qr-VNN">
@@ -1859,11 +1897,11 @@ If you have any questions or concerns regarding our privacy policies, please sen
                         <viewControllerLayoutGuide type="bottom" id="4Qd-84-qKX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y5L-lL-aun">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7o-gN-fXq">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
@@ -1894,7 +1932,7 @@ If you have any questions or concerns regarding our privacy policies, please sen
                         <viewControllerLayoutGuide type="bottom" id="tyB-6b-x7l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AxC-QY-spQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1909,8 +1947,8 @@ If you have any questions or concerns regarding our privacy policies, please sen
         <image name="menu" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bzn-gm-lHh"/>
-        <segue reference="aPF-ii-I4R"/>
-        <segue reference="n99-GG-BjF"/>
+        <segue reference="eK2-2k-UKC"/>
+        <segue reference="4LH-ak-pFT"/>
+        <segue reference="Rrb-h9-4xZ"/>
     </inferredMetricsTieBreakers>
 </document>

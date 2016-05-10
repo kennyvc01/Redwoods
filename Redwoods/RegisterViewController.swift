@@ -14,7 +14,7 @@ class RegisterViewController: UIViewController {
     //Outlet variables
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var txtZipCode: UITextField!
+    @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     
@@ -31,9 +31,7 @@ class RegisterViewController: UIViewController {
     //submit button.  on submit, performs POST to api/user/register using username and password parameters.  If result returns "username already exists", a series of alert controllers are used to have them register or re-enter their credentials.  Else, open FeedViewController.
     @IBAction func btnSubmit(sender: AnyObject) {
         
-        //indicator animates until user is registered
-        self.indicator.hidden = false
-        self.indicator.startAnimating()
+        
         
         let user = txtEmail.text as String!
         let password = txtPassword.text as String!
@@ -41,6 +39,36 @@ class RegisterViewController: UIViewController {
             "username": user,
             "password": password
         ]
+        
+        //first validation:  passwords match
+        if self.txtPassword.text! != self.txtConfirmPassword.text! {
+            //Alert if passwords don't match.
+            let alertController = UIAlertController(title: "Password Error.", message: "The passwords you entered didn't match.", preferredStyle: .Alert)
+            //Ok button on alert
+            let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            }
+            alertController.addAction(OKAction)
+            //present view controller
+            self.presentViewController(alertController, animated: true) {
+            }
+        //second validation:  valid email.  Uses validateEmail function.
+        } else if !validateEmail(txtEmail.text!) {
+            
+            //Alert if passwords don't match.
+            let alertController = UIAlertController(title: "Invalid Email.", message: "Please enter a valid email address.", preferredStyle: .Alert)
+            //Ok button on alert
+            let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            }
+            alertController.addAction(OKAction)
+            //present view controller
+            self.presentViewController(alertController, animated: true) {
+            }
+        
+        } else {
+            //indicator animates until user is registered
+            self.indicator.hidden = false
+            self.indicator.startAnimating()
+        
         //POST to api/user/register
         Alamofire.request(.POST, "https://redwoods-engine-test.herokuapp.com/api/users/register", parameters: parameters, encoding: .JSON)
                 .responseJSON { response in
@@ -114,10 +142,17 @@ class RegisterViewController: UIViewController {
                     
                 }
             }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    //validate email
+    func validateEmail(candidate: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluateWithObject(candidate)
     }
     
 }
