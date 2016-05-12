@@ -19,6 +19,9 @@ class ProfileTableViewController: UITableViewController {
     
     @IBOutlet weak var lblMonthlyGiving: UILabel!
     @IBOutlet weak var lblBank: UILabel!
+    @IBOutlet weak var lblGivingPortfolio: UILabel!
+    @IBOutlet weak var cellPortfolio: UITableViewCell!
+    
     //Moya Provider
     let provider = MoyaProvider<Redwoods>(plugins: [CredentialsPlugin { _ -> NSURLCredential? in
         return NSURLCredential(
@@ -69,6 +72,8 @@ class ProfileTableViewController: UITableViewController {
         
         //function to set total monthly giving label
         monthlyGiving()
+        //function to see if user is donating to a charity.  if not, hide Giving Portfolio cell.
+        checkPortfolio()
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,6 +111,14 @@ class ProfileTableViewController: UITableViewController {
         
         self.lblMonthlyGiving.text = "$" + String(totalAmount)
         
+    }
+    
+    //check to see if user is donating to charities.  If they're not, hide cell
+    func checkPortfolio() {
+        
+        if self.portfolio.count == 0 {
+            self.cellPortfolio.hidden = true
+        }
     }
     
     

@@ -68,6 +68,18 @@ class TableViewController: UITableViewController {
         self.title = "Redwoods"
         self.navigationController?.navigationBar.titleTextAttributes = attributes
         
+        
+        
+        //BrowseOrgs API request in view did load because view did appear caused video to lag.  Request is used in Segue.
+        provider.requestArray(.BrowseOrgs, succeed: { (organizations: [BrowseOrgs]) in
+            self.browseOrgs = organizations
+        }) { (error) in
+            self.error = error
+            print(error)
+        }
+
+        
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -85,15 +97,7 @@ class TableViewController: UITableViewController {
 //            }
 //            print(error._code)
 //        }
-//        
         
-        //BrowseOrgs API request
-        provider.requestArray(.BrowseOrgs, succeed: { (organizations: [BrowseOrgs]) in
-            self.browseOrgs = organizations
-        }) { (error) in
-            self.error = error
-            print(error)
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -208,10 +212,12 @@ class TableViewController: UITableViewController {
         }
         
         
-        if segue.identifier == "Search" {
+        if segue.identifier == "Search"  {
+            self.orgs = []
             let orgVC = segue.destinationViewController as! OrgTableViewController
             orgVC.browseOrgs = self.browseOrgs
         }
 
     }
+    
 }
